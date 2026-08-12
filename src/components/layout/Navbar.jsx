@@ -59,7 +59,7 @@ export default function Navbar() {
       </div>
 
       {/* MAIN NAVBAR */}
-      <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-32 h-20 flex items-center justify-between font-montserrat">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 h-20 flex items-center justify-between font-montserrat">
         {/* LEFT: Brand Logo */}
         <Link to="/" className="flex items-center gap-3 group shrink-0 font-montserrat">
           <div className="relative flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-slate-900 p-1 shadow-xs transition-transform group-hover:scale-105 border border-slate-800">
@@ -71,7 +71,7 @@ export default function Navbar() {
             />
           </div>
           <div className="flex flex-col font-montserrat">
-            <span className="font-montserrat text-base sm:text-xl font-bold tracking-tight text-slate-900 leading-tight">
+            <span className="font-montserrat text-base sm:text-lg xl:text-xl font-bold tracking-tight text-slate-900 leading-tight">
               AD FUTURE STACK
             </span>
             <span className="text-[9px] sm:text-[10px] font-montserrat font-extrabold tracking-widest text-violet-600 uppercase">
@@ -81,7 +81,7 @@ export default function Navbar() {
         </Link>
 
         {/* CENTER: Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-8 font-montserrat" aria-label="Primary Navigation">
+        <nav className="hidden lg:flex items-center gap-3 xl:gap-6 2xl:gap-8 font-montserrat" aria-label="Primary Navigation">
           {NAV_LINKS.map((link) => {
             const hasChildren = Boolean(link.children && link.children.length > 0)
             const isParentActive =

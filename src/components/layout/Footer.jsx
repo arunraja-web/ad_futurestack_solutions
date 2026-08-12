@@ -46,43 +46,43 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="font-montserrat">
-            <h4 className="text-lg font-montserrat font-bold uppercase tracking-widest text-white mb-4">Navigation</h4>
-            <ul className="space-y-2.5 text-sm font-montserrat">
-              <li><Link to="/" className="hover:text-violet-400 transition-colors text-lg font-montserrat">Home</Link></li>
-              <li><Link to="/services" className="hover:text-violet-400 transition-colors text-lg font-montserrat">Services</Link></li>
-              <li><Link to="/capabilities" className="hover:text-violet-400 transition-colors text-lg font-montserrat">Capabilities</Link></li>
-              <li><Link to="/solutions" className="hover:text-violet-400 transition-colors text-lg font-montserrat">Solutions</Link></li>
-              <li><Link to="/projects" className="hover:text-violet-400 transition-colors text-lg font-montserrat">Case Studies</Link></li>
+            <h4 className="text-xs sm:text-sm font-montserrat font-bold uppercase tracking-widest text-white mb-4">Navigation</h4>
+            <ul className="space-y-2.5 text-xs sm:text-sm font-montserrat">
+              <li><Link to="/" className="hover:text-violet-400 transition-colors font-montserrat">Home</Link></li>
+              <li><Link to="/services" className="hover:text-violet-400 transition-colors font-montserrat">Services</Link></li>
+              <li><Link to="/capabilities" className="hover:text-violet-400 transition-colors font-montserrat">Capabilities</Link></li>
+              <li><Link to="/solutions" className="hover:text-violet-400 transition-colors font-montserrat">Solutions</Link></li>
+              <li><Link to="/projects" className="hover:text-violet-400 transition-colors font-montserrat">Case Studies</Link></li>
             </ul>
           </div>
 
           {/* Solutions & Tech */}
           <div className="font-montserrat">
-            <h4 className="text-lg   font-montserrat font-bold uppercase tracking-widest text-white mb-4">Expertise</h4>
-            <ul className="space-y-2.5 text-sm font-montserrat">
-              <li><Link to="/services" className="hover:text-violet-400 transition-colors text-lg font-montserrat">Product Engineering</Link></li>
-              <li><Link to="/capabilities" className="hover:text-violet-400 transition-colors text-lg font-montserrat">Web Development</Link></li>
-              <li><Link to="/solutions" className="hover:text-violet-400 transition-colors text-lg font-montserrat">AI & RAG Workflows</Link></li>
-              <li><Link to="/services" className="hover:text-violet-400 transition-colors text-lg font-montserrat">Mobile Application</Link></li>
-              <li><Link to="/contact" className="hover:text-violet-400 transition-colors text-lg font-montserrat">About Our Team</Link></li>
+            <h4 className="text-xs sm:text-sm font-montserrat font-bold uppercase tracking-widest text-white mb-4">Expertise</h4>
+            <ul className="space-y-2.5 text-xs sm:text-sm font-montserrat">
+              <li><Link to="/services" className="hover:text-violet-400 transition-colors font-montserrat">Product Engineering</Link></li>
+              <li><Link to="/capabilities" className="hover:text-violet-400 transition-colors font-montserrat">Web Development</Link></li>
+              <li><Link to="/solutions" className="hover:text-violet-400 transition-colors font-montserrat">AI & RAG Workflows</Link></li>
+              <li><Link to="/services" className="hover:text-violet-400 transition-colors font-montserrat">Mobile Application</Link></li>
+              <li><Link to="/about" className="hover:text-violet-400 transition-colors font-montserrat">About Our Team</Link></li>
             </ul>
           </div>
 
           {/* Contact Details */}
           <div className="font-montserrat">
-            <h4 className="text-lg font-montserrat font-bold uppercase tracking-widest text-white mb-4">Get in Touch</h4>
-            <ul className="space-y-3 text-sm font-montserrat">
+            <h4 className="text-xs sm:text-sm font-montserrat font-bold uppercase tracking-widest text-white mb-4">Get in Touch</h4>
+            <ul className="space-y-3 text-xs sm:text-sm font-montserrat">
               <li className="flex items-center gap-2.5 font-montserrat">
                 <Mail className="h-4 w-4 text-violet-400 shrink-0" />
-                <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-violet-400 text-lg transition-colors font-montserrat">{CONTACT_EMAIL}</a>
+                <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-violet-400 transition-colors font-montserrat">{CONTACT_EMAIL}</a>
               </li>
               <li className="flex items-center gap-2.5 font-montserrat">
                 <Phone className="h-4 w-4 text-violet-400 shrink-0" />
-                <span className="hover:text-violet-400 transition-colors text-lg font-montserrat">{CONTACT_PHONE}</span>
+                <span className="hover:text-violet-400 transition-colors font-montserrat">{CONTACT_PHONE}</span>
               </li>
               <li className="flex items-start gap-2.5 font-montserrat">
                 <MapPin className="h-4 w-4 text-violet-400 shrink-0 mt-0.5" />
-                <span className="hover:text-violet-400 transition-colors text-lg font-montserrat">{OFFICE_ADDRESS}</span>
+                <span className="hover:text-violet-400 transition-colors font-montserrat">{OFFICE_ADDRESS}</span>
               </li>
             </ul>
           </div>

@@ -46,7 +46,7 @@
 
 .section-title {
   margin: 0;
-  font-size: clamp(32px, 4vw, 50px);
+  font-size: clamp(28px, 4vw, 50px);
   font-weight: 750;
   line-height: 1.1;
   letter-spacing: -0.04em;
@@ -56,7 +56,7 @@
 .section-description {
   margin-top: 18px;
   color: var(--muted);
-  font-size: 15px;
+  font-size: clamp(14px, 1.2vw, 16px);
   line-height: 1.8;
 }
 
@@ -65,7 +65,7 @@
 ========================================================= */
 
 .page-hero-bespoke {
-  min-height: 520px;
+  min-height: clamp(440px, 60vh, 560px);
   position: relative;
   overflow: hidden;
   background-size: cover;
@@ -98,12 +98,13 @@
 }
 
 .page-hero-inner {
-  max-width: 1250px;
-  min-height: 520px;
+  max-width: 1280px;
+  width: 100%;
+  min-height: clamp(440px, 60vh, 560px);
   position: relative;
   z-index: 2;
   margin: auto;
-  padding: 140px 40px 90px;
+  padding: clamp(110px, 14vh, 150px) clamp(20px, 4vw, 40px) clamp(50px, 8vh, 90px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -130,7 +131,7 @@
 .page-hero-bespoke h1 {
   margin: 0;
   color: #ffffff;
-  font-size: clamp(40px, 5.5vw, 68px);
+  font-size: clamp(32px, 5vw, 68px);
   font-weight: 750;
   line-height: 1.05;
   letter-spacing: -0.04em;
@@ -144,7 +145,7 @@
   max-width: 620px;
   margin: 24px 0 32px;
   color: rgba(255, 255, 255, 0.82);
-  font-size: 16px;
+  font-size: clamp(14px, 1.2vw, 16px);
   line-height: 1.8;
 }
 
@@ -214,20 +215,21 @@
 ========================================================= */
 
 .pillars-section {
-  max-width: 1250px;
+  max-width: 1280px;
+  width: 100%;
   margin: auto;
-  padding: 100px 40px;
+  padding: clamp(60px, 8vw, 100px) clamp(20px, 4vw, 40px);
 }
 
 .pillars-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: clamp(16px, 2.5vw, 24px);
   margin-top: 48px;
 }
 
 .pillar-card {
-  padding: 32px 28px;
+  padding: clamp(24px, 3vw, 32px) clamp(20px, 2.5vw, 28px);
   border-radius: 16px;
   border: 1px solid var(--border);
   background: #ffffff;
@@ -291,12 +293,13 @@
 ========================================================= */
 
 .showcase-section {
-  padding: 100px 40px;
+  padding: clamp(60px, 8vw, 100px) clamp(20px, 4vw, 40px);
   background: #f7f9fc;
 }
 
 .showcase-inner {
-  max-width: 1250px;
+  max-width: 1280px;
+  width: 100%;
   margin: auto;
 }
 
@@ -311,10 +314,10 @@
   border-radius: 20px;
   border: 1px solid var(--border);
   background: #ffffff;
-  padding: 40px;
+  padding: clamp(20px, 3.5vw, 40px);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: clamp(20px, 3.5vw, 40px);
   align-items: center;
   transition: all 0.35s ease;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
@@ -353,7 +356,7 @@
 
 .showcase-card-content h3 {
   margin: 0 0 14px;
-  font-size: clamp(24px, 2.5vw, 32px);
+  font-size: clamp(20px, 2.5vw, 32px);
   font-weight: 750;
   line-height: 1.15;
   color: #0f172a;
@@ -431,16 +434,17 @@
 ========================================================= */
 
 .tech-grid-section {
-  padding: 100px 40px;
+  padding: clamp(60px, 8vw, 100px) clamp(20px, 4vw, 40px);
   background: #ffffff;
 }
 
 .tech-grid-inner {
-  max-width: 1250px;
+  max-width: 1280px;
+  width: 100%;
   margin: auto;
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
-  gap: 60px;
+  gap: clamp(24px, 5vw, 60px);
   align-items: center;
 }
 
@@ -476,24 +480,25 @@
 ========================================================= */
 
 .bespoke-stats-section {
-  padding: 60px 40px;
+  padding: clamp(40px, 6vw, 60px) clamp(20px, 4vw, 40px);
   background: #07111f;
   border-top: 1px solid #1e293b;
   border-bottom: 1px solid #1e293b;
 }
 
 .bespoke-stats-inner {
-  max-width: 1250px;
+  max-width: 1280px;
+  width: 100%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: clamp(16px, 3vw, 30px);
   text-align: center;
 }
 
 .bespoke-stat-item strong {
   display: block;
-  font-size: clamp(32px, 3.5vw, 48px);
+  font-size: clamp(28px, 3.5vw, 48px);
   font-weight: 800;
   color: #a78bfa;
   margin-bottom: 6px;
@@ -513,9 +518,10 @@
 ========================================================= */
 
 .bespoke-cta-section {
-  max-width: 1250px;
+  max-width: 1280px;
+  width: 100%;
   margin: auto;
-  padding: 100px 40px;
+  padding: clamp(60px, 8vw, 100px) clamp(20px, 4vw, 40px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -524,7 +530,7 @@
 
 .bespoke-cta-content h2 {
   margin: 0;
-  font-size: clamp(32px, 3.5vw, 48px);
+  font-size: clamp(28px, 3.5vw, 48px);
   font-weight: 750;
   line-height: 1.1;
   color: #0f172a;
@@ -566,15 +572,7 @@
    RESPONSIVE MEDIA QUERIES
 ========================================================= */
 
-@media (max-width: 1024px) {
-  .page-hero-inner,
-  .tech-grid-inner,
-  .bespoke-cta-section {
-    grid-template-columns: 1fr;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
+@media (max-width: 1100px) {
   .pillars-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -592,6 +590,15 @@
     order: 2;
   }
 
+  .tech-grid-inner,
+  .bespoke-cta-section {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 800px) {
   .bespoke-stats-inner {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -599,14 +606,14 @@
 
 @media (max-width: 640px) {
   .page-hero-inner {
-    padding: 120px 20px 60px;
+    padding: 110px 20px 50px;
   }
 
   .pillars-section,
   .showcase-section,
   .tech-grid-section,
   .bespoke-cta-section {
-    padding: 60px 20px;
+    padding: 50px 20px;
   }
 
   .pillars-grid {
@@ -614,7 +621,7 @@
   }
 
   .showcase-card {
-    padding: 24px;
+    padding: 20px;
   }
 
   .bespoke-stats-inner {
@@ -622,3 +629,4 @@
     gap: 24px;
   }
 }
+

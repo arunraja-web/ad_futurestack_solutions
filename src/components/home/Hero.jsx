@@ -18,17 +18,17 @@ export default function Hero() {
   return (
     <section
       onMouseMove={handleMouseMove}
-      className="relative min-h-[85vh] lg:min-h-[92vh] flex flex-col justify-end items-start bg-slate-950 text-white overflow-hidden select-none pb-0 sm:pb-12 lg:pb-16 font-montserrat"
+      className="relative min-h-[550px] lg:min-h-[85vh] flex flex-col justify-end items-start bg-slate-950 text-white overflow-hidden select-none pt-28 lg:pt-32 pb-0 sm:pb-10 lg:pb-14 font-montserrat"
     >
       {/* Background Image Layer */}
       <HeroBackground mousePos={mousePos} />
 
       {/* FLOATING CARD OVERLAY MATCHING REFERENCE CAPGEMINI DESIGN (SHARP RECTANGULAR EDGES, SHIFTED LEFT) */}
       <Container className="relative z-10 w-full font-montserrat px-0 sm:px-6 lg:px-8">
-        <div className="max-w-3xl lg:max-w-5xl bg-violet-950/95 sm:bg-violet-900 text-white p-8 sm:p-12 lg:p-14 shadow-2xl rounded-none border-y sm:border border-violet-400/30 backdrop-blur-md space-y-6 animate-hero-fade-up font-montserrat -ml-0 sm:-ml-2 lg:-ml-4">
+        <div className="max-w-3xl lg:max-w-4xl xl:max-w-5xl bg-violet-950/95 sm:bg-violet-900 text-white p-6 sm:p-10 lg:p-12 shadow-2xl rounded-none border-y sm:border border-violet-400/30 backdrop-blur-md space-y-5 sm:space-y-6 animate-hero-fade-up font-montserrat -ml-0 sm:-ml-2 lg:-ml-4">
 
           {/* Main Headline */}
-          <h1 className="font-montserrat font-semibold text-3xl sm:text-5xl lg:text-5xl text-white tracking-tight uppercase leading-[1.12] sm:leading-[1.08] drop-shadow-md">
+          <h1 className="font-montserrat font-semibold text-2xl sm:text-4xl lg:text-5xl text-white tracking-tight uppercase leading-[1.12] sm:leading-[1.08] drop-shadow-md">
             WE BUILD DIGITAL EXPERIENCES THAT MATTER
           </h1>
 
