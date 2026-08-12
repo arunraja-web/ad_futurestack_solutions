@@ -126,6 +126,23 @@ const projectItems = [
     liveUrl: 'https://angadix.vercel.app/',
     bgImage: '/images/projects/angadix.webp',
     fallbackImage: '/images/projects/angadix.jpg'
+  },
+  {
+    id: 'bookverse-studio',
+    tag: 'Publishing & Digital Media',
+    title: 'BookVerse Studio Curated Imprint Platform',
+    description: 'An interconnected digital publishing ecosystem connecting authors, independent publishers, and readers through curated book catalogs, author portals, and instant search indexing.',
+    bullets: [
+      'Curated literary book catalog with instant keyboard-shortcut search',
+      'Author profile showcase & independent publisher imprint portals',
+      'Multi-language interface support with responsive editorial typography',
+      'High-performance reader discovery engine with rating highlights'
+    ],
+    tags: ['React', 'Publishing Platform', 'Editorial UI', 'Tailwind CSS', 'Book Search'],
+    metrics: 'Live Vercel Application',
+    liveUrl: 'https://book-website-theta-five.vercel.app/',
+    bgImage: '/images/projects/book-verse.webp',
+    fallbackImage: '/images/projects/book-verse.jpg'
   }
 ]
 
