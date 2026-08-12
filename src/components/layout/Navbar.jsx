@@ -117,11 +117,11 @@ export default function Navbar() {
                 {/* DROPDOWN MENU */}
                 {hasChildren && activeDropdown === link.label && (
                   <div
-                    className="absolute top-full left-0 w-80 rounded-2xl bg-white p-3 shadow-2xl border border-slate-200 z-50 animate-in fade-in slide-in-from-top-2 duration-200 font-montserrat text-slate-900"
+                    className="absolute top-full left-0 w-88 sm:w-96 rounded-2xl bg-white p-3.5 shadow-2xl border border-slate-200 z-50 animate-in fade-in slide-in-from-top-2 duration-200 font-montserrat text-slate-900"
                     onMouseEnter={() => handleMouseEnter(link.label)}
                     onMouseLeave={handleMouseLeave}
                   >
-                    <div className="space-y-1 font-montserrat">
+                    <div className="space-y-1.5 font-montserrat">
                       {link.children.map((child) => {
                         return (
                           <NavLink
@@ -129,20 +129,20 @@ export default function Navbar() {
                             to={child.to}
                             onClick={() => setActiveDropdown(null)}
                             className={({ isActive }) =>
-                              `group flex items-start gap-3 rounded-xl p-3 transition-colors font-montserrat ${isActive ? 'bg-violet-50 text-violet-700' : 'hover:bg-slate-50 text-slate-700'
+                              `group flex items-center gap-3.5 rounded-xl p-3 transition-colors font-montserrat ${isActive ? 'bg-violet-50 text-violet-700' : 'hover:bg-slate-50 text-slate-700'
                               }`
                             }
                           >
-                            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-slate-100 border border-slate-200 text-slate-800 group-hover:bg-violet-700 group-hover:text-white transition-all mt-0.5 font-montserrat">
-                              {iconMap[child.iconName] || <Layers className="h-4 w-4" />}
+                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-100 border border-slate-200 text-slate-800 group-hover:bg-violet-700 group-hover:text-white transition-all font-montserrat">
+                              {iconMap[child.iconName] || <Layers className="h-5 w-5" />}
                             </div>
 
                             <div className="flex flex-col flex-1 min-w-0 font-montserrat">
-                              <span className="text-xs font-semibold flex items-center justify-between text-slate-900 font-montserrat">
+                              <span className="text-sm font-bold flex items-center justify-between text-slate-900 font-montserrat">
                                 <span>{child.label}</span>
                                 <ArrowRight className="h-4 w-4 text-slate-400 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                               </span>
-                              <span className="text-[11px] text-slate-500 font-normal line-clamp-1 mt-0.5 font-montserrat">
+                              <span className="text-xs text-slate-500 font-medium line-clamp-1 mt-0.5 font-montserrat">
                                 {child.description}
                               </span>
                             </div>
