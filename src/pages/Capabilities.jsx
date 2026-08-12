@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/page-sections.css'
 import '../styles/services.css'
+import SEO from '../components/common/SEO.jsx'
 import { Cpu, ShieldCheck, Database, Cloud, Zap, Code2, Server, ArrowRight } from 'lucide-react'
 
 const HERO_IMAGE = "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2200&q=90"
@@ -126,6 +127,11 @@ function CapabilityVisualWidget({ bgImage, tag }) {
 export default function Capabilities() {
   return (
     <div className="bespoke-page">
+      <SEO
+        title="Engineering Capabilities & Technical Matrix | AD FutureStack"
+        description="Deep engineering capabilities across Distributed Microservices, Cloud Native DevOps, AI Agent Orchestration, Data Architectures, and Zero-Trust Security."
+        keywords="Microservices Architecture, Cloud DevOps, AI Agent Orchestration, Data Engineering, Cyber Security, AD FutureStack Capabilities"
+      />
       {/* 1. HERO SECTION WITH BACKGROUND IMAGE */}
       <section
         className="page-hero-bespoke"

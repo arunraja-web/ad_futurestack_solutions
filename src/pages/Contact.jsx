@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Building2, Mail, PhoneCall, CheckCircle2, AlertCircle } from "lucide-react";
+import SEO from "../components/common/SEO.jsx";
 import { CONTACT_EMAIL, CONTACT_PHONE, SITE_NAME } from "../utils/constants.js";
 
 const PORTRAIT_IMAGE = "/contact.avif";
@@ -79,6 +80,11 @@ export default function Contact() {
 
   return (
     <div className="relative min-h-screen bg-slate-950 text-white font-montserrat overflow-hidden pt-24 pb-16">
+      <SEO
+        title="Contact AD FutureStack | Request Tech Consultation"
+        description="Get in touch with AD FutureStack. Request a tech consultation, audit your software architecture, or discuss your web & mobile application project."
+        keywords="Contact AD FutureStack, Software Consultation, Hire Tech Agency, Architecture Audit, Contact Software Engineers"
+      />
 
       {/* 1. FULL IMAGE BACKGROUND */}
       <div className="absolute inset-0 w-full h-full pointer-events-none">

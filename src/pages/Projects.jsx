@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/page-sections.css'
 import '../styles/services.css'
+import SEO from '../components/common/SEO.jsx'
 import { Award, TrendingUp, ShieldCheck, ArrowRight, ExternalLink } from 'lucide-react'
 
 const HERO_IMAGE = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2200&q=90"
@@ -21,8 +22,8 @@ const projectItems = [
     tags: ['React', 'Node.js', 'Healthcare UI', 'Tailwind CSS', 'Patient Portal'],
     metrics: 'Live Vercel Application',
     liveUrl: 'https://clinic-management-system-iota-five.vercel.app/',
-    bgImage: '/images/projects/saviours-clinic.png',
-    fallbackImage: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80'
+    bgImage: '/images/projects/saviours-clinic.webp',
+    fallbackImage: '/images/projects/saviours-clinic.jpg'
   },
   {
     id: 'gymnex-premium',
@@ -38,8 +39,8 @@ const projectItems = [
     tags: ['React', 'Next.js', 'SaaS Architecture', 'Membership Engine', 'Tailwind CSS'],
     metrics: 'Live Vercel Application',
     liveUrl: 'https://gymnex-premium.vercel.app/',
-    bgImage: '/images/projects/gymnex-premium.png',
-    fallbackImage: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80'
+    bgImage: '/images/projects/gymnex-premium.webp',
+    fallbackImage: '/images/projects/gymnex-premium.jpg'
   },
   {
     id: 'gymnex-site',
@@ -55,8 +56,8 @@ const projectItems = [
     tags: ['React', 'Vite', 'Tailwind CSS', 'Fitness Portal', 'Framer Motion'],
     metrics: 'Live Vercel Application',
     liveUrl: 'https://gymnex-site-bqqa.vercel.app/',
-    bgImage: '/images/projects/gymnex-site.png',
-    fallbackImage: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1200&q=80'
+    bgImage: '/images/projects/gymnex-site.webp',
+    fallbackImage: '/images/projects/gymnex-site.jpg'
   },
   {
     id: 'aura-studio',
@@ -72,8 +73,8 @@ const projectItems = [
     tags: ['React', 'Luxury UI', 'Video Player API', 'Booking System', 'Tailwind CSS'],
     metrics: 'Live Vercel Application',
     liveUrl: 'https://aura-studio-psi-lac.vercel.app/',
-    bgImage: '/images/projects/aura-studio.png',
-    fallbackImage: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80'
+    bgImage: '/images/projects/aura-studio.webp',
+    fallbackImage: '/images/projects/aura-studio.jpg'
   },
   {
     id: 'glowora',
@@ -89,8 +90,8 @@ const projectItems = [
     tags: ['React', 'E-Commerce', 'Booking Engine', 'Marketplace API', 'Tailwind CSS'],
     metrics: 'Live Vercel Application',
     liveUrl: 'https://glowora-fds5-smoky.vercel.app/',
-    bgImage: '/images/projects/glowora.png',
-    fallbackImage: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80'
+    bgImage: '/images/projects/glowora.webp',
+    fallbackImage: '/images/projects/glowora.jpg'
   },
   {
     id: 'vastram-textile',
@@ -106,8 +107,8 @@ const projectItems = [
     tags: ['React', 'E-Commerce', 'Luxury Web UI', 'Tailwind CSS', 'Silk Catalog'],
     metrics: 'Live Vercel Application',
     liveUrl: 'https://textile-site-ten.vercel.app/',
-    bgImage: '/images/projects/textile-site.png',
-    fallbackImage: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=80'
+    bgImage: '/images/projects/textile-site.webp',
+    fallbackImage: '/images/projects/textile-site.jpg'
   },
   {
     id: 'angadix-marketplace',
@@ -123,8 +124,8 @@ const projectItems = [
     tags: ['React', 'Node.js', 'E-Commerce Engine', 'Tailwind CSS', 'REST API'],
     metrics: 'Live Vercel Application',
     liveUrl: 'https://angadix.vercel.app/',
-    bgImage: '/images/projects/angadix.png',
-    fallbackImage: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=1200&q=80'
+    bgImage: '/images/projects/angadix.webp',
+    fallbackImage: '/images/projects/angadix.jpg'
   }
 ]
 
@@ -161,12 +162,7 @@ function ProjectVisualWidget({ bgImage, fallbackImage, tag, liveUrl, title }) {
       />
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/30 to-transparent opacity-90 group-hover:opacity-75 transition-opacity duration-300 pointer-events-none" />
 
-      {/* Category Tag */}
-      <div className="absolute top-4 right-4 z-10">
-        <span className="text-[10px] font-mono font-bold text-white bg-violet-700/90 backdrop-blur-md px-3 py-1 rounded-full border border-violet-400/40 uppercase tracking-widest shadow-md">
-          {tag}
-        </span>
-      </div>
+
 
       {/* Live Demo Overlay Button */}
       {liveUrl && (
@@ -175,7 +171,7 @@ function ProjectVisualWidget({ bgImage, fallbackImage, tag, liveUrl, title }) {
             href={liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-violet-700/90 hover:bg-violet-800 text-white font-montserrat font-bold text-xs rounded-xl shadow-lg border border-violet-400/40 transition-all backdrop-blur-md"
+            className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-violet-700/90 hover:bg-violet-800 text-white font-montserrat font-semibold text-md rounded-xl shadow-lg border border-violet-400/40 transition-all backdrop-blur-md"
           >
             <span>View Live Project Demo</span>
             <ExternalLink className="h-3.5 w-3.5" />
@@ -189,6 +185,11 @@ function ProjectVisualWidget({ bgImage, fallbackImage, tag, liveUrl, title }) {
 export default function Projects() {
   return (
     <div className="bespoke-page">
+      <SEO
+        title="Featured Projects & Live Deliveries | AD FutureStack"
+        description="Explore live software deliverables built by AD FutureStack across Healthcare, Athletic SaaS, Cinematic Studios, E-Commerce, and Luxury Textiles."
+        keywords="AD FutureStack Projects, Web App Case Studies, Vercel Demos, SaaS Software, Healthcare Management System, E-Commerce Platform"
+      />
       {/* 1. HERO SECTION WITH BACKGROUND IMAGE */}
       <section
         className="page-hero-bespoke"
@@ -258,12 +259,12 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="text-xs font-mono font-bold text-violet-700 bg-violet-50 hover:bg-violet-100 px-2.5 py-1 rounded-full border border-violet-200 flex items-center gap-1 transition-colors"
                     >
-                      <span>Live Vercel Demo</span>
+
                       <ExternalLink className="h-3 w-3" />
                     </a>
                   </div>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
+                  <h3 className="font-semibold text-xl text-white">{item.title}</h3>
+                  <p className="text-white/70 text-base mt-2">{item.description}</p>
 
                   <div className="showcase-bullet-list">
                     {item.bullets.map((bullet, bIdx) => (

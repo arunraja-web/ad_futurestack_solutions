@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/page-sections.css'
 import '../styles/services.css'
+import SEO from '../components/common/SEO.jsx'
 import { Users, Target, Rocket, ShieldCheck, ArrowRight, CheckCircle2 } from 'lucide-react'
 
 const HERO_IMAGE = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2200&q=90"

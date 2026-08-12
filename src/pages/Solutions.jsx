@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/page-sections.css'
 import '../styles/services.css'
+import SEO from '../components/common/SEO.jsx'
 import { Layers, ShieldCheck, Sparkles, ArrowRight, Globe } from 'lucide-react'
 
 const HERO_IMAGE = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2200&q=90"
@@ -104,6 +105,11 @@ function SolutionVisualWidget({ bgImage, tag }) {
 export default function Solutions() {
   return (
     <div className="bespoke-page">
+      <SEO
+        title="Enterprise Solutions & SaaS Blueprints | AD FutureStack"
+        description="Accelerate your product roadmap with turnkey software solutions: B2B Multi-Tenant SaaS Blueprints, AI Workflow Automation Suites, and FinTech Gateway Infrastructure."
+        keywords="SaaS Architecture Blueprint, AI Automation Suite, Turnkey Software Solutions, FinTech Gateway, AD FutureStack Solutions"
+      />
       {/* 1. HERO SECTION WITH BACKGROUND IMAGE */}
       <section
         className="page-hero-bespoke"

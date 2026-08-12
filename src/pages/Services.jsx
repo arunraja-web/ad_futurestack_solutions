@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/services.css";
+import SEO from "../components/common/SEO.jsx";
 
 const services = [
   {
@@ -252,6 +253,11 @@ function ServiceVisual({ index }) {
 export default function Services() {
   return (
     <main className="services-page">
+      <SEO
+        title="Custom Software Engineering & Digital Services | AD FutureStack"
+        description="Explore our IT services spanning Web Development, App Development, AI & Workflow Automation, SEO Growth Engines, and Multi-Tenant SaaS Software."
+        keywords="Web Development Services, Mobile App Development, AI Automation Services, SaaS Engineering, Digital Marketing, AD FutureStack Services"
+      />
 
       {/* =====================================================
           HERO
