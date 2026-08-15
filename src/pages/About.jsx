@@ -87,7 +87,7 @@ export default function About() {
 
         <div className="page-hero-inner">
           <div className="page-hero-content">
-            <br></br> <h1>
+            <br></br> <br></br><br></br><h1>
               Engineering the <span>Digital Future</span>
             </h1>
 

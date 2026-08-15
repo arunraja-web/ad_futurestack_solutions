@@ -161,9 +161,8 @@ export default function Capabilities() {
 
         <div className="page-hero-inner">
           <div className="page-hero-content">
-            <span className="hero-kicker-badge">
-              TECHNICAL MATRIX & ENGINEERING DOMAIN
-            </span>
+            <br></br>
+            <br></br>
 
             <h1>
               Engineering <span>Capabilities</span>
