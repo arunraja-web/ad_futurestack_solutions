@@ -8,7 +8,7 @@ const highlights = [
     category: 'Cloud Engineering',
     title: 'H1 Enterprise Cloud Modernization',
     subtitle: 'Learn about our multi-cloud Kubernetes deployment results and 99.999% SLA uptime across distributed regions.',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
+    image: '/images/projects/fintech-enterprise.webp',
     link: '/projects'
   },
   {
@@ -16,7 +16,7 @@ const highlights = [
     category: 'AI & Data Systems',
     title: 'Conversations for Tomorrow: The AI Corner',
     subtitle: 'Defining intelligent automated workflows, RAG knowledge bases, and digital sovereignty for high-growth enterprises.',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80',
+    image: '/images/home/ai-augmented-engineering.webp',
     link: '/solutions'
   },
   {
@@ -24,7 +24,7 @@ const highlights = [
     category: 'Full-Stack Stack',
     title: 'Driving Innovation in High-Frequency Digital Platforms',
     subtitle: 'Engineering sub-millisecond API response times, microservices streaming, and zero-downtime database failovers.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
+    image: '/images/solutions/saas-blueprint.webp',
     link: '/capabilities'
   },
   {
@@ -32,7 +32,7 @@ const highlights = [
     category: 'Payment Architecture',
     title: 'Global Payment Gateway & Compliance Engine',
     subtitle: 'Building PCI-DSS compliant transactional backend architectures processing millions of monthly transactions.',
-    image: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80',
+    image: '/images/solutions/fintech-platform.webp',
     link: '/projects'
   },
   {
@@ -40,7 +40,7 @@ const highlights = [
     category: 'Healthcare Tech',
     title: 'Real-Time Patient Telemetry & Analytics Platform',
     subtitle: 'HIPAA-compliant cloud platform unifying IoT biometric sensors with predictive diagnostic AI algorithms.',
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80',
+    image: '/images/projects/healthcare-system.webp',
     link: '/solutions'
   },
   {
@@ -48,7 +48,7 @@ const highlights = [
     category: 'Supply Chain Tech',
     title: 'Autonomous Supply Chain Optimization System',
     subtitle: 'Redefining logistics routing with graph optimization, automated dispatching, and live inventory telemetry.',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80',
+    image: '/images/projects/logistics-engine.webp',
     link: '/capabilities'
   }
 ]

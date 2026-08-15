@@ -59,7 +59,7 @@
       rgba(0, 0, 0, 0.88) 45%,
       rgba(0, 0, 0, 0.78) 100%
     ),
-    url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=2200&q=90")
+    url("/images/services/team-collaboration-services.webp")
     center / cover;
 }
 
@@ -1503,7 +1503,7 @@
       rgba(4,11,22,0.92),
       rgba(4,11,22,0.55)
     ),
-    url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=2200&q=85")
+    url("/images/services/services-hero-bg.webp")
     center / cover;
 }
 

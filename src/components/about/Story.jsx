@@ -11,7 +11,7 @@ export default function Story() {
         <div className="lg:col-span-6 relative">
           <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 group">
             <img
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
+              src="/images/about/team-collaboration.webp"
               alt="AD FutureStack Software Architecture Team Collaboration"
               loading="lazy"
               className="w-full h-[280px] sm:h-[420px] lg:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700"

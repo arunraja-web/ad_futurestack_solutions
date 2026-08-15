@@ -4,7 +4,7 @@ export const capabilities = [
     title: 'Full-Stack Web Engineering',
     category: 'Core Engineering',
     iconName: 'Code',
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1000&q=80',
+    image: '/images/services/web-engineering.webp',
     description: 'End-to-end web applications built with TypeScript, React, Next.js, Node.js, and serverless architectures.',
     technologies: ['React', 'Next.js', 'Node.js', 'TypeScript', 'GraphQL', 'Tailwind CSS']
   },
@@ -13,7 +13,7 @@ export const capabilities = [
     title: 'Cloud & Infrastructure',
     category: 'Platform Architecture',
     iconName: 'Cloud',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1000&q=80',
+    image: '/images/capabilities/cloud-devops.webp',
     description: 'Resilient cloud architecture deployment on AWS, GCP, and Azure with Kubernetes and Terraform.',
     technologies: ['AWS', 'GCP', 'Docker', 'Kubernetes', 'Terraform', 'CI/CD']
   },
@@ -22,7 +22,7 @@ export const capabilities = [
     title: 'AI & Intelligent Automation',
     category: 'Emerging Tech',
     iconName: 'Cpu',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1000&q=80',
+    image: '/images/capabilities/ai-automation.webp',
     description: 'Custom AI integration, RAG architectures, LLM fine-tuning, and automated predictive telemetry.',
     technologies: ['PyTorch', 'OpenAI', 'Gemini', 'LangChain', 'Pinecone', 'Python']
   },
@@ -31,7 +31,7 @@ export const capabilities = [
     title: 'Cross-Platform Mobile',
     category: 'Application Development',
     iconName: 'Smartphone',
-    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1000&q=80',
+    image: '/images/services/mobile-products.webp',
     description: 'Native iOS & Android mobile applications engineered for ultra-fast load times and offline synchronization.',
     technologies: ['React Native', 'Swift', 'Kotlin', 'Expo', 'Firebase']
   }

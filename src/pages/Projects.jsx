@@ -5,7 +5,7 @@ import '../styles/services.css'
 import SEO from '../components/common/SEO.jsx'
 import { Award, TrendingUp, ShieldCheck, ArrowRight, ExternalLink } from 'lucide-react'
 
-const HERO_IMAGE = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80"
+const HERO_IMAGE = "/images/solutions/saas-blueprint.webp"
 
 const projectItems = [
   {

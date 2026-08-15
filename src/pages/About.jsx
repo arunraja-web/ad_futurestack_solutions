@@ -5,9 +5,9 @@ import '../styles/services.css'
 import SEO from '../components/common/SEO.jsx'
 import { Users, Target, Rocket, ShieldCheck, ArrowRight, CheckCircle2 } from 'lucide-react'
 
-const HERO_IMAGE = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=80"
-const STORY_IMAGE_MAIN = "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80"
-const STORY_IMAGE_SMALL = "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=500&q=80"
+const HERO_IMAGE = "/images/about/team-collaboration.webp"
+const STORY_IMAGE_MAIN = "/images/about/about-main-story.webp"
+const STORY_IMAGE_SMALL = "/images/services/team-collaboration-services.webp"
 
 const aboutPillars = [
   {
@@ -147,19 +147,20 @@ export default function About() {
               <div className="w-4/5 h-[340px] rounded-2xl overflow-hidden shadow-2xl border border-slate-200">
                 <img
                   src={STORY_IMAGE_MAIN}
-                  onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" }}
                   alt="AD FutureStack Senior Engineering Team Collaborating on Architecture"
                   loading="lazy"
                   className="w-full h-full object-cover"
+                  onError={(e) => { e.target.src = "/images/about/team-collaboration.webp" }}
                 />
               </div>
+
               <div className="absolute bottom-0 right-0 w-3/5 h-[210px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
                 <img
                   src={STORY_IMAGE_SMALL}
-                  onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" }}
                   alt="AD FutureStack Technical System Architecture Review Session"
                   loading="lazy"
                   className="w-full h-full object-cover"
+                  onError={(e) => { e.target.src = "/images/home/architecture-blueprint.webp" }}
                 />
               </div>
             </div>

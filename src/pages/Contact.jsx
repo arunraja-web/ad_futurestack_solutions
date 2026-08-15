@@ -117,7 +117,7 @@ export default function Contact() {
         <img
           src={PORTRAIT_IMAGE}
           onError={(e) => {
-            e.target.src = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2000&q=80";
+            e.target.src = "/images/about/team-collaboration.webp";
           }}
           alt="AD FutureStack Technical Software Architecture & Consultation Workspace"
           loading="lazy"

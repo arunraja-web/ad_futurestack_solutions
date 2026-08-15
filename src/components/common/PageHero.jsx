@@ -4,7 +4,7 @@ export default function PageHero({
   eyebrow,
   title,
   description,
-  image = 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2000&q=80'
+  image = '/images/home/architecture-blueprint.webp'
 }) {
   return (
     <section className="relative py-24 lg:py-32 bg-slate-950 border-b border-slate-800/80 overflow-hidden select-none">
