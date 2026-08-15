@@ -34,6 +34,26 @@ const TextField = ({ label, required, ...props }) => (
   </label>
 );
 
+const contactSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  'name': 'Contact AD FutureStack',
+  'description': 'Get in touch with AD FutureStack lead software architects for tech consultations, custom software quotes, and architecture audits.',
+  'mainEntity': {
+    '@type': 'Organization',
+    'name': 'AD FutureStack',
+    'url': 'https://adfuturestack.dev',
+    'email': 'adfuturestacksolutions@gmail.com',
+    'telephone': '+91 9488681492',
+    'address': {
+      '@type': 'PostalAddress',
+      'addressLocality': 'Kovilpatti',
+      'addressRegion': 'Tamil Nadu',
+      'addressCountry': 'IN'
+    }
+  }
+}
+
 export default function Contact() {
   const [form, setForm] = useState(INITIAL_FORM);
   // idle | sending | success | error
@@ -81,9 +101,11 @@ export default function Contact() {
   return (
     <div className="relative min-h-screen bg-slate-950 text-white font-montserrat overflow-hidden pt-24 pb-16">
       <SEO
-        title="Contact AD FutureStack | Request Tech Consultation"
-        description="Get in touch with AD FutureStack. Request a tech consultation, audit your software architecture, or discuss your web & mobile application project."
+        title="Contact AD FutureStack — Request Tech Consultation"
+        description="Get in touch with our lead software architects. Request an architecture audit, discuss your custom software project, or get a project quote."
         keywords="Contact AD FutureStack, Software Consultation, Hire Tech Agency, Architecture Audit, Contact Software Engineers"
+        canonicalUrl="https://adfuturestack.dev/contact"
+        schema={contactSchema}
       />
 
       {/* 1. FULL IMAGE BACKGROUND */}
@@ -93,7 +115,8 @@ export default function Contact() {
           onError={(e) => {
             e.target.src = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2000&q=80";
           }}
-          alt="AD FutureStack Contact Background"
+          alt="AD FutureStack Technical Software Architecture & Consultation Workspace"
+          loading="lazy"
           className="w-full h-full object-cover filter brightness-[0.2] contrast-[1.1]"
         />
 

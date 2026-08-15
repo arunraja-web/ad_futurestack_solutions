@@ -55,9 +55,29 @@ const milestones = [
   { year: 'Present', title: 'Global Enterprise Partner', desc: 'Over 100+ digital products delivered to high-growth startups and enterprises.' }
 ]
 
+const aboutSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  'name': 'About AD FutureStack',
+  'description': 'Learn about AD FutureStack, our engineering philosophy, core values, and mission to deliver enterprise software architecture.',
+  'mainEntity': {
+    '@type': 'Organization',
+    'name': 'AD FutureStack',
+    'url': 'https://adfuturestack.dev',
+    'logo': 'https://adfuturestack.dev/images/AD%20Logo.png'
+  }
+}
+
 export default function About() {
   return (
     <div className="bespoke-page">
+      <SEO
+        title="About AD FutureStack — Software Architects & Studio"
+        description="Learn about AD FutureStack, our engineering philosophy, core values, and mission to deliver enterprise software architecture and digital solutions."
+        keywords="About AD FutureStack, Software Engineering Studio, Enterprise Architects, Product Engineering Team, Software Studio"
+        canonicalUrl="https://adfuturestack.dev/about"
+        schema={aboutSchema}
+      />
       {/* 1. HERO SECTION WITH BACKGROUND IMAGE */}
       <section
         className="page-hero-bespoke"
@@ -128,7 +148,8 @@ export default function About() {
                 <img
                   src={STORY_IMAGE_MAIN}
                   onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" }}
-                  alt="Engineering team at work"
+                  alt="AD FutureStack Senior Engineering Team Collaborating on Architecture"
+                  loading="lazy"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -136,7 +157,8 @@ export default function About() {
                 <img
                   src={STORY_IMAGE_SMALL}
                   onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" }}
-                  alt="Architectural discussion"
+                  alt="AD FutureStack Technical System Architecture Review Session"
+                  loading="lazy"
                   className="w-full h-full object-cover"
                 />
               </div>

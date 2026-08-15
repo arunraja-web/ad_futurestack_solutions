@@ -22,7 +22,8 @@ export default function Technologies() {
             {/* Background Abstract Graphic */}
             <img
               src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1400&q=80"
-              alt="Realizing Augmented Engineering"
+              alt="AD FutureStack Research Institute - Augmented Engineering & AI Systems Report"
+              loading="lazy"
               className="absolute inset-0 w-full h-full object-cover filter brightness-[0.6] group-hover:scale-105 transition-transform duration-700"
             />
 
@@ -84,7 +85,8 @@ export default function Technologies() {
               <div className="w-full sm:w-48 h-40 rounded-xl overflow-hidden shrink-0 shadow-md border border-slate-200">
                 <img
                   src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80"
-                  alt="Data-powered Innovation Review"
+                  alt="AD FutureStack Telemetry & Enterprise Cloud Innovation Review Report"
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>

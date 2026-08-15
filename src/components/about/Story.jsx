@@ -12,7 +12,8 @@ export default function Story() {
           <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 group">
             <img
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
-              alt="AD Future Stack Team Collaboration"
+              alt="AD FutureStack Software Architecture Team Collaboration"
+              loading="lazy"
               className="w-full h-[280px] sm:h-[420px] lg:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />

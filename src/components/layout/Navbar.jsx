@@ -66,7 +66,7 @@ export default function Navbar() {
             <img
               src="/images/logo/ad-logo.png"
               onError={(e) => { e.target.src = '/images/AD Logo.png' }}
-              alt={`${SITE_NAME} Logo`}
+              alt="AD FutureStack - IT Services & Software Development Studio Logo"
               className="h-full w-full object-contain"
             />
           </div>

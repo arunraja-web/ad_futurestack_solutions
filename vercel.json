@@ -1,6 +1,19 @@
 {
   "version": 2,
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.adfuturestack.dev"
+        }
+      ],
+      "destination": "https://adfuturestack.dev/$1",
+      "permanent": true
+    }
+  ],
   "routes": [
     {
       "src": "/assets/(.*)",

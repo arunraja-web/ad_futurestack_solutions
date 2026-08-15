@@ -250,13 +250,65 @@ function ServiceVisual({ index }) {
   );
 }
 
+const servicesSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  'serviceType': 'IT Services & Software Development',
+  'provider': {
+    '@type': 'Organization',
+    'name': 'AD FutureStack',
+    'url': 'https://adfuturestack.dev'
+  },
+  'areaServed': 'Worldwide',
+  'hasOfferCatalog': {
+    '@type': 'OfferCatalog',
+    'name': 'Digital Engineering Services',
+    'itemListElement': [
+      {
+        '@type': 'Offer',
+        'itemOffered': {
+          '@type': 'Service',
+          'name': 'Web Development',
+          'description': 'Fast, responsive, scalable websites and enterprise web applications.'
+        }
+      },
+      {
+        '@type': 'Offer',
+        'itemOffered': {
+          '@type': 'Service',
+          'name': 'App Development',
+          'description': 'Mobile products for iOS & Android built for performance and user experience.'
+        }
+      },
+      {
+        '@type': 'Offer',
+        'itemOffered': {
+          '@type': 'Service',
+          'name': 'AI & Workflow Automation',
+          'description': 'Intelligent AI agents, n8n workflows, and business application integration.'
+        }
+      },
+      {
+        '@type': 'Offer',
+        'itemOffered': {
+          '@type': 'Service',
+          'name': 'Multi-Tenant SaaS Systems',
+          'description': 'Scalable B2B SaaS platforms with tenant isolation, roles, and subscriptions.'
+        }
+      }
+    ]
+  }
+}
+
 export default function Services() {
   return (
     <main className="services-page">
       <SEO
-        title="Custom Software Engineering & Digital Services | AD FutureStack"
-        description="Explore our IT services spanning Web Development, App Development, AI & Workflow Automation, SEO Growth Engines, and Multi-Tenant SaaS Software."
+        title="IT Services & Digital Engineering | AD FutureStack"
+        description="Explore our digital services: web development, mobile apps, AI workflow automation, SEO growth engines, and multi-tenant SaaS engineering."
         keywords="Web Development Services, Mobile App Development, AI Automation Services, SaaS Engineering, Digital Marketing, AD FutureStack Services"
+        canonicalUrl="https://adfuturestack.dev/services"
+        schema={servicesSchema}
       />
 
       {/* =====================================================
@@ -394,14 +446,16 @@ export default function Services() {
           <div className="image-frame image-frame-main">
             <img
               src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85"
-              alt="Technology team collaborating"
+              alt="AD FutureStack Digital Engineering & Technology Services Team"
+              loading="lazy"
             />
           </div>
 
           <div className="image-frame image-frame-small">
             <img
               src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=600&q=85"
-              alt="Business technology collaboration"
+              alt="AD FutureStack Business Technology Collaboration & Software Consulting"
+              loading="lazy"
             />
           </div>
 

@@ -15,7 +15,8 @@ export default function CapabilityCard({ capability }) {
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <img
           src={capability.image}
-          alt={capability.title}
+          alt={`AD FutureStack Engineering Capability - ${capability.title}`}
+          loading="lazy"
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out filter brightness-[0.55] group-hover:brightness-[0.45]"
         />
         {/* Gradient Overlay for Readability */}

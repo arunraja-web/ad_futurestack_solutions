@@ -12,7 +12,8 @@ export default function PageHero({
       <div className="absolute inset-0 w-full h-full pointer-events-none">
         <img
           src={image}
-          alt={title}
+          alt={title || "AD FutureStack Hero Visual"}
+          loading="lazy"
           className="w-full h-full object-cover opacity-30 mix-blend-luminosity"
         />
         {/* Pure Black Gradient Overlay for Maximum Text Contrast */}

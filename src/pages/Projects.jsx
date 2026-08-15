@@ -174,7 +174,8 @@ function ProjectVisualWidget({ bgImage, fallbackImage, tag, liveUrl, title }) {
             e.target.src = fallbackImage
           }
         }}
-        alt={title || tag || "Project Showcase Visual"}
+        alt={`AD FutureStack Case Study - ${title || tag || "Project Showcase Visual"}`}
+        loading="lazy"
         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/30 to-transparent opacity-90 group-hover:opacity-75 transition-opacity duration-300 pointer-events-none" />
@@ -199,13 +200,33 @@ function ProjectVisualWidget({ bgImage, fallbackImage, tag, liveUrl, title }) {
   )
 }
 
+const projectsSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  'name': 'AD FutureStack Featured Projects',
+  'description': 'Live software deliverables across healthcare, athletic SaaS, cinematic web applications, and e-commerce.',
+  'numberOfItems': projectItems.length,
+  'itemListElement': projectItems.map((item, index) => ({
+    '@type': 'ListItem',
+    'position': index + 1,
+    'item': {
+      '@type': 'CreativeWork',
+      'name': item.title,
+      'description': item.description,
+      'url': item.liveUrl || 'https://adfuturestack.dev/projects'
+    }
+  }))
+}
+
 export default function Projects() {
   return (
     <div className="bespoke-page">
       <SEO
-        title="Featured Projects & Live Deliveries | AD FutureStack"
-        description="Explore live software deliverables built by AD FutureStack across Healthcare, Athletic SaaS, Cinematic Studios, E-Commerce, and Luxury Textiles."
+        title="Client Portfolio & Software Case Studies | AD FutureStack"
+        description="Browse our portfolio of healthcare portals, athletic SaaS platforms, digital cinema engines, and enterprise web applications."
         keywords="AD FutureStack Projects, Web App Case Studies, Vercel Demos, SaaS Software, Healthcare Management System, E-Commerce Platform"
+        canonicalUrl="https://adfuturestack.dev/projects"
+        schema={projectsSchema}
       />
       {/* 1. HERO SECTION WITH BACKGROUND IMAGE */}
       <section

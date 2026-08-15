@@ -1,11 +1,13 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 
 export default function SEO({
-  title = 'AD FutureStack — IT Services & Solutions',
-  description = 'AD FutureStack is a modern IT services, software development & product engineering studio. We design, build, and scale enterprise web apps, mobile apps, AI workflows, and SaaS platforms.',
+  title = 'AD FutureStack — IT Services & Software Studio',
+  description = 'AD FutureStack is a modern IT services & software development studio. We engineer custom web applications, mobile apps, AI automation workflows, and multi-tenant SaaS platforms.',
   keywords = 'IT Services, Web Development, Software Engineering, SaaS Development, Mobile Apps, AI Workflows, Cloud DevOps, AD FutureStack',
   ogImage = '/images/AD Logo.png',
-  canonicalUrl = 'https://adfuturestack.com/'
+  canonicalUrl = 'https://adfuturestack.dev/',
+  robots = 'index, follow',
+  schema = null
 }) {
   useEffect(() => {
     // 1. Update Document Title
@@ -29,11 +31,13 @@ export default function SEO({
     // Set meta tags
     setMeta('meta[name="description"]', 'description', description)
     setMeta('meta[name="keywords"]', 'keywords', keywords)
+    setMeta('meta[name="robots"]', 'robots', robots)
 
     // Open Graph Tags
     setMeta('meta[property="og:title"]', 'og:title', title)
     setMeta('meta[property="og:description"]', 'og:description', description)
     setMeta('meta[property="og:image"]', 'og:image', ogImage)
+    setMeta('meta[property="og:url"]', 'og:url', canonicalUrl)
     setMeta('meta[property="og:type"]', 'og:type', 'website')
 
     // Twitter Card Tags
@@ -50,7 +54,21 @@ export default function SEO({
       document.head.appendChild(canonical)
     }
     canonical.setAttribute('href', canonicalUrl)
-  }, [title, description, keywords, ogImage, canonicalUrl])
+
+    // Dynamic JSON-LD Schema injection
+    let scriptTag = document.getElementById('dynamic-json-ld')
+    if (schema) {
+      if (!scriptTag) {
+        scriptTag = document.createElement('script')
+        scriptTag.id = 'dynamic-json-ld'
+        scriptTag.type = 'application/ld+json'
+        document.head.appendChild(scriptTag)
+      }
+      scriptTag.text = JSON.stringify(schema)
+    } else if (scriptTag) {
+      scriptTag.remove()
+    }
+  }, [title, description, keywords, ogImage, canonicalUrl, robots, schema])
 
   return null
 }

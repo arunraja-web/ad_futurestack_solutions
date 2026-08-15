@@ -111,7 +111,8 @@ function CapabilityVisualWidget({ bgImage, tag }) {
     <div className="showcase-card-visual relative overflow-hidden rounded-2xl group min-h-[300px] border border-slate-700/60 shadow-xl p-0">
       <img
         src={bgImage}
-        alt={tag || "Capability Visual"}
+        alt={`AD FutureStack Engineering Domain - ${tag || "Capability Visual"}`}
+        loading="lazy"
         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300 pointer-events-none" />
@@ -124,13 +125,32 @@ function CapabilityVisualWidget({ bgImage, tag }) {
   )
 }
 
+const capabilitiesSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  'headline': 'AD FutureStack Technical Matrix & Engineering Domain',
+  'description': 'Deep domain proficiency across modern distributed systems, cloud infrastructure, AI automation pipelines, and enterprise-grade data architectures.',
+  'author': {
+    '@type': 'Organization',
+    'name': 'AD FutureStack',
+    'url': 'https://adfuturestack.dev'
+  },
+  'publisher': {
+    '@type': 'Organization',
+    'name': 'AD FutureStack',
+    'url': 'https://adfuturestack.dev'
+  }
+}
+
 export default function Capabilities() {
   return (
     <div className="bespoke-page">
       <SEO
-        title="Engineering Capabilities & Technical Matrix | AD FutureStack"
-        description="Deep engineering capabilities across Distributed Microservices, Cloud Native DevOps, AI Agent Orchestration, Data Architectures, and Zero-Trust Security."
+        title="Engineering Capabilities & Tech Stack | AD FutureStack"
+        description="Discover our domain expertise in distributed microservices, cloud DevOps, AI agent orchestration, data architecture, and zero-trust cybersecurity."
         keywords="Microservices Architecture, Cloud DevOps, AI Agent Orchestration, Data Engineering, Cyber Security, AD FutureStack Capabilities"
+        canonicalUrl="https://adfuturestack.dev/capabilities"
+        schema={capabilitiesSchema}
       />
       {/* 1. HERO SECTION WITH BACKGROUND IMAGE */}
       <section

@@ -15,7 +15,8 @@ export default function Footer() {
                 <img
                   src="/images/logo/ad-logo.png"
                   onError={(e) => { e.target.src = '/images/AD Logo.png' }}
-                  alt={`${SITE_NAME} Logo`}
+                  alt="AD FutureStack - IT Services & Software Development Studio Logo"
+                  loading="lazy"
                   className="h-full w-full object-contain"
                 />
               </div>

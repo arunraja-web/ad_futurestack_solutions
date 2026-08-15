@@ -25,7 +25,8 @@ export default function Process() {
             <div className="relative overflow-hidden rounded-2xl aspect-[16/10] bg-slate-100 shadow-md">
               <img
                 src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80"
-                alt="Building Scalable AI & Cloud Infrastructure"
+                alt="Building Scalable AI & Cloud Infrastructure for Enterprise Software"
+                loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
             </div>
@@ -54,7 +55,8 @@ export default function Process() {
               <div className="relative overflow-hidden rounded-2xl aspect-[16/9] bg-slate-100 shadow-sm">
                 <img
                   src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
-                  alt="Future-shaping projects"
+                  alt="AD FutureStack Unique Software Architecture Blueprint"
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -77,7 +79,8 @@ export default function Process() {
               <div className="relative overflow-hidden rounded-2xl aspect-[16/9] bg-slate-100 shadow-sm">
                 <img
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
-                  alt="Inclusion and engineering culture"
+                  alt="AD FutureStack Engineering Culture & Career Growth in Tech"
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>

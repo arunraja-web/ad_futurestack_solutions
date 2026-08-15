@@ -88,7 +88,8 @@ export default function FeaturedProjects() {
               <div className="relative overflow-hidden aspect-[4/3] bg-slate-100 rounded-xl shadow-xs">
                 <img
                   src={item.image}
-                  alt={item.title}
+                  alt={`AD FutureStack Featured Project Case Study - ${item.title}`}
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>

@@ -10,7 +10,9 @@ export default function HeroBackground({ bgScale = 1, bgOpacity = 1, mousePos = 
       {/* 1. Full High-Res Image Background */}
       <img
         src="https://images.unsplash.com/photo-1737365505612-7ff3ef8f7970?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="AD FutureStack Modern Workspace"
+        alt="AD FutureStack Modern Software Engineering Studio Workspace"
+        loading="eager"
+        fetchpriority="high"
         className="w-full h-full object-cover filter brightness-[] contrast-[1.2]"
       />
 

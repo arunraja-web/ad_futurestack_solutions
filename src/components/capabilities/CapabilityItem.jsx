@@ -86,7 +86,8 @@ export default function CapabilitiesInteractiveShowcase() {
               <img
                 key={activeCapability.id}
                 src={activeCapability.image}
-                alt={activeCapability.title}
+                alt={`AD FutureStack Engineering Domain - ${activeCapability.title}`}
+                loading="lazy"
                 className="w-full h-full object-cover filter brightness-[0.4] transition-all duration-700 ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-slate-950/20" />

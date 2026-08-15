@@ -89,7 +89,8 @@ function SolutionVisualWidget({ bgImage, tag }) {
     <div className="showcase-card-visual relative overflow-hidden rounded-2xl group min-h-[300px] border border-slate-700/60 shadow-xl p-0">
       <img
         src={bgImage}
-        alt={tag || "Solution Visual"}
+        alt={`AD FutureStack Enterprise Solution Blueprint - ${tag || "Solution Visual"}`}
+        loading="lazy"
         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300 pointer-events-none" />
@@ -102,13 +103,33 @@ function SolutionVisualWidget({ bgImage, tag }) {
   )
 }
 
+const solutionsSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  'name': 'AD FutureStack Enterprise Blueprints',
+  'operatingSystem': 'Cloud Native',
+  'applicationCategory': 'BusinessApplication',
+  'publisher': {
+    '@type': 'Organization',
+    'name': 'AD FutureStack',
+    'url': 'https://adfuturestack.dev'
+  },
+  'offers': {
+    '@type': 'Offer',
+    'price': '0',
+    'priceCurrency': 'USD'
+  }
+}
+
 export default function Solutions() {
   return (
     <div className="bespoke-page">
       <SEO
-        title="Enterprise Solutions & SaaS Blueprints | AD FutureStack"
-        description="Accelerate your product roadmap with turnkey software solutions: B2B Multi-Tenant SaaS Blueprints, AI Workflow Automation Suites, and FinTech Gateway Infrastructure."
+        title="Enterprise SaaS & AI Software Blueprints | AD FutureStack"
+        description="Accelerate development with pre-engineered software blueprints: B2B multi-tenant SaaS platforms, AI automation suites, and API gateway infrastructure."
         keywords="SaaS Architecture Blueprint, AI Automation Suite, Turnkey Software Solutions, FinTech Gateway, AD FutureStack Solutions"
+        canonicalUrl="https://adfuturestack.dev/solutions"
+        schema={solutionsSchema}
       />
       {/* 1. HERO SECTION WITH BACKGROUND IMAGE */}
       <section
