@@ -2,6 +2,8 @@ import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/layout/Navbar.jsx'
 import Footer from './components/layout/Footer.jsx'
 import ScrollToTop from './components/layout/ScrollToTop.jsx'
+import ScrollProgressBar from './components/common/ScrollProgressBar.jsx'
+import useScrollReveal from './hooks/useScrollReveal.js'
 
 import Home from './pages/Home.jsx'
 import Services from './pages/Services.jsx'
@@ -13,8 +15,11 @@ import Contact from './pages/Contact.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 export default function App() {
+  useScrollReveal()
+
   return (
     <div className="flex min-h-screen flex-col bg-white text-slate-900 font-montserrat selection:bg-violet-700 selection:text-white w-full overflow-x-hidden">
+      <ScrollProgressBar />
       <ScrollToTop />
       <Navbar />
       <main className="flex-1 w-full bg-white font-montserrat">

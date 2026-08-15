@@ -57,7 +57,7 @@ export default function WhatWeDo() {
     <section className="py-20 lg:py-24 bg-slate-50/70 border-b border-slate-200/80 font-montserrat">
       <Container className="font-montserrat">
         {/* SECTION HEADER */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4 font-montserrat">
+        <div data-reveal="up" className="text-center max-w-3xl mx-auto mb-16 space-y-4 font-montserrat">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50 border border-violet-200 shadow-2xs font-montserrat">
             <HelpCircle className="h-4 w-4 text-violet-700" />
             <span className="text-xs font-montserrat font-bold tracking-widest text-violet-700 uppercase">
@@ -75,7 +75,7 @@ export default function WhatWeDo() {
         </div>
 
         {/* ACCORDION GRID */}
-        <div className="max-w-4xl mx-auto space-y-4 font-montserrat">
+        <div data-reveal="up" className="max-w-4xl mx-auto space-y-4 font-montserrat">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index
 

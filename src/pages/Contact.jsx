@@ -129,7 +129,7 @@ export default function Contact() {
       </div>
 
       {/* CENTERED CONTENT CONTAINER */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 text-center flex flex-col items-center">
+      <div data-reveal="up" className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 text-center flex flex-col items-center">
         <div className="w-full max-w-3xl font-montserrat">
 
           {/* HEADER BADGE */}

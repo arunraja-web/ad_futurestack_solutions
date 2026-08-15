@@ -172,7 +172,7 @@ export default function Solutions() {
 
         <div className="pillars-grid">
           {solutionPillars.map((item, idx) => (
-            <div key={idx} className="pillar-card">
+            <div key={idx} data-reveal="up" data-stagger={(idx + 1) * 100} className="pillar-card">
               <div className="pillar-icon-box">{item.icon}</div>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
@@ -192,7 +192,7 @@ export default function Solutions() {
 
           <div className="showcase-grid">
             {solutionItems.map((item, idx) => (
-              <div key={item.id} className={`showcase-card ${idx % 2 === 1 ? 'reverse' : ''}`}>
+              <div key={item.id} data-reveal={idx % 2 === 0 ? "left" : "right"} className={`showcase-card ${idx % 2 === 1 ? 'reverse' : ''}`}>
                 <div className="showcase-card-content">
                   <span className="showcase-tag">{item.tag}</span>
                   <h3>{item.title}</h3>

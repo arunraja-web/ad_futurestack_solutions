@@ -21,7 +21,7 @@ export default function PageHero({
         <div className="absolute inset-0 bg-tech-grid-dark opacity-40" />
       </div>
 
-      <Container className="relative z-10 text-center">
+      <Container data-reveal="up" className="relative z-10 text-center">
         {eyebrow && (
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-cyan-500/40 text-xs font-mono font-bold tracking-widest text-cyan-400 uppercase mb-6 shadow-md backdrop-blur-md">
             <span className="h-2 w-2 rounded-full bg-cyan-400 animate-ping"></span>

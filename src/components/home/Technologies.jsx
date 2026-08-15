@@ -17,7 +17,7 @@ export default function Technologies() {
         <div className="space-y-8 font-montserrat">
 
           {/* TOP BANNER CARD WITH OVERLAPPING WHITE BADGE */}
-          <div className="relative bg-slate-950 rounded-2xl overflow-hidden shadow-xl min-h-[320px] lg:min-h-[360px] flex items-center justify-between font-montserrat group">
+          <div data-reveal="left" className="relative bg-slate-950 rounded-2xl overflow-hidden shadow-xl min-h-[320px] lg:min-h-[360px] flex items-center justify-between font-montserrat group">
 
             {/* Background Abstract Graphic */}
             <img
@@ -69,7 +69,7 @@ export default function Technologies() {
             </div>
 
             {/* RIGHT OVERLAPPING WHITE REPORT CARD WITH THUMBNAIL */}
-            <div className="lg:col-span-7 bg-slate-50 rounded-2xl p-8 sm:p-10 shadow-md border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-8 font-montserrat group">
+            <div data-reveal="right" className="lg:col-span-7 bg-slate-50 rounded-2xl p-8 sm:p-10 shadow-md border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-8 font-montserrat group">
               <div className="space-y-4 flex-1 font-montserrat">
                 <span className="text-xs font-montserrat text-slate-500 font-semibold block">
                   — Report

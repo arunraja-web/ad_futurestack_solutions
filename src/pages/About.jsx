@@ -168,7 +168,7 @@ export default function About() {
 
           {/* MISSION & VISION DUAL CARDS */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
-            <div className="bg-slate-900 text-white p-8 rounded-3xl border border-slate-800 shadow-xl relative overflow-hidden">
+            <div data-reveal="left" className="bg-slate-900 text-white p-8 rounded-3xl border border-slate-800 shadow-xl relative overflow-hidden">
               <div className="h-12 w-12 rounded-xl bg-violet-700/30 border border-violet-500/40 text-violet-400 flex items-center justify-center mb-6">
                 <Target className="h-6 w-6" />
               </div>
@@ -179,7 +179,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="bg-slate-900 text-white p-8 rounded-3xl border border-slate-800 shadow-xl relative overflow-hidden">
+            <div data-reveal="right" className="bg-slate-900 text-white p-8 rounded-3xl border border-slate-800 shadow-xl relative overflow-hidden">
               <div className="h-12 w-12 rounded-xl bg-violet-700/30 border border-violet-500/40 text-violet-400 flex items-center justify-center mb-6">
                 <Rocket className="h-6 w-6" />
               </div>

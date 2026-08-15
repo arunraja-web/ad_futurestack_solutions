@@ -215,7 +215,7 @@ export default function Capabilities() {
 
           <div className="showcase-grid">
             {capabilityItems.map((item, idx) => (
-              <div key={item.id} className={`showcase-card ${idx % 2 === 1 ? 'reverse' : ''}`}>
+              <div key={item.id} data-reveal={idx % 2 === 0 ? "left" : "right"} className={`showcase-card ${idx % 2 === 1 ? 'reverse' : ''}`}>
                 <div className="showcase-card-content">
                   <span className="showcase-tag">{item.tag}</span>
                   <h3>{item.title}</h3>

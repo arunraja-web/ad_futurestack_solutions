@@ -267,7 +267,7 @@ export default function Projects() {
 
         <div className="pillars-grid">
           {projectPillars.map((item, idx) => (
-            <div key={idx} className="pillar-card">
+            <div key={idx} data-reveal="up" data-stagger={(idx + 1) * 100} className="pillar-card">
               <div className="pillar-icon-box">{item.icon}</div>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
@@ -276,18 +276,18 @@ export default function Projects() {
         </div>
       </section>
 
-      {/* 3. CASE STUDIES SHOWCASE GRID */}
+      {/* 3. CORE SHOWCASE GRID */}
       <section className="showcase-section" id="case-studies">
         <div className="showcase-inner">
-          <span className="section-kicker">LIVE SHOWCASE</span>
-          <h2 className="section-title font-semibold">Featured Live Projects</h2>
+          <span className="section-kicker">SELECTED PORTFOLIO</span>
+          <h2 className="section-title font-medium">Production Case Studies</h2>
           <p className="section-description">
-            Explore our production web applications across Healthcare, Athletic SaaS, Cinematic Studios, and E-Commerce Marketplaces.
+            Deep dive into our live enterprise deployments across specialized business sectors.
           </p>
 
           <div className="showcase-grid">
             {projectItems.map((item, idx) => (
-              <div key={item.id} className={`showcase-card ${idx % 2 === 1 ? 'reverse' : ''}`}>
+              <div key={item.id} data-reveal={idx % 2 === 0 ? "left" : "right"} className={`showcase-card ${idx % 2 === 1 ? 'reverse' : ''}`}>
                 <div className="showcase-card-content">
                   <div className="flex items-center justify-between gap-4 mb-2">
                     <span className="showcase-tag mb-0">{item.tag}</span>

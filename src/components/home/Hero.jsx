@@ -25,7 +25,7 @@ export default function Hero() {
 
       {/* FLOATING CARD OVERLAY MATCHING REFERENCE CAPGEMINI DESIGN (SHARP RECTANGULAR EDGES, SHIFTED LEFT) */}
       <Container className="relative z-10 w-full font-montserrat px-0 sm:px-6 lg:px-8">
-        <div className="max-w-3xl lg:max-w-4xl xl:max-w-5xl bg-violet-950/95 sm:bg-violet-900 text-white p-6 sm:p-10 lg:p-12 shadow-2xl rounded-none border-y sm:border border-violet-400/30 backdrop-blur-md space-y-5 sm:space-y-6 animate-hero-fade-up font-montserrat -ml-0 sm:-ml-2 lg:-ml-4">
+        <div data-reveal="up" className="max-w-3xl lg:max-w-4xl xl:max-w-5xl bg-violet-950/95 sm:bg-violet-900 text-white p-6 sm:p-10 lg:p-12 shadow-2xl rounded-none border-y sm:border border-violet-400/30 backdrop-blur-md space-y-5 sm:space-y-6 font-montserrat -ml-0 sm:-ml-2 lg:-ml-4">
 
           {/* Main Headline */}
           <h1 className="font-montserrat font-semibold text-2xl sm:text-4xl lg:text-5xl text-white tracking-tight uppercase leading-[1.12] sm:leading-[1.08] drop-shadow-md">

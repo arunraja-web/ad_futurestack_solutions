@@ -8,7 +8,8 @@ export default function Story() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center font-montserrat">
 
         {/* LEFT: Image Composition & Floating Stat Badge */}
-        <div className="lg:col-span-6 relative">
+        <div data-reveal="left" className="lg:col-span-6 relative">
+
           <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 group">
             <img
               src="/images/about/team-collaboration.webp"
@@ -36,7 +37,7 @@ export default function Story() {
         </div>
 
         {/* RIGHT: Content Narrative */}
-        <div className="lg:col-span-6 space-y-6 sm:space-y-7 font-montserrat">
+        <div data-reveal="right" className="lg:col-span-6 space-y-6 sm:space-y-7 font-montserrat">
 
           {/* Main Title */}
           <h2 className="text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight leading-[1.2] sm:leading-[1.15] uppercase font-montserrat">

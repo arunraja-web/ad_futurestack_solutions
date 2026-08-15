@@ -320,7 +320,7 @@ export default function Services() {
 
         <div className="services-hero-inner">
 
-          <div className="services-hero-content">
+          <div data-reveal="up" className="services-hero-content">
 
             <br></br>
             <h1>
@@ -409,8 +409,10 @@ export default function Services() {
 
         <div className="capability-grid">
 
-          {capabilities.map((item) => (
+          {capabilities.map((item, idx) => (
             <article
+              data-reveal="up"
+              data-stagger={(idx + 1) * 100}
               className="capability-card"
               key={item.title}
             >
@@ -441,7 +443,7 @@ export default function Services() {
       ===================================================== */}
       <section className="connection-section">
 
-        <div className="connection-visual">
+        <div data-reveal="left" className="connection-visual">
 
           <div className="image-frame image-frame-main">
             <img
@@ -467,7 +469,7 @@ export default function Services() {
         </div>
 
 
-        <div className="connection-content">
+        <div data-reveal="right" className="connection-content">
 
           <span className="section-kicker">
             HOW WE WORK
@@ -532,7 +534,7 @@ export default function Services() {
         id="services-list"
       >
 
-        <div className="services-list-heading">
+        <div data-reveal="up" className="services-list-heading">
 
           <div>
             <span className="section-kicker">
@@ -558,6 +560,7 @@ export default function Services() {
 
           {services.map((service, index) => (
             <article
+              data-reveal={index % 2 === 0 ? "left" : "right"}
               className={`full-service-card ${index === 2 ? "featured-service" : ""
                 }`}
               key={service.number}

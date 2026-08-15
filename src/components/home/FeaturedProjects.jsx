@@ -58,7 +58,7 @@ export default function FeaturedProjects() {
     <section className="py-16 sm:py-24 bg-white border-b border-slate-200/80 font-montserrat">
       <Container className="font-montserrat">
         {/* SECTION TITLE */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4 font-montserrat">
+        <div data-reveal="up" className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4 font-montserrat">
           <div>
             <span className="text-xs font-montserrat font-bold uppercase tracking-widest text-violet-700 block mb-1">
               Case Studies & Portfolio
@@ -78,10 +78,11 @@ export default function FeaturedProjects() {
 
         {/* 6-CARD EDITORIAL GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 font-montserrat">
-          {highlights.map((item) => (
+          {highlights.map((item, idx) => (
             <Link
               key={item.id}
               to={item.link}
+              data-reveal={idx % 2 === 0 ? "left" : "right"}
               className="group block space-y-4 font-montserrat select-none"
             >
               {/* Sharp Rectangular Image */}
