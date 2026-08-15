@@ -5,7 +5,7 @@ import '../styles/services.css'
 import SEO from '../components/common/SEO.jsx'
 import { Layers, ShieldCheck, Sparkles, ArrowRight, Globe } from 'lucide-react'
 
-const HERO_IMAGE = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2200&q=90"
+const HERO_IMAGE = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=80"
 
 const solutionItems = [
   {
@@ -20,7 +20,7 @@ const solutionItems = [
       'Automated tenant provisioning & domain management'
     ],
     tags: ['Next.js', 'Node.js', 'PostgreSQL', 'Redis', 'Docker', 'Stripe'],
-    bgImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80'
+    bgImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80'
   },
   {
     id: 'ai-automation-blueprint',
@@ -34,7 +34,7 @@ const solutionItems = [
       'Human-in-the-loop approval workflows & auditing'
     ],
     tags: ['Python', 'LangChain', 'n8n', 'Pinecone', 'OpenAI', 'REST APIs'],
-    bgImage: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80'
+    bgImage: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=700&q=80'
   },
   {
     id: 'api-gateway-blueprint',
@@ -48,7 +48,7 @@ const solutionItems = [
       'Prometheus & Grafana real-time monitoring'
     ],
     tags: ['Java Spring Boot', 'Kafka', 'Redis', 'Nginx', 'Prometheus'],
-    bgImage: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1000&q=80'
+    bgImage: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=700&q=80'
   },
   {
     id: 'fintech-blueprint',
@@ -62,7 +62,7 @@ const solutionItems = [
       'Automated KYC/AML verification workflows'
     ],
     tags: ['Go', 'PostgreSQL', 'OAuth2', 'Vault', 'PCI-DSS', 'AWS'],
-    bgImage: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1000&q=80'
+    bgImage: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=700&q=80'
   }
 ]
 

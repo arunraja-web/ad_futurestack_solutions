@@ -445,7 +445,7 @@ export default function Services() {
 
           <div className="image-frame image-frame-main">
             <img
-              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85"
+              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80"
               alt="AD FutureStack Digital Engineering & Technology Services Team"
               loading="lazy"
             />
@@ -453,7 +453,7 @@ export default function Services() {
 
           <div className="image-frame image-frame-small">
             <img
-              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=600&q=85"
+              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=500&q=80"
               alt="AD FutureStack Business Technology Collaboration & Software Consulting"
               loading="lazy"
             />

@@ -5,7 +5,7 @@ import '../styles/services.css'
 import SEO from '../components/common/SEO.jsx'
 import { Cpu, ShieldCheck, Database, Cloud, Zap, Code2, Server, ArrowRight } from 'lucide-react'
 
-const HERO_IMAGE = "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2200&q=90"
+const HERO_IMAGE = "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=80"
 
 const capabilityItems = [
   {
@@ -20,7 +20,7 @@ const capabilityItems = [
       'Distributed caching with Redis & Memcached'
     ],
     tags: ['Java Spring Boot', 'Node.js', 'Go', 'gRPC', 'Kafka', 'Redis'],
-    bgImage: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80'
+    bgImage: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=700&q=80'
   },
   {
     id: 'cloud',
@@ -34,7 +34,7 @@ const capabilityItems = [
       'Multi-region failover & disaster recovery'
     ],
     tags: ['AWS', 'Docker', 'Kubernetes', 'Terraform', 'Helm', 'CI/CD'],
-    bgImage: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1000&q=80'
+    bgImage: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=700&q=80'
   },
   {
     id: 'ai-automation',
@@ -48,7 +48,7 @@ const capabilityItems = [
       'Intelligent document processing & NLP pipelines'
     ],
     tags: ['Python', 'LangChain', 'OpenAI', 'n8n', 'Pinecone', 'PyTorch'],
-    bgImage: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1000&q=80'
+    bgImage: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=700&q=80'
   },
   {
     id: 'data',
@@ -62,7 +62,7 @@ const capabilityItems = [
       'Data encryption & compliance auditing'
     ],
     tags: ['PostgreSQL', 'ClickHouse', 'MongoDB', 'Snowflake', 'Spark'],
-    bgImage: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1000&q=80'
+    bgImage: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=700&q=80'
   },
   {
     id: 'security',
@@ -76,7 +76,7 @@ const capabilityItems = [
       'Automated vulnerability scanning & penetration testing'
     ],
     tags: ['OAuth2', 'Vault', 'JWT', 'OIDC', 'SOC2', 'TLS 1.3'],
-    bgImage: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1000&q=80'
+    bgImage: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=700&q=80'
   }
 ]
 

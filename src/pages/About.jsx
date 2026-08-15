@@ -5,9 +5,9 @@ import '../styles/services.css'
 import SEO from '../components/common/SEO.jsx'
 import { Users, Target, Rocket, ShieldCheck, ArrowRight, CheckCircle2 } from 'lucide-react'
 
-const HERO_IMAGE = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2200&q=90"
-const STORY_IMAGE_MAIN = "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80"
-const STORY_IMAGE_SMALL = "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80"
+const HERO_IMAGE = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=80"
+const STORY_IMAGE_MAIN = "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80"
+const STORY_IMAGE_SMALL = "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=500&q=80"
 
 const aboutPillars = [
   {
