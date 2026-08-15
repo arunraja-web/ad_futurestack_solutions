@@ -20,19 +20,23 @@ const INITIAL_FORM = {
 };
 
 // Underline Text Field Primitive
-const TextField = ({ label, required, ...props }) => (
-  <label className="block text-left font-montserrat">
-    <span className="text-sm font-medium text-white font-montserrat">
-      {label}
-      {required && <span className="text-violet-400 ml-0.5">*</span>}
-    </span>
-    <input
-      {...props}
-      required={required}
-      className="mt-3 w-full border-0 border-b border-white/25 bg-transparent pb-2 text-base text-white outline-none transition-colors duration-200 placeholder:text-white/30 focus:border-violet-400 font-montserrat"
-    />
-  </label>
-);
+const TextField = ({ label, required, id, ...props }) => {
+  const fieldId = id || `field-${label.toLowerCase().replace(/\s+/g, '-')}`
+  return (
+    <label htmlFor={fieldId} className="block text-left font-montserrat">
+      <span className="text-sm font-medium text-white font-montserrat">
+        {label}
+        {required && <span className="text-violet-400 ml-0.5">*</span>}
+      </span>
+      <input
+        id={fieldId}
+        {...props}
+        required={required}
+        className="mt-3 w-full border-0 border-b border-white/25 bg-transparent pb-2 text-base text-white outline-none transition-colors duration-200 placeholder:text-white/30 focus:border-violet-400 focus-visible:ring-2 focus-visible:ring-violet-400 font-montserrat"
+      />
+    </label>
+  )
+}
 
 const contactSchema = {
   '@context': 'https://schema.org',
@@ -184,18 +188,19 @@ export default function Contact() {
               />
             </div>
 
-            <label className="block text-left font-montserrat">
+            <label htmlFor="field-message" className="block text-left font-montserrat">
               <span className="text-sm font-medium text-white font-montserrat">
                 How can we help you?<span className="text-violet-400 ml-0.5">*</span>
               </span>
               <textarea
+                id="field-message"
                 required
                 rows={3}
                 maxLength={MESSAGE_MAX_LENGTH}
                 value={form.message}
                 onChange={updateField("message")}
                 placeholder="Briefly describe your project requirements, target architecture, or timeline..."
-                className="mt-3 w-full border-0 border-b border-white/25 bg-transparent pb-2 text-base text-white outline-none transition-colors duration-200 placeholder:text-white/30 focus:border-violet-400 font-montserrat"
+                className="mt-3 w-full border-0 border-b border-white/25 bg-transparent pb-2 text-base text-white outline-none transition-colors duration-200 placeholder:text-white/30 focus:border-violet-400 focus-visible:ring-2 focus-visible:ring-violet-400 font-montserrat"
               />
               <span className="mt-2 block text-right text-xs text-slate-300 font-montserrat">
                 ({form.message.length}/{MESSAGE_MAX_LENGTH})
@@ -204,25 +209,27 @@ export default function Contact() {
 
             {/* CONSENT CHECKBOXES */}
             <div className="space-y-4 pt-2 font-montserrat text-left">
-              <label className="flex items-start gap-3 text-xs sm:text-sm leading-relaxed text-slate-200 font-montserrat cursor-pointer">
+              <label htmlFor="field-consent-contact" className="flex items-start gap-3 text-xs sm:text-sm leading-relaxed text-slate-200 font-montserrat cursor-pointer">
                 <input
+                  id="field-consent-contact"
                   type="checkbox"
                   required
                   checked={form.consentContact}
                   onChange={updateField("consentContact")}
-                  className="mt-0.5 h-4 w-4 shrink-0 rounded-sm border-slate-600 bg-transparent accent-violet-600 cursor-pointer"
+                  className="mt-0.5 h-4 w-4 shrink-0 rounded-sm border-slate-600 bg-transparent accent-violet-600 focus-visible:ring-2 focus-visible:ring-violet-400 cursor-pointer"
                 />
                 <span>
                   I consent to the processing of my personal data entered above for {SITE_NAME} to contact me regarding this inquiry.<span className="text-violet-400 ml-0.5">*</span>
                 </span>
               </label>
 
-              <label className="flex items-start gap-3 text-xs sm:text-sm leading-relaxed text-slate-200 font-montserrat cursor-pointer">
+              <label htmlFor="field-consent-marketing" className="flex items-start gap-3 text-xs sm:text-sm leading-relaxed text-slate-200 font-montserrat cursor-pointer">
                 <input
+                  id="field-consent-marketing"
                   type="checkbox"
                   checked={form.consentMarketing}
                   onChange={updateField("consentMarketing")}
-                  className="mt-0.5 h-4 w-4 shrink-0 rounded-sm border-slate-600 bg-transparent accent-violet-600 cursor-pointer"
+                  className="mt-0.5 h-4 w-4 shrink-0 rounded-sm border-slate-600 bg-transparent accent-violet-600 focus-visible:ring-2 focus-visible:ring-violet-400 cursor-pointer"
                 />
                 <span>
                   I would like to receive technological insights, whitepapers, and engineering updates from {SITE_NAME}.

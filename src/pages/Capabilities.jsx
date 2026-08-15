@@ -258,7 +258,7 @@ export default function Capabilities() {
           <div className="space-y-6">
             {techCategories.map((cat, idx) => (
               <div key={idx}>
-                <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-500 mb-2">{cat.label}</h4>
+                <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-300 mb-2">{cat.label}</h3>
                 <div className="tech-pill-group">
                   {cat.items.map((tech) => (
                     <span key={tech} className="tech-pill-item">

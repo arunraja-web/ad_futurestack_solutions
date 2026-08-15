@@ -29,17 +29,17 @@ export default function Footer() {
                 </span>
               </div>
             </Link>
-            <p className="text-sm text-slate-400 max-w-sm leading-relaxed font-montserrat">
+            <p className="text-sm text-slate-300 max-w-sm leading-relaxed font-montserrat">
               Architecting next-generation digital products, intelligent systems, and scalable cloud platforms for ambitious enterprises worldwide.
             </p>
             <div className="flex items-center gap-3 pt-2">
-              <a href="https://github.com" target="_blank" rel="noreferrer" className="h-9 w-9 flex items-center justify-center rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-violet-400 hover:border-violet-500/50 transition-all">
+              <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="AD FutureStack GitHub Repository" className="h-9 w-9 flex items-center justify-center rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-violet-400 hover:border-violet-500/50 transition-all focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:outline-none">
                 <Code2 className="h-4 w-4" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="h-9 w-9 flex items-center justify-center rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-violet-400 hover:border-violet-500/50 transition-all">
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="AD FutureStack LinkedIn Profile" className="h-9 w-9 flex items-center justify-center rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-violet-400 hover:border-violet-500/50 transition-all focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:outline-none">
                 <Globe className="h-4 w-4" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="h-9 w-9 flex items-center justify-center rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-violet-400 hover:border-violet-500/50 transition-all">
+              <a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="AD FutureStack Twitter Profile" className="h-9 w-9 flex items-center justify-center rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-violet-400 hover:border-violet-500/50 transition-all focus-visible:ring-2 focus-visible:ring-violet-400 focus-visible:outline-none">
                 <Share2 className="h-4 w-4" />
               </a>
             </div>
@@ -47,8 +47,8 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="font-montserrat">
-            <h4 className="text-xs sm:text-sm font-montserrat font-bold uppercase tracking-widest text-white mb-4">Navigation</h4>
-            <ul className="space-y-2.5 text-xs sm:text-sm font-montserrat">
+            <h3 className="text-xs sm:text-sm font-montserrat font-bold uppercase tracking-widest text-white mb-4">Navigation</h3>
+            <ul className="space-y-2.5 text-xs sm:text-sm font-montserrat text-slate-300">
               <li><Link to="/" className="hover:text-violet-400 transition-colors font-montserrat">Home</Link></li>
               <li><Link to="/services" className="hover:text-violet-400 transition-colors font-montserrat">Services</Link></li>
               <li><Link to="/capabilities" className="hover:text-violet-400 transition-colors font-montserrat">Capabilities</Link></li>
@@ -59,8 +59,8 @@ export default function Footer() {
 
           {/* Solutions & Tech */}
           <div className="font-montserrat">
-            <h4 className="text-xs sm:text-sm font-montserrat font-bold uppercase tracking-widest text-white mb-4">Expertise</h4>
-            <ul className="space-y-2.5 text-xs sm:text-sm font-montserrat">
+            <h3 className="text-xs sm:text-sm font-montserrat font-bold uppercase tracking-widest text-white mb-4">Expertise</h3>
+            <ul className="space-y-2.5 text-xs sm:text-sm font-montserrat text-slate-300">
               <li><Link to="/services" className="hover:text-violet-400 transition-colors font-montserrat">Product Engineering</Link></li>
               <li><Link to="/capabilities" className="hover:text-violet-400 transition-colors font-montserrat">Web Development</Link></li>
               <li><Link to="/solutions" className="hover:text-violet-400 transition-colors font-montserrat">AI & RAG Workflows</Link></li>
@@ -71,8 +71,8 @@ export default function Footer() {
 
           {/* Contact Details */}
           <div className="font-montserrat">
-            <h4 className="text-xs sm:text-sm font-montserrat font-bold uppercase tracking-widest text-white mb-4">Get in Touch</h4>
-            <ul className="space-y-3 text-xs sm:text-sm font-montserrat">
+            <h3 className="text-xs sm:text-sm font-montserrat font-bold uppercase tracking-widest text-white mb-4">Get in Touch</h3>
+            <ul className="space-y-3 text-xs sm:text-sm font-montserrat text-slate-300">
               <li className="flex items-center gap-2.5 font-montserrat">
                 <Mail className="h-4 w-4 text-violet-400 shrink-0" />
                 <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-violet-400 transition-colors font-montserrat">{CONTACT_EMAIL}</a>

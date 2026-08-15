@@ -41,7 +41,7 @@ export default function Hero() {
           <div className="pt-2 font-montserrat">
             <Link
               to="/services"
-              className="group inline-flex items-center gap-3 bg-white text-violet-900 px-8 py-3.5 rounded-none font-bold text-xs uppercase tracking-widest hover:bg-slate-100 hover:text-violet-950 transition-all shadow-lg hover:shadow-white/20 active:scale-95 font-montserrat cursor-pointer"
+              className="group inline-flex items-center gap-3 bg-white text-violet-900 px-8 py-3.5 rounded-none font-bold text-xs uppercase tracking-widest hover:bg-slate-100 hover:text-violet-950 transition-all shadow-lg hover:shadow-white/20 active:scale-95 focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none font-montserrat cursor-pointer"
             >
               <span>Let's Build</span>
               <ArrowRight className="h-4 w-4 text-violet-900 group-hover:translate-x-1 transition-transform" />

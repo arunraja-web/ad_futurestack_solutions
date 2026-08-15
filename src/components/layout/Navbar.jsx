@@ -184,8 +184,10 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setOpen(!open)}
-            aria-label="Toggle Menu"
-            className="inline-flex items-center justify-center rounded-xl p-2.5 text-slate-900 bg-slate-100 hover:bg-slate-200 transition-colors lg:hidden focus:outline-none cursor-pointer"
+            aria-label="Toggle Navigation Menu"
+            aria-expanded={open}
+            aria-controls="mobile-navigation-menu"
+            className="inline-flex items-center justify-center rounded-xl p-2.5 text-slate-900 bg-slate-100 hover:bg-slate-200 transition-colors lg:hidden focus-visible:ring-2 focus-visible:ring-violet-600 focus-visible:outline-none cursor-pointer"
           >
             {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -195,7 +197,7 @@ export default function Navbar() {
       {/* MOBILE DRAWER */}
       {open && (
         <div className="lg:hidden border-t border-slate-200 bg-white text-slate-900 px-4 py-6 shadow-2xl animate-in slide-in-from-top duration-200 font-montserrat">
-          <nav className="flex flex-col space-y-4 font-montserrat">
+          <nav id="mobile-navigation-menu" aria-label="Mobile Navigation" className="flex flex-col space-y-4 font-montserrat">
             {NAV_LINKS.map((link) => {
               const hasChildren = Boolean(link.children && link.children.length > 0)
               return (
