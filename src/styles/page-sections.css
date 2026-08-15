@@ -16,7 +16,7 @@
   --light: #f7f9fc;
 
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
   color: var(--text);
   background: #ffffff;
   font-family: 'Montserrat', system-ui, -apple-system, sans-serif;

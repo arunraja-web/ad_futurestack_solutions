@@ -11,9 +11,9 @@
 
   html {
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
     font-family: 'Outfit', 'Montserrat', system-ui, -apple-system, sans-serif;
-    overflow-x: hidden;
-    max-width: 100vw;
+    max-width: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -24,7 +24,7 @@
     @apply bg-white text-slate-900 antialiased selection:bg-violet-700 selection:text-white;
     font-family: 'Outfit', 'Montserrat', system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
-    max-width: 100vw;
+    max-width: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -33,11 +33,10 @@
 
   #root {
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 100vw;
-    overflow-x: hidden;
     background-color: #ffffff;
   }
 }
@@ -80,6 +79,7 @@
 [data-reveal].is-revealed {
   opacity: 1;
   transform: translate3d(0, 0, 0) scale3d(1, 1, 1) !important;
+  will-change: auto;
 }
 
 /* Continuous Floating Keyframes */

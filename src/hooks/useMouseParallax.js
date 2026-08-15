@@ -1,17 +1,31 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 export function useMouseParallax(intensity = 15) {
   const [position, setPosition] = useState({ x: 0, y: 0 })
+  const tickingRef = useRef(false)
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      const { innerWidth, innerHeight } = window
-      const x = ((e.clientX / innerWidth) - 0.5) * intensity
-      const y = ((e.clientY / innerHeight) - 0.5) * intensity
-      setPosition({ x, y })
+    let latestE = null
+
+    const updatePosition = () => {
+      if (latestE) {
+        const { innerWidth, innerHeight } = window
+        const x = ((latestE.clientX / innerWidth) - 0.5) * intensity
+        const y = ((latestE.clientY / innerHeight) - 0.5) * intensity
+        setPosition({ x, y })
+      }
+      tickingRef.current = false
     }
 
-    window.addEventListener('mousemove', handleMouseMove)
+    const handleMouseMove = (e) => {
+      latestE = e
+      if (!tickingRef.current) {
+        tickingRef.current = true
+        requestAnimationFrame(updatePosition)
+      }
+    }
+
+    window.addEventListener('mousemove', handleMouseMove, { passive: true })
     return () => window.removeEventListener('mousemove', handleMouseMove)
   }, [intensity])
 

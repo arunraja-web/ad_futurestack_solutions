@@ -18,7 +18,7 @@ export default function App() {
   useScrollReveal()
 
   return (
-    <div className="flex min-h-screen flex-col bg-white text-slate-900 font-montserrat selection:bg-violet-700 selection:text-white w-full overflow-x-hidden">
+    <div className="flex min-h-screen flex-col bg-white text-slate-900 font-montserrat selection:bg-violet-700 selection:text-white w-full">
       <ScrollProgressBar />
       <ScrollToTop />
       <Navbar />
