@@ -1,0 +1,614 @@
+/* ============================================================
+   AD FUTURESTACK — PROJECTS SHOWCASE
+   Clean, minimal SaaS-style portfolio section.
+   • Standard document flow — no sticky, no absolute stacking
+   • Only GPU properties animated (opacity + transform)
+   • Violet used only: category tag text, CTA button
+   • Everything else: white / slate / neutral gray
+   ============================================================ */
+
+/* ── Section wrapper ────────────────────────────────────── */
+.prow-section {
+  background: #ffffff;
+  padding: clamp(120px, 14vh, 150px) 0 100px;
+}
+
+/* ── Section header ─────────────────────────────────────── */
+.prow-section-header {
+  max-width: 600px;
+  margin: 0 auto 80px;
+  text-align: center;
+  padding: 0 24px;
+}
+
+/* ── List of project rows ───────────────────────────────── */
+.prow-list {
+  display: flex;
+  flex-direction: column;
+  /* 120px between each project row */
+  gap: 120px;
+  padding: 0 clamp(20px, 4vw, 60px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── Individual project row ─────────────────────────────── */
+.prow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 5vw, 72px);
+  align-items: center;
+}
+
+/* ── Reveal animation ───────────────────────────────────── */
+.prow-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity   0.6s ease-out,
+    transform 0.6s ease-out;
+}
+
+.prow-reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* prefers-reduced-motion: skip all animation */
+@media (prefers-reduced-motion: reduce) {
+  .prow-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ── IMAGE COLUMN ───────────────────────────────────────── */
+.prow-image-col {
+  width: 100%;
+}
+
+/* Browser frame */
+.prow-browser {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  background: #0f172a;
+  overflow: hidden;
+  box-shadow:
+    0 4px 6px -1px rgba(15, 23, 42, 0.05),
+    0 10px 30px -8px rgba(15, 23, 42, 0.12);
+  transition: box-shadow 0.3s ease;
+}
+
+.prow-browser:hover {
+  box-shadow:
+    0 4px 6px -1px rgba(15, 23, 42, 0.06),
+    0 20px 40px -10px rgba(15, 23, 42, 0.18);
+}
+
+/* Chrome bar */
+.prow-chrome-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
+}
+
+/* Traffic lights */
+.prow-chrome-dots {
+  display: flex;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.prow-dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.prow-dot--red    { background: #ef4444; opacity: 0.75; }
+.prow-dot--yellow { background: #f59e0b; opacity: 0.75; }
+.prow-dot--green  { background: #22c55e; opacity: 0.75; }
+
+/* URL bar */
+.prow-url-bar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 5px;
+  padding: 4px 10px;
+  min-width: 0;
+}
+
+.prow-lock-icon {
+  color: #22c55e;
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+}
+
+.prow-url-text {
+  font-size: 11px;
+  font-family: 'SF Mono', ui-monospace, monospace;
+  color: #94a3b8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Live indicator */
+.prow-chrome-live {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-family: ui-monospace, monospace;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.prow-live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  animation: prow-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes prow-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.45; }
+}
+
+/* Screenshot area */
+.prow-screenshot-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #0f172a;
+}
+
+.prow-screenshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.prow-browser:hover .prow-screenshot {
+  transform: scale(1.02);
+}
+
+/* Scrim */
+.prow-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 0.75) 0%,
+    rgba(15, 23, 42, 0.15) 45%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* Stat badge — top-right */
+.prow-stat-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 6px 10px;
+  pointer-events: none;
+}
+
+.prow-stat-value {
+  font-size: 13px;
+  font-weight: 700;
+  font-family: ui-monospace, monospace;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.prow-stat-label {
+  font-size: 10px;
+  font-weight: 500;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-left: 1px solid rgba(255,255,255,0.15);
+  padding-left: 6px;
+}
+
+/* CTA button overlay */
+.prow-cta-wrap {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+}
+
+.prow-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  background: #6d28d9;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background   0.2s ease,
+    transform    0.2s ease,
+    box-shadow   0.2s ease;
+}
+
+.prow-cta-btn:hover {
+  background: #5b21b6;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px -4px rgba(109, 40, 217, 0.5);
+}
+
+.prow-cta-btn:active {
+  transform: translateY(0);
+}
+
+.prow-cta-icon {
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+}
+
+/* ── TEXT COLUMN ────────────────────────────────────────── */
+.prow-text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Tag row */
+.prow-tag-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* Category tag */
+.prow-category-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #f5f3ff;
+  color: #6d28d9;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  border-radius: 6px;
+  border: 1px solid #ede9fe;
+}
+
+/* Live demo text link */
+.prow-live-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #6d28d9;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+.prow-live-link:hover {
+  opacity: 1;
+}
+
+.prow-live-link-icon {
+  width: 11px;
+  height: 11px;
+}
+
+/* Title */
+.prow-title {
+  font-size: clamp(24px, 2.4vw, 34px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: #0f172a;
+  margin: 0 0 14px;
+}
+
+/* Description */
+.prow-description {
+  font-size: 15px;
+  line-height: 1.72;
+  color: #64748b;
+  margin: 0 0 24px;
+  max-width: 44ch;
+}
+
+/* Bullets */
+.prow-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prow-bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.prow-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background: #ede9fe;
+  color: #7c3aed;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .prow-section {
+    padding: 110px 0 72px;
+  }
+
+  .prow-list {
+    gap: 72px;
+    padding: 0 20px;
+  }
+
+  .prow-section-header {
+    margin-bottom: 56px;
+  }
+
+  /* Stack: image on top, text below — always, regardless of alternation */
+  .prow {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  /* Force image to render first regardless of DOM order */
+  .prow-image-col {
+    order: -1;
+  }
+
+  .prow-text-col {
+    order: 1;
+  }
+
+  .prow-description {
+    max-width: none;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .prow-list {
+    gap: 96px;
+  }
+
+  .prow {
+    gap: 36px;
+  }
+
+  .prow-title {
+    font-size: 26px;
+  }
+}
+
+/* ============================================================
+   PROJECTS FINAL CTA — SPLIT LAYOUT WITH LOOPING VIDEO
+   ============================================================ */
+
+.pfcta-section {
+  background: #ffffff;
+  border-top: 1px solid #f1f5f9;
+  padding: clamp(64px, 8vw, 96px) clamp(20px, 4vw, 48px);
+  position: relative;
+  overflow: hidden;
+}
+
+.pfcta-container {
+  width: 100%;
+}
+
+.pfcta-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: clamp(36px, 5vw, 68px);
+  align-items: center;
+  min-height: clamp(440px, 48vh, 560px);
+}
+
+/* ── Content column (left) ──────────────────────────────── */
+.pfcta-content-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.pfcta-kicker {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #6d28d9;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.pfcta-title {
+  font-size: clamp(28px, 3.2vw, 44px);
+  font-weight: 750;
+  line-height: 1.15;
+  color: #0f172a;
+  letter-spacing: -0.025em;
+  margin: 0 0 16px;
+}
+
+.pfcta-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #64748b;
+  max-width: 520px;
+  margin: 0 0 28px;
+}
+
+/* ── Action button ──────────────────────────────────────── */
+.pfcta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 26px;
+  background: #6d28d9;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  text-decoration: none;
+  box-shadow: 0 4px 14px -2px rgba(109, 40, 217, 0.35);
+  transition:
+    background   0.2s ease,
+    transform    0.2s ease,
+    box-shadow   0.2s ease;
+}
+
+.pfcta-btn:hover {
+  background: #5b21b6;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -4px rgba(109, 40, 217, 0.45);
+}
+
+.pfcta-btn:active {
+  transform: translateY(0);
+}
+
+.pfcta-btn-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.pfcta-btn:hover .pfcta-btn-icon {
+  transform: translateX(2px);
+}
+
+/* ── Video column (right) — frameless, seamless blend ────── */
+.pfcta-video-col {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pfcta-video-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pfcta-video {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  display: block;
+  background: transparent;
+  mix-blend-mode: multiply;
+}
+
+/* ── Animations ─────────────────────────────────────────── */
+.pfcta-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity   0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pfcta-reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Responsive & Accessibility ─────────────────────────── */
+@media (max-width: 900px) {
+  .pfcta-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    min-height: auto;
+  }
+
+  .pfcta-video-wrap {
+    width: 100%;
+  }
+
+  .pfcta-description {
+    max-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pfcta-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .pfcta-btn:hover {
+    transform: none !important;
+  }
+}
+
