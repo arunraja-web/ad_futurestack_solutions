@@ -5,7 +5,7 @@ export const services = [
     title: 'Custom Product Engineering',
     description:
       'High-performance React and Next.js interfaces built for speed, accessibility, and effortless user interaction.',
-    image: '/images/services/web-engineering.webp',
+    image: '/images/services/web-development-new.jpg',
     deliverables: ['Component Systems', 'Performance Audits', 'Headless Storefronts', 'Accessibility (a11y)'],
   },
   {
@@ -23,7 +23,7 @@ export const services = [
     title: 'Mobile App Development',
     description:
       'Native iOS, Android, and cross-platform React Native mobile experiences designed for speed and smooth gestures.',
-    image: '/images/services/mobile-products.webp',
+    image: '/images/services/app-development-new.jpg',
     deliverables: ['React Native Apps', 'Native iOS/Android', 'Push Notifications', 'Offline Sync'],
   },
   {
@@ -32,7 +32,7 @@ export const services = [
     title: 'AI & Workflow Automation',
     description:
       'Custom LLM integrations, RAG vector search pipelines, and automated business workflows that save hundreds of hours.',
-    image: '/images/capabilities/ai-automation.webp',
+    image: '/images/services/ai-automation-new.jpg',
     deliverables: ['Gemini / OpenAI APIs', 'RAG Pipelines', 'Document Processing', 'Automated Chatbots'],
   },
   {
@@ -50,7 +50,7 @@ export const services = [
     title: 'Multi-Tenant SaaS Systems',
     description:
       'End-to-end cloud platform architecture built to scale from MVP startup launch to enterprise multi-tenancy.',
-    image: '/images/solutions/solutions-hero-bg.webp',
+    image: '/images/services/saas-systems-new.jpg',
     deliverables: ['Multi-Tenant Schemas', 'Subscription Billing', 'Admin Dashboards', 'Role-Based Access'],
   },
 ]

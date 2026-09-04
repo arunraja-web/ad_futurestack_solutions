@@ -96,84 +96,35 @@ const servicesSchema = {
   }
 }
 
-export default function Services() {
+export default function WhatWeDo() {
   return (
-    <main className="services-page">
+    <main className="services-page what-we-do-page">
       <SEO
-        title="IT Services & Digital Engineering | AD FutureStack"
+        title="What We Do | AD FutureStack"
         description="Explore our digital services: web development, mobile apps, AI workflow automation, SEO growth engines, and multi-tenant SaaS engineering."
         keywords="Web Development Services, Mobile App Development, AI Automation Services, SaaS Engineering, Digital Marketing, AD FutureStack Services"
-        canonicalUrl="https://adfuturestack.dev/services"
+        canonicalUrl="https://adfuturestack.dev/what-we-do"
         schema={servicesSchema}
       />
 
       {/* =====================================================
           HERO
       ===================================================== */}
-      <section className="services-hero">
+      <section className="tcs-hero">
+        <div className="tcs-hero-bg"></div>
+        <div className="tcs-hero-overlay"></div>
 
-        <div className="services-hero-overlay" />
-
-        <div className="services-hero-inner">
-
-          <div className="services-hero-content">
-
-            <br></br><br></br>
-            <h1 className="animate-hero-fade-up" style={{ animationDelay: '0ms', opacity: 0 }}>
-              Excellent software
-              <br />
-              services for your
-              <br />
-              <span>business success.</span>
-            </h1>
-
-            <p className="animate-hero-fade-up" style={{ animationDelay: '120ms', opacity: 0 }}>
-              From modern websites and applications to AI-powered
-              automation and scalable SaaS platforms, we build digital
-              solutions that help ambitious businesses move forward.
-            </p>
-
-            <div className="hero-buttons animate-hero-fade-up" style={{ animationDelay: '240ms', opacity: 0 }}>
-
-              <a
-                href="/our-services"
-                className="hero-primary-btn"
-              >
-                Explore Services
-                <Arrow />
-              </a>
-
-              <a
-                href="/contact"
-                className="hero-secondary-btn"
-              >
-                Contact Us
-                <span>↗</span>
-              </a>
-
-            </div>
-
-            <a
-              href="#why-us"
-              className="watch-story animate-float animate-hero-fade-up"
-              style={{ animationDelay: '360ms', opacity: 0 }}
-            >
-              <span className="play-circle">▶</span>
-
-              <span>
-                <strong>Discover Our Approach</strong>
-                <small>How we build digital products</small>
-              </span>
-            </a>
-
-          </div>
-
+        <div className="tcs-hero-content">
+          <h1 className="animate-hero-fade-up" style={{ animationDelay: '120ms', opacity: 0 }}>
+            Excellent software services <br /> for your business success
+          </h1>
+          <p className="animate-hero-fade-up" style={{ animationDelay: '240ms', opacity: 0 }}>
+            Unlock the full potential of your enterprise with modern digital solutions
+          </p>
         </div>
-
-        <div className="hero-bottom-curve" />
-
       </section>
 
+      <div className="what-we-do-content-wrapper">
 
       {/* =====================================================
           WHY CHOOSE US (ANIMATED)
@@ -191,7 +142,7 @@ export default function Services() {
 
           <div className="image-frame image-frame-main" data-reveal="left">
             <img
-              src="/images/services/digital-marketing-new.jpg"
+              src="/images/services/team_collaboration.jpg"
               alt="AD FutureStack Digital Engineering & Technology Services Team"
               loading="lazy"
             />
@@ -316,7 +267,7 @@ export default function Services() {
       ===================================================== */}
       <section className="growth-section">
         <div className="growth-bg-image">
-          <img src="/images/services/digital-marketing-new.jpg" alt="Background" loading="lazy" />
+          <img src="/images/services/digital_growth_bg.jpg" alt="Background" loading="lazy" />
           <div className="growth-bg-overlay"></div>
         </div>
 
@@ -403,40 +354,7 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="stats-banner-container" data-reveal="up" data-stagger="300">
-          <div className="stats-banner">
-            <div className="stat-item">
-              <div className="stat-icon-wrapper blue-bg"><Users size={22} /></div>
-              <div className="stat-text">
-                <strong>50+</strong>
-                <span>Happy Clients</span>
-              </div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-icon-wrapper purple-bg"><Rocket size={22} /></div>
-              <div className="stat-text">
-                <strong>120+</strong>
-                <span>Projects Delivered</span>
-              </div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-icon-wrapper blue-bg"><CheckCircle size={22} /></div>
-              <div className="stat-text">
-                <strong>98%</strong>
-                <span>Client Satisfaction</span>
-              </div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-icon-wrapper purple-bg"><Clock size={22} /></div>
-              <div className="stat-text">
-                <strong>5+</strong>
-                <span>Years of Experience</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </section>
+        </section>
 
 
       {/* =====================================================
@@ -468,6 +386,7 @@ export default function Services() {
         </div>
 
       </section>
+      </div>
 
     </main>
   );

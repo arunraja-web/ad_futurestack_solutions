@@ -4,7 +4,7 @@ export default function PageHero({
   eyebrow,
   title,
   description,
-  image = '/images/home/architecture-blueprint.webp'
+  image = '/images/services/saas-systems-new.jpg'
 }) {
   return (
     <section className="relative py-24 lg:py-32 bg-slate-950 border-b border-slate-800/80 overflow-hidden select-none">

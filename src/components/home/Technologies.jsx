@@ -21,7 +21,7 @@ export default function Technologies() {
 
             {/* Background Abstract Graphic */}
             <img
-              src="/images/home/ai-augmented-engineering.webp"
+              src="/images/services/ai-automation-new.jpg"
               alt="AD FutureStack Research Institute - Augmented Engineering & AI Systems Report"
               loading="lazy"
               className="absolute inset-0 w-full h-full object-cover filter brightness-[0.6] group-hover:scale-105 transition-transform duration-700"

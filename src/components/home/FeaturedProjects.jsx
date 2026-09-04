@@ -16,7 +16,7 @@ const highlights = [
     category: 'AI & Data Systems',
     title: 'Conversations for Tomorrow: The AI Corner',
     subtitle: 'Defining intelligent automated workflows, RAG knowledge bases, and digital sovereignty for high-growth enterprises.',
-    image: '/images/home/ai-augmented-engineering.webp',
+    image: '/images/services/ai-automation-new.jpg',
     link: '/solutions'
   },
   {

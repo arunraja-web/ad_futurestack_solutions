@@ -54,7 +54,7 @@ export default function Process() {
             >
               <div className="relative overflow-hidden rounded-2xl aspect-[16/9] bg-slate-100 shadow-sm">
                 <img
-                  src="/images/home/architecture-blueprint.webp"
+                  src="/images/services/saas-systems-new.jpg"
                   alt="AD FutureStack Unique Software Architecture Blueprint"
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

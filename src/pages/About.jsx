@@ -7,7 +7,7 @@ import { Users, Target, Rocket, ShieldCheck, ArrowRight, CheckCircle2 } from 'lu
 
 const HERO_IMAGE = "/images/about/team-collaboration.webp"
 const STORY_IMAGE_MAIN = "/images/about/about-main-story.webp"
-const STORY_IMAGE_SMALL = "/images/services/team-collaboration-services.webp"
+const STORY_IMAGE_SMALL = "/images/services/digital-marketing-new.jpg"
 
 const aboutPillars = [
   {
@@ -160,7 +160,7 @@ export default function About() {
                   alt="AD FutureStack Technical System Architecture Review Session"
                   loading="lazy"
                   className="w-full h-full object-cover"
-                  onError={(e) => { e.target.src = "/images/home/architecture-blueprint.webp" }}
+                  onError={(e) => { e.target.src = "/images/services/saas-systems-new.jpg" }}
                 />
               </div>
             </div>

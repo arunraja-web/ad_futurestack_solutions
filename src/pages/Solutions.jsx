@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom'
 import '../styles/page-sections.css'
 import '../styles/services.css'
 import SEO from '../components/common/SEO.jsx'
-import { Layers, ShieldCheck, Sparkles, ArrowRight, Globe } from 'lucide-react'
+import CountUp from '../components/common/CountUp.jsx'
+import { Rocket, BadgeCheck, PackageCheck, ArrowRight } from 'lucide-react'
 
-const HERO_IMAGE = "/images/solutions/solutions-hero-bg.webp"
+const HERO_IMAGE = "/images/services/saas-systems-new.jpg"
 
 const solutionItems = [
   {
@@ -34,7 +35,7 @@ const solutionItems = [
       'Human-in-the-loop approval workflows & auditing'
     ],
     tags: ['Python', 'LangChain', 'n8n', 'Pinecone', 'OpenAI', 'REST APIs'],
-    bgImage: '/images/home/ai-augmented-engineering.webp'
+    bgImage: '/images/services/ai-automation-new.jpg'
   },
   {
     id: 'api-gateway-blueprint',
@@ -68,17 +69,17 @@ const solutionItems = [
 
 const solutionPillars = [
   {
-    icon: <Sparkles className="h-6 w-6" />,
+    icon: <Rocket className="h-6 w-6 icon-reveal" />,
     title: '70% Faster Time-to-Market',
     description: 'Pre-architected foundation modules allow your team to launch production-grade enterprise software in weeks instead of months.'
   },
   {
-    icon: <ShieldCheck className="h-6 w-6" />,
+    icon: <BadgeCheck className="h-6 w-6 icon-reveal" />,
     title: 'Bank-Grade Compliance',
     description: 'Built-in security frameworks designed to meet SOC2 Type II, ISO 27001, and HIPAA compliance requirements out of the box.'
   },
   {
-    icon: <Layers className="h-6 w-6" />,
+    icon: <PackageCheck className="h-6 w-6 icon-reveal" />,
     title: '100% Modularity & Ownership',
     description: 'Clean, fully documented source code with zero proprietary lock-in. You retain 100% IP ownership of your system.'
   }
@@ -141,16 +142,15 @@ export default function Solutions() {
         <div className="page-hero-inner">
           <div className="page-hero-content">
             <br></br>
-            <h1>
+            <h1 className="animate-hero-fade-up" style={{ animationDelay: '0ms', opacity: 0 }}>
               Enterprise <span>Solutions</span>
             </h1>
 
-
-            <p>
+            <p className="animate-hero-fade-up" style={{ animationDelay: '120ms', opacity: 0 }}>
               Accelerate product deployment with pre-engineered platform modules built for security, scale, and seamless cloud integration.
             </p>
 
-            <div className="hero-action-group">
+            <div className="hero-action-group animate-hero-fade-up" style={{ animationDelay: '240ms', opacity: 0 }}>
               <a href="#blueprints" className="hero-btn-primary">
                 Explore Blueprints <ArrowRight className="h-4 w-4" />
               </a>
@@ -190,7 +190,8 @@ export default function Solutions() {
             Explore our ready-to-customise architecture suites engineered for enterprise software operations.
           </p>
 
-          <div className="showcase-grid">
+          <div className="showcase-grid relative">
+            <div className="services-timeline-line" data-reveal="scaleY"></div>
             {solutionItems.map((item, idx) => (
               <div key={item.id} data-reveal={idx % 2 === 0 ? "left" : "right"} className={`showcase-card ${idx % 2 === 1 ? 'reverse' : ''}`}>
                 <div className="showcase-card-content">
@@ -225,19 +226,19 @@ export default function Solutions() {
       <section className="bespoke-stats-section">
         <div className="bespoke-stats-inner">
           <div className="bespoke-stat-item">
-            <strong>70%</strong>
+            <strong><CountUp target="70%" /></strong>
             <span>Faster Time to Market</span>
           </div>
           <div className="bespoke-stat-item">
-            <strong>99.95%</strong>
+            <strong><CountUp target="99.95%" /></strong>
             <span>Deployment Reliability</span>
           </div>
           <div className="bespoke-stat-item">
-            <strong>60%</strong>
+            <strong><CountUp target="60%" /></strong>
             <span>Lower OpEx Overhead</span>
           </div>
           <div className="bespoke-stat-item">
-            <strong>100%</strong>
+            <strong><CountUp target="100%" /></strong>
             <span>IP Code Ownership</span>
           </div>
         </div>
@@ -245,7 +246,7 @@ export default function Solutions() {
 
       {/* 5. FINAL CTA */}
       <section className="bespoke-cta-section">
-        <div className="bespoke-cta-content">
+        <div className="bespoke-cta-content" data-reveal="up">
           <h2>Request a Customized Blueprint Demo</h2>
           <p>
             Have specific compliance, data sovereignty, or stack requirements? We tailor enterprise blueprints to fit your exact business needs.

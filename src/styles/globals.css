@@ -57,11 +57,11 @@
 }
 
 [data-reveal="left"] {
-  transform: translate3d(-32px, 0, 0);
+  transform: translate3d(-80px, 0, 0);
 }
 
 [data-reveal="right"] {
-  transform: translate3d(32px, 0, 0);
+  transform: translate3d(80px, 0, 0);
 }
 
 [data-reveal="up"] {

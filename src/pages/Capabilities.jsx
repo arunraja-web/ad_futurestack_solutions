@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 import '../styles/page-sections.css'
 import '../styles/services.css'
 import SEO from '../components/common/SEO.jsx'
-import { Cpu, ShieldCheck, Database, Cloud, Zap, Code2, Server, ArrowRight } from 'lucide-react'
+import CountUp from '../components/common/CountUp.jsx'
+import { Cpu, ShieldAlert, Network, Code2, ArrowRight } from 'lucide-react'
 
 const HERO_IMAGE = "/images/capabilities/microservices.webp"
 
@@ -48,7 +49,7 @@ const capabilityItems = [
       'Intelligent document processing & NLP pipelines'
     ],
     tags: ['Python', 'LangChain', 'OpenAI', 'n8n', 'Pinecone', 'PyTorch'],
-    bgImage: '/images/capabilities/ai-automation.webp'
+    bgImage: '/images/services/ai-automation-new.jpg'
   },
   {
     id: 'data',
@@ -82,17 +83,17 @@ const capabilityItems = [
 
 const pillars = [
   {
-    icon: <Zap className="h-6 w-6" />,
+    icon: <Cpu className="h-6 w-6 icon-reveal" />,
     title: 'Extreme Scalability',
     description: 'Engineered to handle exponential traffic growth without performance degradation or infrastructure rewrites.'
   },
   {
-    icon: <ShieldCheck className="h-6 w-6" />,
+    icon: <ShieldAlert className="h-6 w-6 icon-reveal" />,
     title: 'Zero-Trust Resilience',
     description: 'Built-in security, role-based access, and automated failover mechanics protecting critical business assets.'
   },
   {
-    icon: <Cpu className="h-6 w-6" />,
+    icon: <Network className="h-6 w-6 icon-reveal" />,
     title: 'Future-Proof Tech Stack',
     description: 'Built with modern, maintainable open standards to prevent vendor lock-in and minimize technical debt.'
   }
@@ -164,15 +165,15 @@ export default function Capabilities() {
             <br></br>
             <br></br>
 
-            <h1>
+            <h1 className="animate-hero-fade-up" style={{ animationDelay: '0ms', opacity: 0 }}>
               Engineering <span>Capabilities</span>
             </h1>
 
-            <p>
+            <p className="animate-hero-fade-up" style={{ animationDelay: '120ms', opacity: 0 }}>
               Deep domain proficiency across modern distributed systems, cloud infrastructure, AI automation pipelines, and enterprise-grade data architectures.
             </p>
 
-            <div className="hero-action-group">
+            <div className="hero-action-group animate-hero-fade-up" style={{ animationDelay: '240ms', opacity: 0 }}>
               <a href="#core-capabilities" className="hero-btn-primary">
                 Explore Capabilities <ArrowRight className="h-4 w-4" />
               </a>
@@ -194,7 +195,7 @@ export default function Capabilities() {
 
         <div className="pillars-grid">
           {pillars.map((item, idx) => (
-            <div key={idx} className="pillar-card">
+            <div key={idx} data-reveal="up" data-stagger={(idx + 1) * 100} className="pillar-card">
               <div className="pillar-icon-box">{item.icon}</div>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
@@ -212,7 +213,8 @@ export default function Capabilities() {
             Explore our specific capabilities across infrastructure layers, application backend, and intelligent automation systems.
           </p>
 
-          <div className="showcase-grid">
+          <div className="showcase-grid relative">
+            <div className="services-timeline-line" data-reveal="scaleY"></div>
             {capabilityItems.map((item, idx) => (
               <div key={item.id} data-reveal={idx % 2 === 0 ? "left" : "right"} className={`showcase-card ${idx % 2 === 1 ? 'reverse' : ''}`}>
                 <div className="showcase-card-content">
@@ -259,8 +261,8 @@ export default function Capabilities() {
               <div key={idx}>
                 <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-300 mb-2">{cat.label}</h3>
                 <div className="tech-pill-group">
-                  {cat.items.map((tech) => (
-                    <span key={tech} className="tech-pill-item">
+                  {cat.items.map((tech, techIdx) => (
+                    <span key={tech} className="tech-pill-item" data-reveal="fade" data-stagger={techIdx * 50}>
                       <Code2 className="h-3.5 w-3.5 text-violet-600" />
                       {tech}
                     </span>
@@ -276,19 +278,19 @@ export default function Capabilities() {
       <section className="bespoke-stats-section">
         <div className="bespoke-stats-inner">
           <div className="bespoke-stat-item">
-            <strong>99.99%</strong>
+            <strong><CountUp target="99.99%" /></strong>
             <span>SLA Uptime Target</span>
           </div>
           <div className="bespoke-stat-item">
-            <strong>&lt; 30ms</strong>
+            <strong><CountUp target="< 30ms" /></strong>
             <span>Global API Latency</span>
           </div>
           <div className="bespoke-stat-item">
-            <strong>50M+</strong>
+            <strong><CountUp target="50M+" /></strong>
             <span>Daily Telemetry Events</span>
           </div>
           <div className="bespoke-stat-item">
-            <strong>100%</strong>
+            <strong><CountUp target="100%" /></strong>
             <span>Zero-Trust Compliant</span>
           </div>
         </div>
@@ -296,7 +298,7 @@ export default function Capabilities() {
 
       {/* 6. FINAL CTA */}
       <section className="bespoke-cta-section">
-        <div className="bespoke-cta-content">
+        <div className="bespoke-cta-content" data-reveal="up">
           <h2>Need an Architectural Assessment?</h2>
           <p>
             Our senior engineers can audit your current infrastructure, pinpoint bottlenecks, and design a scalable blueprint for your growth.
