@@ -257,7 +257,7 @@ const servicesSchema = {
   'provider': {
     '@type': 'Organization',
     'name': 'AD FutureStack',
-    'url': 'https://adfuturestack.dev'
+    'url': 'https://adfuturestack.com'
   },
   'areaServed': 'Worldwide',
   'hasOfferCatalog': {
@@ -304,10 +304,10 @@ export default function Services() {
   return (
     <main className="services-page">
       <SEO
-        title="IT Services & Digital Engineering | AD FutureStack"
+        title="IT Services & Digital Engineering Solutions | AD FutureStack"
         description="Explore our digital services: web development, mobile apps, AI workflow automation, SEO growth engines, and multi-tenant SaaS engineering."
         keywords="Web Development Services, Mobile App Development, AI Automation Services, SaaS Engineering, Digital Marketing, AD FutureStack Services"
-        canonicalUrl="https://adfuturestack.dev/services"
+        canonicalUrl="https://adfuturestack.com/services"
         schema={servicesSchema}
       />
 

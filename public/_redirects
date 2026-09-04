@@ -1,0 +1,10 @@
+# Permanent 301 Migration Redirects from old .dev domain and www
+https://adfuturestack.dev/*   https://adfuturestack.com/:splat   301!
+https://www.adfuturestack.dev/*   https://adfuturestack.com/:splat   301!
+https://www.adfuturestack.com/*   https://adfuturestack.com/:splat   301!
+
+# Legacy route aliases
+/case-studies   /projects   301!
+
+# SPA Fallback
+/*    /index.html   200

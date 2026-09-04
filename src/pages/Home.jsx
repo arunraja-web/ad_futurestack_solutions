@@ -13,10 +13,10 @@ const homeSchema = {
   '@graph': [
     {
       '@type': 'Organization',
-      '@id': 'https://adfuturestack.dev/#organization',
+      '@id': 'https://adfuturestack.com/#organization',
       'name': 'AD FutureStack',
-      'url': 'https://adfuturestack.dev',
-      'logo': 'https://adfuturestack.dev/images/AD%20Logo.png',
+      'url': 'https://adfuturestack.com',
+      'logo': 'https://adfuturestack.com/images/AD%20Logo.png',
       'description': 'Modern IT services, web development, mobile apps, AI automation, and software engineering studio.',
       'email': 'adfuturestacksolutions@gmail.com',
       'telephone': '+91 9488681492',
@@ -26,12 +26,12 @@ const homeSchema = {
     },
     {
       '@type': 'WebSite',
-      '@id': 'https://adfuturestack.dev/#website',
-      'url': 'https://adfuturestack.dev',
+      '@id': 'https://adfuturestack.com/#website',
+      'url': 'https://adfuturestack.com',
       'name': 'AD FutureStack',
       'description': 'Modern IT services & software development studio.',
       'publisher': {
-        '@id': 'https://adfuturestack.dev/#organization'
+        '@id': 'https://adfuturestack.com/#organization'
       }
     }
   ]
@@ -41,10 +41,10 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="AD FutureStack — IT Services & Software Studio"
+        title="AD FutureStack — IT Services & Software Development Studio"
         description="AD FutureStack builds custom web applications, mobile apps, AI automation workflows, and scalable multi-tenant SaaS platforms for ambitious companies."
         keywords="AD FutureStack, IT Services, Web Development Studio, Custom Software Development, App Development, AI Workflows, SaaS Platform"
-        canonicalUrl="https://adfuturestack.dev/"
+        canonicalUrl="https://adfuturestack.com/"
         schema={homeSchema}
       />
       <Hero />

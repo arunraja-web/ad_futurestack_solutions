@@ -63,8 +63,8 @@ const aboutSchema = {
   'mainEntity': {
     '@type': 'Organization',
     'name': 'AD FutureStack',
-    'url': 'https://adfuturestack.dev',
-    'logo': 'https://adfuturestack.dev/images/AD%20Logo.png'
+    'url': 'https://adfuturestack.com',
+    'logo': 'https://adfuturestack.com/images/AD%20Logo.png'
   }
 }
 
@@ -75,7 +75,7 @@ export default function About() {
         title="About AD FutureStack — Software Architects & Studio"
         description="Learn about AD FutureStack, our engineering philosophy, core values, and mission to deliver enterprise software architecture and digital solutions."
         keywords="About AD FutureStack, Software Engineering Studio, Enterprise Architects, Product Engineering Team, Software Studio"
-        canonicalUrl="https://adfuturestack.dev/about"
+        canonicalUrl="https://adfuturestack.com/about"
         schema={aboutSchema}
       />
       {/* 1. HERO SECTION WITH BACKGROUND IMAGE */}

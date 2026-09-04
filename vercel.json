@@ -36,6 +36,46 @@
       ]
     }
   ],
+  "redirects": [
+    {
+      "source": "/:match*",
+      "has": [
+        {
+          "type": "host",
+          "value": "adfuturestack.dev"
+        }
+      ],
+      "destination": "https://adfuturestack.com/:match*",
+      "permanent": true
+    },
+    {
+      "source": "/:match*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.adfuturestack.dev"
+        }
+      ],
+      "destination": "https://adfuturestack.com/:match*",
+      "permanent": true
+    },
+    {
+      "source": "/:match*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.adfuturestack.com"
+        }
+      ],
+      "destination": "https://adfuturestack.com/:match*",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies",
+      "destination": "/projects",
+      "permanent": true
+    }
+  ],
   "routes": [
     {
       "handle": "filesystem"

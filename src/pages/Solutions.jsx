@@ -112,7 +112,7 @@ const solutionsSchema = {
   'publisher': {
     '@type': 'Organization',
     'name': 'AD FutureStack',
-    'url': 'https://adfuturestack.dev'
+    'url': 'https://adfuturestack.com'
   },
   'offers': {
     '@type': 'Offer',
@@ -128,7 +128,7 @@ export default function Solutions() {
         title="Enterprise SaaS & AI Software Blueprints | AD FutureStack"
         description="Accelerate development with pre-engineered software blueprints: B2B multi-tenant SaaS platforms, AI automation suites, and API gateway infrastructure."
         keywords="SaaS Architecture Blueprint, AI Automation Suite, Turnkey Software Solutions, FinTech Gateway, AD FutureStack Solutions"
-        canonicalUrl="https://adfuturestack.dev/solutions"
+        canonicalUrl="https://adfuturestack.com/solutions"
         schema={solutionsSchema}
       />
       {/* 1. HERO SECTION WITH BACKGROUND IMAGE */}

@@ -213,7 +213,7 @@ const projectsSchema = {
       '@type': 'CreativeWork',
       'name': item.title,
       'description': item.description,
-      'url': item.liveUrl || 'https://adfuturestack.dev/projects'
+      'url': item.liveUrl || 'https://adfuturestack.com/projects'
     }
   }))
 }
@@ -225,7 +225,7 @@ export default function Projects() {
         title="Client Portfolio & Software Case Studies | AD FutureStack"
         description="Browse our portfolio of healthcare portals, athletic SaaS platforms, digital cinema engines, and enterprise web applications."
         keywords="AD FutureStack Projects, Web App Case Studies, Vercel Demos, SaaS Software, Healthcare Management System, E-Commerce Platform"
-        canonicalUrl="https://adfuturestack.dev/projects"
+        canonicalUrl="https://adfuturestack.com/projects"
         schema={projectsSchema}
       />
       {/* 1. HERO SECTION WITH BACKGROUND IMAGE */}

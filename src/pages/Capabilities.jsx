@@ -133,12 +133,12 @@ const capabilitiesSchema = {
   'author': {
     '@type': 'Organization',
     'name': 'AD FutureStack',
-    'url': 'https://adfuturestack.dev'
+    'url': 'https://adfuturestack.com'
   },
   'publisher': {
     '@type': 'Organization',
     'name': 'AD FutureStack',
-    'url': 'https://adfuturestack.dev'
+    'url': 'https://adfuturestack.com'
   }
 }
 
@@ -149,7 +149,7 @@ export default function Capabilities() {
         title="Engineering Capabilities & Tech Stack | AD FutureStack"
         description="Discover our domain expertise in distributed microservices, cloud DevOps, AI agent orchestration, data architecture, and zero-trust cybersecurity."
         keywords="Microservices Architecture, Cloud DevOps, AI Agent Orchestration, Data Engineering, Cyber Security, AD FutureStack Capabilities"
-        canonicalUrl="https://adfuturestack.dev/capabilities"
+        canonicalUrl="https://adfuturestack.com/capabilities"
         schema={capabilitiesSchema}
       />
       {/* 1. HERO SECTION WITH BACKGROUND IMAGE */}
