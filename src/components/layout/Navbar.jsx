@@ -7,13 +7,12 @@ import {
   Layers,
   Sparkles,
   PhoneCall,
-  Mail,
   ArrowRight,
   ShieldCheck,
   Code
 } from 'lucide-react'
 import { NAV_LINKS } from '../../data/navigation.js'
-import { SITE_NAME, CONTACT_EMAIL, CONTACT_PHONE } from '../../utils/constants.js'
+import { SITE_NAME, CONTACT_PHONE } from '../../utils/constants.js'
 
 const iconMap = {
   Layers: <Layers className="h-4 w-4 text-violet-600" />,
@@ -41,23 +40,6 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-[100] w-full bg-white/95 backdrop-blur-md shadow-md border-b border-slate-200/80 font-montserrat text-slate-900">
-      {/* TOP HEADER BAR */}
-      <div className="bg-slate-900 text-slate-300 text-xs py-2.5 px-4 sm:px-6 lg:px-8 border-b border-slate-800 hidden md:block font-montserrat">
-        <div className="max-w-7xl mx-auto flex items-center justify-between font-montserrat">
-          <div className="flex items-center gap-6">
-            <span className="text-slate-300 font-montserrat">Welcome to IT Solutions & Services</span>
-            <div className="flex items-center gap-1.5 font-montserrat">
-              <Mail className="h-3.5 w-3.5 text-violet-400" />
-              <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-violet-400 transition-colors font-montserrat">{CONTACT_EMAIL}</a>
-            </div>
-            <div className="flex items-center gap-1.5 font-montserrat">
-              <span>Let's Build Together</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
       {/* MAIN NAVBAR */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 h-20 flex items-center justify-between font-montserrat">
         {/* LEFT: Brand Logo */}
