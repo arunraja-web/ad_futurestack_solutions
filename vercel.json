@@ -74,6 +74,16 @@
       "source": "/case-studies",
       "destination": "/projects",
       "permanent": true
+    },
+    {
+      "source": "/sitemap",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/sitemaps",
+      "destination": "/sitemap.xml",
+      "permanent": true
     }
   ],
   "routes": [

@@ -5,6 +5,8 @@ https://www.adfuturestack.com/*   https://adfuturestack.com/:splat   301!
 
 # Legacy route aliases
 /case-studies   /projects   301!
+/sitemap   /sitemap.xml   301!
+/sitemaps   /sitemap.xml   301!
 
 # SPA Fallback
 /*    /index.html   200
