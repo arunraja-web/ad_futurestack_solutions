@@ -190,13 +190,7 @@ export default function Solutions() {
               A structured, collaborative and agile approach to deliver solutions that create long-term value.
             </p>
             
-            <div className="sol-approach-side-list">
-              <span>DISCOVER</span>
-              <span>DEFINE</span>
-              <span>DEVELOP</span>
-              <span>DEPLOY</span>
-              <span>SCALE</span>
-            </div>
+
           </div>
 
           <div className="sol-timeline">

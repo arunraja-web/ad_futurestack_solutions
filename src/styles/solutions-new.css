@@ -377,10 +377,15 @@
   letter-spacing: -1px;
 }
 .sol-approach-title span {
-  color: #38bdf8;
-  text-decoration: underline;
-  text-underline-offset: 8px;
-  text-decoration-thickness: 2px;
+  color: #ffffff;
+  display: inline-block;
+  animation: float-text 3s ease-in-out infinite;
+}
+
+@keyframes float-text {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0px); }
 }
 .sol-approach-desc {
   font-size: 14px;
