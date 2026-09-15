@@ -46,7 +46,7 @@ const contactSchema = {
   'mainEntity': {
     '@type': 'Organization',
     'name': 'AD FutureStack',
-    'url': 'https://adfuturestack.dev',
+    'url': 'https://adfuturestack.com',
     'email': 'adfuturestacksolutions@gmail.com',
     'telephone': '+91 9488681492',
     'address': {
@@ -105,10 +105,10 @@ export default function Contact() {
   return (
     <div className="relative min-h-screen bg-slate-950 text-white font-montserrat overflow-hidden pt-24 pb-16">
       <SEO
-        title="Contact AD FutureStack — Request Tech Consultation"
+        title="Contact Us — Request Tech Consultation | AD FutureStack"
         description="Get in touch with our lead software architects. Request an architecture audit, discuss your custom software project, or get a project quote."
         keywords="Contact AD FutureStack, Software Consultation, Hire Tech Agency, Architecture Audit, Contact Software Engineers"
-        canonicalUrl="https://adfuturestack.dev/contact"
+        canonicalUrl="https://adfuturestack.com/contact"
         schema={contactSchema}
       />
 

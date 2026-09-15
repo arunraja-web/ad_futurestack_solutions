@@ -62,12 +62,32 @@ const capabilitiesData = [
   }
 ]
 
+const capabilitiesSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  'headline': 'AD FutureStack Technical Matrix & Engineering Domain',
+  'description': 'Deep domain proficiency across modern distributed systems, cloud infrastructure, AI automation pipelines, and enterprise-grade data architectures.',
+  'author': {
+    '@type': 'Organization',
+    'name': 'AD FutureStack',
+    'url': 'https://adfuturestack.com'
+  },
+  'publisher': {
+    '@type': 'Organization',
+    'name': 'AD FutureStack',
+    'url': 'https://adfuturestack.com'
+  }
+}
+
 export default function Capabilities() {
   return (
     <main className="cap-new-page">
       <SEO
-        title="Engineering Capabilities | AD FutureStack"
-        description="Discover our domain expertise in digital transformation, cloud solutions, AI, product engineering, automation, and cybersecurity."
+        title="Engineering Capabilities & Tech Stack | AD FutureStack"
+        description="Discover our domain expertise in distributed microservices, cloud DevOps, AI agent orchestration, data architecture, and zero-trust cybersecurity."
+        keywords="Microservices Architecture, Cloud DevOps, AI Agent Orchestration, Data Engineering, Cyber Security, AD FutureStack Capabilities"
+        canonicalUrl="https://adfuturestack.com/capabilities"
+        schema={capabilitiesSchema}
       />
 
       {/* Hero Section */}

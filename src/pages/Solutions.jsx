@@ -60,12 +60,54 @@ const industries = [
   { name: 'Education', image: '/images/projects/book-verse.webp' },
 ]
 
+
+function SolutionVisualWidget({ bgImage, tag }) {
+  return (
+    <div className="showcase-card-visual relative overflow-hidden rounded-2xl group min-h-[300px] border border-slate-700/60 shadow-xl p-0">
+      <img
+        src={bgImage}
+        alt={`AD FutureStack Enterprise Solution Blueprint - ${tag || "Solution Visual"}`}
+        loading="lazy"
+        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300 pointer-events-none" />
+      <div className="absolute top-4 right-4 z-10">
+        <span className="text-[10px] font-mono font-bold text-white bg-violet-700/90 backdrop-blur-md px-3 py-1 rounded-full border border-violet-400/40 uppercase tracking-widest shadow-md">
+          {tag}
+        </span>
+      </div>
+    </div>
+  )
+}
+
+const solutionsSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  'name': 'AD FutureStack Enterprise Blueprints',
+  'operatingSystem': 'Cloud Native',
+  'applicationCategory': 'BusinessApplication',
+  'publisher': {
+    '@type': 'Organization',
+    'name': 'AD FutureStack',
+    'url': 'https://adfuturestack.com'
+  },
+  'offers': {
+    '@type': 'Offer',
+    'price': '0',
+    'priceCurrency': 'USD'
+  }
+}
+
+
 export default function Solutions() {
   return (
     <main className="sol-page">
       <SEO
-        title="Solutions | AD FutureStack"
-        description="Complex challenges transformed into scalable, future-ready solutions combining engineering, intelligence, and innovation."
+        title="Enterprise SaaS & AI Software Blueprints | AD FutureStack"
+        description="Accelerate development with pre-engineered software blueprints: B2B multi-tenant SaaS platforms, AI automation suites, and API gateway infrastructure."
+        keywords="SaaS Architecture Blueprint, AI Automation Suite, Turnkey Software Solutions, FinTech Gateway, AD FutureStack Solutions"
+        canonicalUrl="https://adfuturestack.com/solutions"
+        schema={solutionsSchema}
       />
 
       {/* Hero Section */}

@@ -1,11 +1,13 @@
 import { useEffect } from 'react'
 
+const DOMAIN = 'https://adfuturestack.com'
+
 export default function SEO({
-  title = 'AD FutureStack — IT Services & Software Studio',
+  title = 'AD FutureStack — IT Services & Software Development Studio',
   description = 'AD FutureStack is a modern IT services & software development studio. We engineer custom web applications, mobile apps, AI automation workflows, and multi-tenant SaaS platforms.',
   keywords = 'IT Services, Web Development, Software Engineering, SaaS Development, Mobile Apps, AI Workflows, Cloud DevOps, AD FutureStack',
   ogImage = '/images/AD Logo.png',
-  canonicalUrl = 'https://adfuturestack.dev/',
+  canonicalUrl = 'https://adfuturestack.com/',
   robots = 'index, follow',
   schema = null
 }) {
@@ -13,7 +15,12 @@ export default function SEO({
     // 1. Update Document Title
     document.title = title
 
-    // 2. Helper to set or update meta tag
+    // 2. Resolve absolute URL for social sharing images
+    const absoluteOgImage = ogImage.startsWith('http')
+      ? ogImage
+      : `${DOMAIN}${ogImage.startsWith('/') ? '' : '/'}${ogImage}`
+
+    // 3. Helper to set or update meta tag
     const setMeta = (selector, name, content) => {
       let el = document.querySelector(selector)
       if (!el) {
@@ -36,7 +43,7 @@ export default function SEO({
     // Open Graph Tags
     setMeta('meta[property="og:title"]', 'og:title', title)
     setMeta('meta[property="og:description"]', 'og:description', description)
-    setMeta('meta[property="og:image"]', 'og:image', ogImage)
+    setMeta('meta[property="og:image"]', 'og:image', absoluteOgImage)
     setMeta('meta[property="og:url"]', 'og:url', canonicalUrl)
     setMeta('meta[property="og:type"]', 'og:type', 'website')
 
@@ -44,7 +51,7 @@ export default function SEO({
     setMeta('meta[name="twitter:card"]', 'twitter:card', 'summary_large_image')
     setMeta('meta[name="twitter:title"]', 'twitter:title', title)
     setMeta('meta[name="twitter:description"]', 'twitter:description', description)
-    setMeta('meta[name="twitter:image"]', 'twitter:image', ogImage)
+    setMeta('meta[name="twitter:image"]', 'twitter:image', absoluteOgImage)
 
     // Canonical link
     let canonical = document.querySelector('link[rel="canonical"]')

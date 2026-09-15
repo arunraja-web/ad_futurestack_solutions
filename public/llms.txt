@@ -6,40 +6,40 @@ AD FutureStack partners with ambitious startups and enterprises to design, build
 
 ## Core Services
 
-- [Custom Product Engineering](https://adfuturestack.dev/services#product-engineering): High-performance React and Next.js interfaces built for speed, accessibility, and modern user interaction.
-- [APIs & Microservices](https://adfuturestack.dev/services#backend-apis): High-throughput Node.js, Spring Boot, and Go microservices with sub-50ms latency.
-- [Mobile App Development](https://adfuturestack.dev/services#mobile-engineering): Native iOS and Android cross-platform React Native mobile applications.
-- [AI & Workflow Automation](https://adfuturestack.dev/services#ai-automation): Custom LLM integrations, RAG vector search pipelines, and autonomous AI workflow orchestration.
-- [Cloud Infrastructure & DevOps](https://adfuturestack.dev/services#infrastructure): Multi-region AWS and GCP cloud architectures with Kubernetes, Terraform, and CI/CD pipelines.
-- [Multi-Tenant SaaS Systems](https://adfuturestack.dev/services#saas-architecture): Pre-engineered SaaS foundations with tenant data isolation, role-based security, and subscription billing.
+- [Custom Product Engineering](https://adfuturestack.com/services#product-engineering): High-performance React and Next.js interfaces built for speed, accessibility, and modern user interaction.
+- [APIs & Microservices](https://adfuturestack.com/services#backend-apis): High-throughput Node.js, Spring Boot, and Go microservices with sub-50ms latency.
+- [Mobile App Development](https://adfuturestack.com/services#mobile-engineering): Native iOS and Android cross-platform React Native mobile applications.
+- [AI & Workflow Automation](https://adfuturestack.com/services#ai-automation): Custom LLM integrations, RAG vector search pipelines, and autonomous AI workflow orchestration.
+- [Cloud Infrastructure & DevOps](https://adfuturestack.com/services#infrastructure): Multi-region AWS and GCP cloud architectures with Kubernetes, Terraform, and CI/CD pipelines.
+- [Multi-Tenant SaaS Systems](https://adfuturestack.com/services#saas-architecture): Pre-engineered SaaS foundations with tenant data isolation, role-based security, and subscription billing.
 
 ## Solution Blueprints
 
-- [Enterprise Multi-Tenant SaaS Blueprint](https://adfuturestack.dev/solutions#saas-blueprint): Multi-tenant architecture foundation featuring database isolation and Stripe billing.
-- [AI Workflow Automation Suite](https://adfuturestack.dev/solutions#ai-automation-blueprint): Autonomous AI agents connecting LLMs to enterprise ERP/CRM systems.
-- [High-Throughput API Gateway](https://adfuturestack.dev/solutions#api-gateway-blueprint): Sub-20ms low latency API routing, Kafka streaming, and Prometheus telemetry.
-- [FinTech Payment & Compliance Platform](https://adfuturestack.dev/solutions#fintech-blueprint): Double-entry ledger, PCI-DSS compliance, fraud scoring, and KYC/AML workflows.
+- [Enterprise Multi-Tenant SaaS Blueprint](https://adfuturestack.com/solutions#saas-blueprint): Multi-tenant architecture foundation featuring database isolation and Stripe billing.
+- [AI Workflow Automation Suite](https://adfuturestack.com/solutions#ai-automation-blueprint): Autonomous AI agents connecting LLMs to enterprise ERP/CRM systems.
+- [High-Throughput API Gateway](https://adfuturestack.com/solutions#api-gateway-blueprint): Sub-20ms low latency API routing, Kafka streaming, and Prometheus telemetry.
+- [FinTech Payment & Compliance Platform](https://adfuturestack.com/solutions#fintech-blueprint): Double-entry ledger, PCI-DSS compliance, fraud scoring, and KYC/AML workflows.
 
 ## Technical Capabilities
 
-- [Distributed Systems](https://adfuturestack.dev/capabilities#microservices): gRPC, REST APIs, Kafka streaming, Redis caching, zero-downtime rolling deploys.
-- [Cloud & Infrastructure](https://adfuturestack.dev/capabilities#cloud): Infrastructure-as-code automation, Docker, Kubernetes, multi-region failover.
-- [Data Architecture](https://adfuturestack.dev/capabilities#data): PostgreSQL, ClickHouse analytics, real-time ETL pipelines, data encryption.
-- [Zero-Trust Cybersecurity](https://adfuturestack.dev/capabilities#security): OAuth2, SAML SSO, SOC2 & ISO 27001 compliance readiness auditing.
+- [Distributed Systems](https://adfuturestack.com/capabilities#microservices): gRPC, REST APIs, Kafka streaming, Redis caching, zero-downtime rolling deploys.
+- [Cloud & Infrastructure](https://adfuturestack.com/capabilities#cloud): Infrastructure-as-code automation, Docker, Kubernetes, multi-region failover.
+- [Data Architecture](https://adfuturestack.com/capabilities#data): PostgreSQL, ClickHouse analytics, real-time ETL pipelines, data encryption.
+- [Zero-Trust Cybersecurity](https://adfuturestack.com/capabilities#security): OAuth2, SAML SSO, SOC2 & ISO 27001 compliance readiness auditing.
 
 ## Key Links
 
-- [Homepage](https://adfuturestack.dev/): Studio overview and featured project portfolio.
-- [Services](https://adfuturestack.dev/services): Full-stack product engineering services.
-- [Capabilities](https://adfuturestack.dev/capabilities): Technical ecosystem, architecture matrix, and tooling.
-- [Solutions](https://adfuturestack.dev/solutions): Enterprise software blueprints and operational accelerators.
-- [Case Studies](https://adfuturestack.dev/projects): Portfolio of client deployments and performance metrics.
-- [About Studio](https://adfuturestack.dev/about): Senior engineering team culture, vision, and operational principles.
-- [Technical Consultation](https://adfuturestack.dev/contact): Get in touch with our engineering team.
+- [Homepage](https://adfuturestack.com/): Studio overview and featured project portfolio.
+- [Services](https://adfuturestack.com/services): Full-stack product engineering services.
+- [Capabilities](https://adfuturestack.com/capabilities): Technical ecosystem, architecture matrix, and tooling.
+- [Solutions](https://adfuturestack.com/solutions): Enterprise software blueprints and operational accelerators.
+- [Case Studies](https://adfuturestack.com/projects): Portfolio of client deployments and performance metrics.
+- [About Studio](https://adfuturestack.com/about): Senior engineering team culture, vision, and operational principles.
+- [Technical Consultation](https://adfuturestack.com/contact): Get in touch with our engineering team.
 
 ## Contact Information
 
 - Email: adfuturestacksolutions@gmail.com
 - Phone: +91 9488681492
 - Location: Kovilpatti, Tamil Nadu, India
-- Website: https://adfuturestack.dev
+- Website: https://adfuturestack.com
