@@ -4,18 +4,18 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 const content = [
   {
     title: "Product Engineering",
-    desc: "From an initial idea to a production-ready digital product.",
+    desc: "From an initial idea to a production-ready digital product. We engineer scalable, secure, and high-performance applications tailored to your business. Our process covers everything from UI/UX design to seamless deployment.",
     image: "/images/services/product-engineering-new.jpg"
   },
   {
     title: "AI & Automation",
-    desc: "Intelligent workflows that remove repetitive operational work.",
-    image: "/images/services/business-collaboration.webp"
+    desc: "Intelligent workflows that remove repetitive operational work. We implement custom AI agents, n8n automations, and smart integrations. Our solutions reduce manual overhead and unlock new levels of efficiency.",
+    image: "https://i.pinimg.com/736x/b2/e5/38/b2e5380cccf49d3aa6d8cdba1aca90e8.jpg"
   },
   {
-    title: "Cloud & Data",
-    desc: "Reliable infrastructure and data systems built to scale.",
-    image: "/images/services/cloud-data-new.jpg"
+    title: "SaaS Development",
+    desc: "Scalable multi-tenant SaaS platforms tailored to your business model. We build robust systems with tenant isolation and flexible subscription management, empowering you to deliver reliable software as a service.",
+    image: "https://i.pinimg.com/736x/28/8e/69/288e693ba68b51800358f3fcd53f57be.jpg"
   }
 ];
 
@@ -172,7 +172,7 @@ function ContentBlock({ item, isEven, index }) {
         style={{
           gridColumn: isEven ? '5 / 13' : '1 / 9',
           gridRow: 1,
-          height: '560px',
+          height: '380px',
           position: 'relative',
           overflow: 'hidden',
           borderRadius: '4px',

@@ -403,38 +403,7 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="stats-banner-container" data-reveal="up" data-stagger="300">
-          <div className="stats-banner">
-            <div className="stat-item">
-              <div className="stat-icon-wrapper blue-bg"><Users size={22} /></div>
-              <div className="stat-text">
-                <strong>50+</strong>
-                <span>Happy Clients</span>
-              </div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-icon-wrapper purple-bg"><Rocket size={22} /></div>
-              <div className="stat-text">
-                <strong>120+</strong>
-                <span>Projects Delivered</span>
-              </div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-icon-wrapper blue-bg"><CheckCircle size={22} /></div>
-              <div className="stat-text">
-                <strong>98%</strong>
-                <span>Client Satisfaction</span>
-              </div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-icon-wrapper purple-bg"><Clock size={22} /></div>
-              <div className="stat-text">
-                <strong>5+</strong>
-                <span>Years of Experience</span>
-              </div>
-            </div>
-          </div>
-        </div>
+
 
       </section>
 

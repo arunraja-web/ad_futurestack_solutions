@@ -12,7 +12,7 @@
   html {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    font-family: 'Outfit', 'Montserrat', system-ui, -apple-system, sans-serif;
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
     max-width: 100%;
     width: 100%;
     margin: 0;
@@ -22,7 +22,7 @@
 
   body {
     @apply bg-white text-slate-900 antialiased selection:bg-violet-700 selection:text-white;
-    font-family: 'Outfit', 'Montserrat', system-ui, -apple-system, sans-serif;
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
     max-width: 100%;
     width: 100%;
@@ -43,7 +43,7 @@
 
 @layer utilities {
   .font-montserrat {
-    font-family: 'Outfit', 'Montserrat', system-ui, -apple-system, sans-serif;
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
   }
 }
 

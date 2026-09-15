@@ -1,0 +1,670 @@
+/* solutions-new.css */
+.sol-page {
+  font-family: 'Montserrat', sans-serif;
+  color: #111827;
+  background-color: #fff;
+  overflow-x: clip;
+}
+
+/* Base Utility */
+.sol-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+.sol-hero {
+  padding: 120px 0 80px;
+  background: radial-gradient(circle at center right, #f8fafc 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.sol-hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.sol-hero-left {
+  flex: 1;
+  max-width: 600px;
+}
+
+.sol-kicker {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.sol-kicker::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background-color: #2563eb;
+}
+
+.sol-title {
+  font-size: clamp(48px, 5vw, 64px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin-bottom: 24px;
+}
+.sol-title span {
+  color: #2563eb;
+}
+
+.sol-desc {
+  font-size: 18px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 90%;
+}
+
+.sol-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.sol-btn-primary {
+  background-color: #2563eb;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s;
+}
+.sol-btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.sol-btn-play {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #111827;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+}
+.sol-play-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  transition: border-color 0.3s;
+}
+.sol-btn-play:hover .sol-play-icon {
+  border-color: #2563eb;
+}
+
+.sol-hero-stats {
+  display: flex;
+  gap: 32px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 32px;
+}
+.sol-stat {
+  border-left: 1px solid #e5e7eb;
+  padding-left: 16px;
+}
+.sol-stat:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+.sol-stat-num {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 4px;
+}
+.sol-stat-label {
+  display: block;
+  font-size: 11px;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.sol-hero-right {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.sol-hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+.sol-hero-image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
+}
+.sol-hero-side-list {
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.sol-hero-list-item {
+  display: flex;
+  flex-direction: column;
+}
+.sol-hero-list-num {
+  font-size: 10px;
+  font-weight: 700;
+  color: #9ca3af;
+}
+.sol-hero-list-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* =========================================================
+   SPECTRUM CARDS (ARCHED)
+========================================================= */
+.sol-spectrum {
+  padding: 40px 0;
+  background-color: #f8fafc;
+}
+
+.sol-spectrum-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.sol-spectrum-title-area {
+  max-width: 500px;
+}
+.sol-spectrum-title-area h2 {
+  font-size: clamp(32px, 4vw, 40px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+.sol-spectrum-desc-area {
+  max-width: 400px;
+  display: flex;
+  gap: 20px;
+}
+.sol-spectrum-desc-area p {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.6;
+}
+.sol-spectrum-side-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #4b5563;
+  border-left: 2px solid #e5e7eb;
+  padding-left: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  justify-content: center;
+}
+
+.sol-arch-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.sol-arch-card {
+  background: white;
+  border-radius: 100px 100px 16px 16px;
+  padding: 0 0 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  text-align: left;
+}
+.sol-arch-card:nth-child(1) { background: linear-gradient(180deg, #bfdbfe 0%, #eff6ff 100%); }
+.sol-arch-card:nth-child(2) { background: linear-gradient(180deg, #fed7aa 0%, #fff7ed 100%); }
+.sol-arch-card:nth-child(3) { background: linear-gradient(180deg, #d8b4fe 0%, #faf5ff 100%); }
+.sol-arch-card:nth-child(4) { background: linear-gradient(180deg, #bbf7d0 0%, #f0fdf4 100%); }
+.sol-arch-card:nth-child(5) { background: linear-gradient(180deg, #fbcfe8 0%, #fdf2f8 100%); }
+.sol-arch-card:nth-child(6) { background: linear-gradient(180deg, #bae6fd 0%, #f0f9ff 100%); }
+
+.sol-arch-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px -5px rgba(0,0,0,0.1);
+}
+
+.sol-arch-image {
+  width: 100%;
+  aspect-ratio: 1 / 1.1;
+  border-radius: 100px 100px 100px 0;
+  overflow: hidden;
+  margin-bottom: -24px;
+}
+.sol-arch-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sol-arch-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 10;
+  margin-bottom: 20px;
+  margin-left: 24px;
+  color: #2563eb;
+}
+.sol-arch-num {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 8px;
+  padding: 0 24px;
+}
+.sol-arch-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  color: #111827;
+  padding: 0 24px;
+}
+.sol-arch-desc {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  flex-grow: 1;
+  padding: 0 24px;
+}
+
+.sol-arch-arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  transition: all 0.3s;
+  margin-left: 24px;
+}
+.sol-arch-card:hover .sol-arch-arrow {
+  border-color: #2563eb;
+  color: #2563eb;
+  background-color: #eff6ff;
+}
+
+/* =========================================================
+   OUR APPROACH (DARK TIMELINE)
+========================================================= */
+.sol-approach {
+  background-color: #0f172a;
+  color: white;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.sol-approach-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.sol-approach-kicker {
+  font-size: 12px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+  display: block;
+}
+.sol-approach-title {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+.sol-approach-title span {
+  color: #38bdf8;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 2px;
+}
+.sol-approach-desc {
+  font-size: 14px;
+  color: #94a3b8;
+  max-width: 300px;
+  line-height: 1.6;
+}
+.sol-approach-side-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #94a3b8;
+  border-left: 2px solid #334155;
+  padding-left: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sol-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  position: relative;
+}
+/* Wavy line fake */
+.sol-timeline::before {
+  content: "";
+  position: absolute;
+  top: 32px;
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background: linear-gradient(90deg, #38bdf8 0%, rgba(56,189,248,0.2) 100%);
+  z-index: 1;
+}
+
+.sol-timeline-item {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.sol-timeline-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #1e293b;
+  border: 2px solid #334155;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: white;
+  transition: all 0.3s;
+}
+.sol-timeline-item:hover .sol-timeline-icon {
+  border-color: #38bdf8;
+  background-color: #38bdf8;
+  box-shadow: 0 0 20px rgba(56,189,248,0.4);
+}
+.sol-timeline-num {
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+.sol-timeline-item-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.sol-timeline-item-desc {
+  font-size: 12px;
+  color: #94a3b8;
+  line-height: 1.5;
+  max-width: 200px;
+}
+
+/* =========================================================
+   INDUSTRIES GRID
+========================================================= */
+.sol-industries {
+  padding: 100px 0;
+  background-color: #fff;
+}
+.sol-industries-inner {
+  display: flex;
+  gap: 40px;
+}
+.sol-industries-left {
+  flex: 0 0 300px;
+}
+.sol-industries-kicker {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sol-industries-kicker::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background-color: #2563eb;
+}
+.sol-industries-title {
+  font-size: clamp(32px, 3vw, 40px);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+.sol-industries-desc {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.sol-industries-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.sol-ind-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  display: block;
+}
+.sol-ind-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.sol-ind-card:hover img {
+  transform: scale(1.05);
+}
+.sol-ind-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  color: #111827;
+}
+
+/* =========================================================
+   FOOTER CTA (DARK)
+========================================================= */
+.sol-cta {
+  background-color: #0f172a;
+  background-image: url('/images/solutions/solutions-hero-bg.webp');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  padding: 100px 0;
+  color: white;
+}
+.sol-cta-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.sol-cta-left {
+  max-width: 600px;
+}
+.sol-cta-kicker {
+  font-size: 12px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sol-cta-kicker::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background-color: #38bdf8;
+}
+.sol-cta-title {
+  font-size: clamp(40px, 5vw, 56px);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+.sol-cta-desc {
+  font-size: 16px;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+.sol-cta-actions {
+  display: flex;
+  gap: 16px;
+}
+.sol-btn-secondary {
+  background-color: transparent;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: background-color 0.3s;
+}
+.sol-btn-secondary:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.sol-cta-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-left: 1px solid rgba(255,255,255,0.2);
+  padding-left: 32px;
+}
+.sol-cta-right span {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f8fafc;
+}
+.sol-cta-right span::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+/* Responsive Overrides */
+@media (max-width: 1200px) {
+  .sol-arch-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+}
+@media (max-width: 1024px) {
+  .sol-hero-inner { flex-direction: column; text-align: center; }
+  .sol-hero-left { max-width: 100%; }
+  .sol-kicker { justify-content: center; }
+  .sol-hero-actions { justify-content: center; }
+  .sol-hero-stats { justify-content: center; flex-wrap: wrap; }
+  .sol-hero-side-list { display: none; }
+  .sol-timeline { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+  .sol-timeline::before { display: none; }
+  .sol-industries-inner { flex-direction: column; }
+  .sol-industries-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .sol-arch-grid { grid-template-columns: repeat(2, 1fr); }
+  .sol-timeline { grid-template-columns: 1fr; }
+  .sol-industries-grid { grid-template-columns: 1fr; }
+  .sol-cta-actions { flex-direction: column; }
+  .sol-cta-right { display: none; }
+}
+@media (max-width: 480px) {
+  .sol-arch-grid { grid-template-columns: 1fr; }
+}

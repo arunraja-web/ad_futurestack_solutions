@@ -27,18 +27,7 @@ const capabilities = [
   },
 ];
 
-const technologies = [
-  { name: "React", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
-  { name: "Next.js", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" },
-  { name: "Node.js", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" },
-  { name: "Java", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" },
-  { name: "Spring Boot", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" },
-  { name: "Python", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
-  { name: "PostgreSQL", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" },
-  { name: "MongoDB", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" },
-  { name: "AWS", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
-  { name: "Docker", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" }
-];
+
 
 function Arrow() {
   return <span className="service-arrow">→</span>;
@@ -111,7 +100,7 @@ export default function WhatWeDo() {
           HERO
       ===================================================== */}
       <section className="tcs-hero">
-        <div className="tcs-hero-bg"></div>
+        <div className="tcs-hero-bg" style={{ backgroundImage: "url('/images/hero/what-we-do-hero.jpg')" }}></div>
         <div className="tcs-hero-overlay"></div>
 
         <div className="tcs-hero-content">
@@ -156,9 +145,12 @@ export default function WhatWeDo() {
             />
           </div>
 
-          <div className="award-card" data-reveal="scale" data-stagger="300">
-            <strong><CountUp target={100} />+</strong>
-            <span>Digital Projects<br />Delivered</span>
+          <div className="image-frame image-frame-small-right" data-reveal="scale" data-stagger="300">
+            <img
+              src="/images/services/product-engineering-new.jpg"
+              alt="Engineering Work"
+              loading="lazy"
+            />
           </div>
 
         </div>
@@ -222,139 +214,54 @@ export default function WhatWeDo() {
 
 
 
-      {/* =====================================================
-          TECHNOLOGY STRIP
-      ===================================================== */}
-      <section className="technology-section">
 
-        <div className="technology-inner">
-
-          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-            <span className="section-kicker">
-              TECHNOLOGY
-            </span>
-
-            <h2>
-              Built with modern technology
-            </h2>
-          </div>
-
-          <div className="technology-marquee-container">
-            <div className="technology-marquee-content">
-              {technologies.map((tech, idx) => (
-                <div key={idx} className="tech-logo-item">
-                  <img src={tech.src} alt={tech.name} loading="lazy" />
-                  <span>{tech.name}</span>
-                </div>
-              ))}
-              {/* Duplicate list for seamless infinite scrolling */}
-              {technologies.map((tech, idx) => (
-                <div key={`dup-${idx}`} className="tech-logo-item">
-                  <img src={tech.src} alt={tech.name} loading="lazy" />
-                  <span>{tech.name}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-        </div>
-
-      </section>
 
 
       {/* =====================================================
           DIGITAL GROWTH CTA
       ===================================================== */}
-      <section className="growth-section">
+      <section className="growth-section" style={{ minHeight: '100vh', height: '100vh' }}>
         <div className="growth-bg-image">
-          <img src="/images/services/digital_growth_bg.jpg" alt="Background" loading="lazy" />
-          <div className="growth-bg-overlay"></div>
+          <img 
+            src="https://i.pinimg.com/736x/24/22/be/2422bea743ba1144181892dd6ef13af6.jpg" 
+            alt="Background" 
+            loading="lazy" 
+            style={{ maskImage: 'none', WebkitMaskImage: 'none', opacity: 1 }}
+          />
         </div>
 
-        <div className="growth-content-wrapper">
-          <div className="growth-content-left" data-reveal="right">
-            <span className="section-kicker">DIGITAL GROWTH</span>
-            <h2>
-              It's your time to grow<br />through <span className="text-blue">technology.</span>
+        <div className="growth-content-wrapper" style={{ gridTemplateColumns: '1fr', justifyItems: 'center', textAlign: 'center' }}>
+          <div className="growth-content-left" data-reveal="up" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <span className="section-kicker" style={{ color: 'white' }}>DIGITAL GROWTH</span>
+            <h2 style={{ textAlign: 'center', color: 'white' }}>
+              It's your time to grow<br />through <span style={{ color: 'white' }}>technology.</span>
             </h2>
-            <p>
+            <p style={{ textAlign: 'center', color: 'rgba(255, 255, 255, 0.9)' }}>
               Build better digital experiences, automate operations,
               reach more customers and create systems that scale with
               your business.
             </p>
-            <div className="growth-buttons">
-              <a href="/contact" className="hero-primary-btn">
+            <div className="growth-buttons" style={{ justifyContent: 'center' }}>
+              <a href="/contact" className="hero-primary-btn" style={{ padding: '18px 36px', fontSize: '18px' }}>
                 Get Started
                 <Arrow />
               </a>
-              <a href="/projects" className="hero-secondary-btn alt-btn">
+              <a href="/projects" className="hero-primary-btn" style={{ padding: '18px 36px', fontSize: '18px' }}>
                 See Our Work
                 <span>↗</span>
               </a>
             </div>
-            <div className="growth-features">
-              <span data-reveal="fade" data-stagger="100">✓ Lead Generation</span>
-              <span data-reveal="fade" data-stagger="200">✓ Business Automation</span>
-              <span data-reveal="fade" data-stagger="300">✓ Scalable Systems</span>
-              <span data-reveal="fade" data-stagger="400">✓ Data-driven Growth</span>
-            </div>
-          </div>
-
-          <div className="growth-content-right" data-reveal="left" data-stagger="200">
-            <div className="floating-ui-container">
-              
-              <div className="float-card card-strategy" style={{ animationDelay: '0s' }}>
-                <Target size={22} strokeWidth={2} className="float-icon blue" />
-                <div className="float-text">
-                  <strong>Strategy</strong>
-                  <div className="skeleton-line w-full"></div>
-                </div>
-              </div>
-              
-              <div className="float-card card-automation" style={{ animationDelay: '1.5s' }}>
-                <Bot size={22} strokeWidth={2} className="float-icon purple" />
-                <div className="float-text">
-                  <strong>Automation</strong>
-                  <div className="skeleton-line w-half"></div>
-                </div>
-              </div>
-              
-              <div className="float-card card-growth" style={{ animationDelay: '0.7s' }}>
-                <div className="float-text">
-                  <strong>Growth</strong>
-                </div>
-                <div className="chart-line">
-                   <svg viewBox="0 0 100 40" preserveAspectRatio="none">
-                     <path d="M0,35 Q10,35 20,25 T40,20 T60,10 T80,15 T100,5" fill="none" stroke="var(--blue)" strokeWidth="2.5" />
-                     <circle cx="20" cy="25" r="3.5" fill="var(--blue)" />
-                     <circle cx="60" cy="10" r="3.5" fill="var(--blue)" />
-                     <circle cx="100" cy="5" r="3.5" fill="var(--blue)" />
-                   </svg>
-                </div>
-              </div>
-              
-              <div className="float-card card-systems" style={{ animationDelay: '2s' }}>
-                <Box size={22} strokeWidth={2} className="float-icon navy" />
-                <div className="float-text">
-                  <strong>Systems</strong>
-                  <div className="skeleton-line w-full"></div>
-                  <div className="skeleton-line w-half mt-1"></div>
-                </div>
-              </div>
-              
-              <div className="float-card card-analytics" style={{ animationDelay: '1.2s' }}>
-                <PieChart size={22} strokeWidth={2} className="float-icon blue" />
-                <div className="float-text">
-                  <strong>Analytics</strong>
-                  <div className="skeleton-line w-half"></div>
-                </div>
-              </div>
-              
+            <div className="growth-features" style={{ justifyContent: 'center', marginTop: '20px' }}>
+              <span data-reveal="fade" data-stagger="100" style={{ color: 'white', fontSize: '18px', fontWeight: '500' }}>✓ Lead Generation</span>
+              <span data-reveal="fade" data-stagger="200" style={{ color: 'white', fontSize: '18px', fontWeight: '500' }}>✓ Business Automation</span>
+              <span data-reveal="fade" data-stagger="300" style={{ color: 'white', fontSize: '18px', fontWeight: '500' }}>✓ Scalable Systems</span>
+              <span data-reveal="fade" data-stagger="400" style={{ color: 'white', fontSize: '18px', fontWeight: '500' }}>✓ Data-driven Growth</span>
             </div>
           </div>
         </div>
 
-        </section>
+
+      </section>
 
 
       {/* =====================================================

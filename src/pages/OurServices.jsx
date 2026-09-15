@@ -135,17 +135,9 @@ function ServiceAlternatingCard({ service, index }) {
         <p className="ser-alt-short">{service.short}</p>
         <p className="ser-alt-desc">{service.description}</p>
         
-        <div className="ser-alt-tags">
-          {service.tags.map((tag) => (
-            <span key={tag}>{tag}</span>
-          ))}
-        </div>
 
-        <div className="ser-card-cta-row">
-          <a href="/contact" className="ser-alt-btn">
-            Start a Project <ArrowRight size={18} />
-          </a>
-        </div>
+
+
       </div>
     </div>
   );
@@ -153,12 +145,11 @@ function ServiceAlternatingCard({ service, index }) {
 
 function ServicesAlternatingShowcase({ services }) {
   return (
-    <section className="ser-zoom-section" id="services-list">
+    <section className="ser-zoom-section" id="services-list" style={{ paddingBottom: '20px' }}>
       {/* Header with Our Services and related content (Clean, no dots) */}
       <div className="ser-zoom-header" data-reveal="up">
-        <span className="section-kicker">WHAT WE DO</span>
         <h2 className="ser-zoom-title">
-          Our <span className="ser-title-gradient">Services</span>
+          Our Services
         </h2>
         <p className="ser-zoom-subtitle">
           From high-performance web and mobile applications to intelligent AI workflows and scalable cloud SaaS platforms — explore how we engineer future-ready solutions tailored to scale your business.
@@ -237,12 +228,11 @@ export default function OurServices() {
         <div className="tcs-hero-overlay"></div>
 
         <div className="tcs-hero-content">
-          <span className="section-kicker hero-kicker-pill">FUTURE-READY ENGINEERING</span>
           <h1 className="animate-hero-fade-up" style={{ animationDelay: '120ms' }}>
             Transforming Ideas Into <br />
-            <span>Intelligent Digital Solutions</span>
+            Intelligent Digital Solutions
           </h1>
-          <p className="animate-hero-fade-up" style={{ animationDelay: '240ms' }}>
+          <p className="animate-hero-fade-up" style={{ animationDelay: '240ms', fontSize: 'clamp(15px, 1.8vw, 18px)' }}>
             From high-impact web and mobile apps to autonomous AI workflows and enterprise SaaS systems — we build technology that drives measurable business growth.
           </p>
           <a href="#services-list" className="hero-primary-btn animate-hero-fade-up" style={{ animationDelay: '360ms' }}>
@@ -261,7 +251,7 @@ export default function OurServices() {
         {/* =====================================================
             OUR PROCESS
         ===================================================== */}
-        <section className="process-section" id="process">
+        <section className="process-section" id="process" style={{ paddingTop: '20px' }}>
           <div className="process-header" data-reveal="up">
             <span className="section-kicker">HOW WE WORK</span>
             <h2>Our Proven Approach</h2>
