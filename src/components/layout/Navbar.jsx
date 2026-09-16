@@ -6,13 +6,12 @@ import {
   ChevronDown,
   Layers,
   Sparkles,
-  PhoneCall,
   ArrowRight,
   ShieldCheck,
   Code
 } from 'lucide-react'
 import { NAV_LINKS } from '../../data/navigation.js'
-import { SITE_NAME, CONTACT_PHONE } from '../../utils/constants.js'
+import { SITE_NAME } from '../../utils/constants.js'
 
 const iconMap = {
   Layers: <Layers className="h-4 w-4 text-[#0062CD]" />,
@@ -51,10 +50,11 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-[100] w-full bg-white/95 backdrop-blur-md shadow-md border-b border-slate-200/80 font-montserrat text-slate-900">
       {/* MAIN NAVBAR */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 h-20 flex items-center justify-between font-montserrat">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 h-20 flex items-center justify-between font-montserrat">
         {/* LEFT: Brand Logo */}
-        <Link to="/" className="flex items-center gap-3 group shrink-0 font-montserrat">
-          <div className="relative flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-slate-900 p-1 shadow-xs transition-transform group-hover:scale-105 border border-slate-800">
+        <Link to="/" className="flex items-center group shrink-0 font-montserrat relative z-20">
+          {/* Logo Icon Box - Sits in front (z-10) with solid background */}
+          <div className="relative z-10 flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-slate-900 p-1 shadow-md transition-transform group-hover:scale-105 border border-slate-800">
             <img
               src="/images/logo/ad-logo.png"
               onError={(e) => { e.target.src = '/images/AD Logo.png' }}
@@ -62,7 +62,15 @@ export default function Navbar() {
               className="h-full w-full object-contain"
             />
           </div>
-          <div className="flex flex-col font-montserrat">
+
+          {/* Brand Text - Butter smooth slide into the logo on scroll, slides back out at top */}
+          <div
+            className={`flex flex-col font-montserrat overflow-hidden whitespace-nowrap transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-[max-width,opacity,transform] ${
+              scrolled
+                ? 'max-w-0 opacity-0 -translate-x-6 ml-0 pointer-events-none'
+                : 'max-w-[260px] opacity-100 translate-x-0 ml-3.5'
+            }`}
+          >
             <span className="font-montserrat text-base sm:text-lg xl:text-xl font-bold tracking-tight text-slate-900 leading-tight">
               AD FUTURE STACK
             </span>
@@ -72,8 +80,11 @@ export default function Navbar() {
           </div>
         </Link>
 
-        {/* CENTER: Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-3 xl:gap-6 2xl:gap-8 font-montserrat" aria-label="Primary Navigation">
+        {/* CENTER: Navigation Links - Perfectly STATIC at true center regardless of logo width */}
+        <nav
+          className="hidden lg:flex items-center gap-3 xl:gap-6 2xl:gap-8 font-montserrat absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
+          aria-label="Primary Navigation"
+        >
           {NAV_LINKS.map((link) => {
             const hasChildren = Boolean(link.children && link.children.length > 0)
             const isParentActive =
@@ -152,22 +163,8 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* RIGHT SIDE: Phone Call Badge & CTA */}
-        <div className="flex items-center gap-5 sm:gap-6 font-montserrat">
-          <div className="hidden xl:flex items-center gap-3 font-montserrat">
-            <div className="h-10 w-10 rounded-full bg-[#0062CD] text-white flex items-center justify-center shadow-md shrink-0">
-              <PhoneCall className="h-5 w-5" />
-            </div>
-            <div className="flex flex-col font-montserrat">
-              <span className="text-[10px] font-montserrat uppercase font-bold text-slate-500">
-                Let's Talk
-              </span>
-              <a href={`tel:${CONTACT_PHONE}`} className="text-xs font-bold text-slate-900 hover:text-[#0062CD] transition-colors font-montserrat">
-                {CONTACT_PHONE}
-              </a>
-            </div>
-          </div>
-
+        {/* RIGHT SIDE: CTA & Mobile Menu */}
+        <div className="flex items-center gap-4 font-montserrat">
           <Link
             to="/contact"
             className="hidden sm:inline-flex items-center justify-center rounded-xl bg-[#0062CD] px-5 sm:px-6 py-2.5 sm:py-3 text-xs font-bold text-white uppercase tracking-wider hover:bg-[#0052b0] transition-all shadow-md hover:shadow-[#0062CD]/25 active:scale-95 font-montserrat shrink-0"
@@ -233,13 +230,6 @@ export default function Navbar() {
             })}
 
             <div className="pt-4 border-t border-slate-200 flex flex-col gap-3 font-montserrat">
-              <a
-                href={`tel:${CONTACT_PHONE}`}
-                className="text-xs font-bold text-slate-800 flex items-center gap-2 font-montserrat"
-              >
-                <PhoneCall className="h-4 w-4 text-[#0062CD]" />
-                <span>{CONTACT_PHONE}</span>
-              </a>
               <Link
                 to="/contact"
                 onClick={() => setOpen(false)}
