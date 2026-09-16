@@ -7,15 +7,15 @@ const HERO_SLIDES = [
   },
   {
     src: '/images/hero/hero-slide-2.webp',
-    alt: 'Enterprise Technology Innovation & Meeting',
+    alt: 'Code Architecture & Full-Stack Engineering Workspace',
   },
   {
     src: '/images/hero/hero-slide-3.webp',
-    alt: 'Software Engineering & IT Workspace',
+    alt: 'AI Neural Networks, Data Pipelines & Connected APIs',
   },
   {
     src: '/images/hero/hero-slide-4.webp',
-    alt: 'Microprocessor & Hardware Technology Architecture',
+    alt: 'AI Enterprise Intelligence, Sales Telemetry & Cloud Ecosystems',
   },
   {
     src: '/images/hero/hero-slide-5.webp',
