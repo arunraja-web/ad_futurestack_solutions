@@ -1,254 +1,50 @@
 import React from "react";
 import "../styles/services.css";
 import SEO from "../components/common/SEO.jsx";
+import { Blocks, BrainCircuit, CloudCog, Workflow, Network, Target, Bot, Box, PieChart, Users, CheckCircle, Clock, Rocket } from "lucide-react";
+import { Link } from "react-router-dom";
+import CountUp from "../components/common/CountUp.jsx";
+import AnimatedShowcase from "../components/sections/AnimatedShowcase.jsx";
 
-const services = [
-  {
-    number: "01",
-    title: "Web Development",
-    short: "Modern digital experiences built around your business.",
-    description:
-      "We design and develop fast, responsive and scalable websites and web applications that combine strong visual experiences with reliable engineering.",
-    tags: ["React", "Node.js", "APIs", "Databases"],
-  },
-  {
-    number: "02",
-    title: "App Development",
-    short: "Mobile products designed for real-world users.",
-    description:
-      "From customer-facing mobile applications to business platforms, we create intuitive and high-performance experiences that work seamlessly across devices.",
-    tags: ["React Native", "APIs", "Cloud", "Mobile"],
-  },
-  {
-    number: "03",
-    title: "AI & Workflow Automation",
-    short: "Turn repetitive work into intelligent systems.",
-    description:
-      "We connect AI agents, business applications and automated workflows to reduce manual processes, improve productivity and help teams operate smarter.",
-    tags: ["AI Agents", "n8n", "Automation", "APIs"],
-  },
-  {
-    number: "04",
-    title: "Digital Marketing",
-    short: "Build visibility. Generate demand. Grow online.",
-    description:
-      "Our data-driven digital strategies help businesses improve search visibility, reach the right audience, generate qualified leads and build sustainable online growth.",
-    tags: ["SEO", "Ads", "Social", "Analytics"],
-  },
-  {
-    number: "05",
-    title: "Multi-Tenant SaaS Systems",
-    short: "Scalable platforms built for multiple businesses.",
-    description:
-      "We engineer secure SaaS platforms with multi-tenancy, role management, subscriptions, isolated data and scalable infrastructure.",
-    tags: ["Next.js", "Node.js", "PostgreSQL", "AWS"],
-  },
-];
+
+
 
 const capabilities = [
   {
-    icon: "◈",
+    icon: <Blocks className="lucide-icon icon-reveal" strokeWidth={1.5} />,
     title: "Product Engineering",
     text: "From an initial idea to a production-ready digital product.",
   },
   {
-    icon: "✦",
+    icon: <BrainCircuit className="lucide-icon icon-reveal" strokeWidth={1.5} />,
     title: "AI & Automation",
     text: "Intelligent workflows that remove repetitive operational work.",
   },
   {
-    icon: "⌁",
+    icon: <CloudCog className="lucide-icon icon-reveal" strokeWidth={1.5} />,
     title: "Cloud & Data",
     text: "Reliable infrastructure and data systems built to scale.",
   },
 ];
 
 const technologies = [
-  "React",
-  "Next.js",
-  "Node.js",
-  "Java",
-  "Spring Boot",
-  "Python",
-  "PostgreSQL",
-  "MongoDB",
-  "AWS",
-  "Docker",
-  "AI",
-  "APIs",
+  { name: "React", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+  { name: "Next.js", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" },
+  { name: "Node.js", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" },
+  { name: "Java", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" },
+  { name: "Spring Boot", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" },
+  { name: "Python", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
+  { name: "PostgreSQL", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" },
+  { name: "MongoDB", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" },
+  { name: "AWS", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
+  { name: "Docker", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" }
 ];
 
 function Arrow() {
   return <span className="service-arrow">→</span>;
 }
 
-function ServiceVisual({ index }) {
-  if (index === 0) {
-    return (
-      <div className="visual-browser">
-        <div className="browser-header">
-          <span />
-          <span />
-          <span />
-        </div>
 
-        <div className="browser-layout">
-          <div className="browser-menu">
-            <i />
-            <i />
-            <i />
-            <i />
-          </div>
-
-          <div className="browser-content">
-            <div className="browser-heading" />
-
-            <div className="browser-metrics">
-              <div />
-              <div />
-              <div />
-            </div>
-
-            <div className="browser-chart">
-              <i />
-              <i />
-              <i />
-              <i />
-              <i />
-              <i />
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (index === 1) {
-    return (
-      <div className="visual-phone">
-        <div className="phone">
-          <div className="phone-speaker" />
-
-          <div className="phone-screen">
-            <div className="phone-title" />
-            <div className="phone-hero" />
-
-            <div className="phone-items">
-              <span />
-              <span />
-            </div>
-
-            <div className="phone-bottom">
-              <i />
-              <i />
-              <i />
-              <i />
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (index === 2) {
-    return (
-      <div className="visual-automation">
-        <div className="automation-core">
-          <span>AI</span>
-        </div>
-
-        <div className="automation-node node-a">
-          CRM
-        </div>
-
-        <div className="automation-node node-b">
-          API
-        </div>
-
-        <div className="automation-node node-c">
-          DATA
-        </div>
-
-        <div className="automation-node node-d">
-          n8n
-        </div>
-
-        <div className="automation-line line-a" />
-        <div className="automation-line line-b" />
-        <div className="automation-line line-c" />
-        <div className="automation-line line-d" />
-      </div>
-    );
-  }
-
-  if (index === 3) {
-    return (
-      <div className="visual-marketing">
-        <div className="marketing-card">
-          <div className="marketing-top">
-            <span />
-            <span />
-          </div>
-
-          <div className="marketing-chart">
-            <i />
-            <i />
-            <i />
-            <i />
-            <i />
-            <i />
-            <i />
-          </div>
-
-          <div className="marketing-bottom">
-            <span />
-            <span />
-            <span />
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className="visual-saas">
-      <div className="saas-window">
-        <div className="saas-sidebar">
-          <b />
-          <i />
-          <i />
-          <i />
-          <i />
-        </div>
-
-        <div className="saas-content">
-          <div className="saas-top">
-            <span />
-            <span />
-          </div>
-
-          <div className="saas-boxes">
-            <i />
-            <i />
-            <i />
-          </div>
-
-          <div className="saas-graph">
-            <i />
-            <i />
-            <i />
-            <i />
-            <i />
-          </div>
-        </div>
-      </div>
-
-      <div className="tenant-bubble bubble-a">A</div>
-      <div className="tenant-bubble bubble-b">B</div>
-      <div className="tenant-bubble bubble-c">C</div>
-    </div>
-  );
-}
 
 const servicesSchema = {
   '@context': 'https://schema.org',
@@ -257,7 +53,7 @@ const servicesSchema = {
   'provider': {
     '@type': 'Organization',
     'name': 'AD FutureStack',
-    'url': 'https://adfuturestack.dev'
+    'url': 'https://adfuturestack.com'
   },
   'areaServed': 'Worldwide',
   'hasOfferCatalog': {
@@ -304,10 +100,10 @@ export default function Services() {
   return (
     <main className="services-page">
       <SEO
-        title="IT Services & Digital Engineering | AD FutureStack"
+        title="IT Services & Digital Engineering Solutions | AD FutureStack"
         description="Explore our digital services: web development, mobile apps, AI workflow automation, SEO growth engines, and multi-tenant SaaS engineering."
         keywords="Web Development Services, Mobile App Development, AI Automation Services, SaaS Engineering, Digital Marketing, AD FutureStack Services"
-        canonicalUrl="https://adfuturestack.dev/services"
+        canonicalUrl="https://adfuturestack.com/services"
         schema={servicesSchema}
       />
 
@@ -320,10 +116,10 @@ export default function Services() {
 
         <div className="services-hero-inner">
 
-          <div data-reveal="up" className="services-hero-content">
+          <div className="services-hero-content">
 
             <br></br><br></br>
-            <h1>
+            <h1 className="animate-hero-fade-up" style={{ animationDelay: '0ms', opacity: 0 }}>
               Excellent software
               <br />
               services for your
@@ -331,16 +127,16 @@ export default function Services() {
               <span>business success.</span>
             </h1>
 
-            <p>
+            <p className="animate-hero-fade-up" style={{ animationDelay: '120ms', opacity: 0 }}>
               From modern websites and applications to AI-powered
               automation and scalable SaaS platforms, we build digital
               solutions that help ambitious businesses move forward.
             </p>
 
-            <div className="hero-buttons">
+            <div className="hero-buttons animate-hero-fade-up" style={{ animationDelay: '240ms', opacity: 0 }}>
 
               <a
-                href="#services-list"
+                href="/our-services"
                 className="hero-primary-btn"
               >
                 Explore Services
@@ -359,7 +155,8 @@ export default function Services() {
 
             <a
               href="#why-us"
-              className="watch-story"
+              className="watch-story animate-float animate-hero-fade-up"
+              style={{ animationDelay: '360ms', opacity: 0 }}
             >
               <span className="play-circle">▶</span>
 
@@ -379,81 +176,28 @@ export default function Services() {
 
 
       {/* =====================================================
-          WHY CHOOSE US
+          WHY CHOOSE US (ANIMATED)
       ===================================================== */}
-      <section
-        className="why-section"
-        id="why-us"
-      >
-
-        <div className="why-intro">
-
-          <span className="section-kicker">
-            WHY CHOOSE US
-          </span>
-
-          <h2>
-            Technology that works
-            <br />
-            for your business.
-          </h2>
-
-          <p>
-            We don't just deliver software. We understand the business
-            behind the technology and create solutions designed around
-            your goals, customers and future growth.
-          </p>
-
-        </div>
-
-
-        <div className="capability-grid">
-
-          {capabilities.map((item, idx) => (
-            <article
-              data-reveal="up"
-              data-stagger={(idx + 1) * 100}
-              className="capability-card"
-              key={item.title}
-            >
-
-              <div className="capability-icon">
-                {item.icon}
-              </div>
-
-              <h3>{item.title}</h3>
-
-              <p>{item.text}</p>
-
-              <a href="#services-list">
-                Explore
-                <Arrow />
-              </a>
-
-            </article>
-          ))}
-
-        </div>
-
-      </section>
-
+      <div id="why-us">
+        <AnimatedShowcase />
+      </div>
 
       {/* =====================================================
           CONNECTING PEOPLE & TECHNOLOGY
       ===================================================== */}
       <section className="connection-section">
 
-        <div data-reveal="left" className="connection-visual">
+        <div className="connection-visual">
 
-          <div className="image-frame image-frame-main">
+          <div className="image-frame image-frame-main" data-reveal="left">
             <img
-              src="/images/services/team-collaboration-services.webp"
+              src="/images/services/digital-marketing-new.jpg"
               alt="AD FutureStack Digital Engineering & Technology Services Team"
               loading="lazy"
             />
           </div>
 
-          <div className="image-frame image-frame-small">
+          <div className="image-frame image-frame-small" data-reveal="left" data-stagger="150">
             <img
               src="/images/services/business-collaboration.webp"
               alt="AD FutureStack Business Technology Collaboration & Software Consulting"
@@ -461,8 +205,8 @@ export default function Services() {
             />
           </div>
 
-          <div className="award-card">
-            <strong>100+</strong>
+          <div className="award-card" data-reveal="scale" data-stagger="300">
+            <strong><CountUp target={100} />+</strong>
             <span>Digital Projects<br />Delivered</span>
           </div>
 
@@ -490,7 +234,7 @@ export default function Services() {
           <div className="connection-points">
 
             <div>
-              <span>✦</span>
+              <span className="icon-reveal"><Workflow size={18} /></span>
 
               <div>
                 <strong>Business-first thinking</strong>
@@ -501,7 +245,7 @@ export default function Services() {
             </div>
 
             <div>
-              <span>◈</span>
+              <span className="icon-reveal"><Network size={18} /></span>
 
               <div>
                 <strong>Long-term partnership</strong>
@@ -526,93 +270,6 @@ export default function Services() {
       </section>
 
 
-      {/* =====================================================
-          SERVICES
-      ===================================================== */}
-      <section
-        className="services-list-section"
-        id="services-list"
-      >
-
-        <div data-reveal="up" className="services-list-heading">
-
-          <div>
-            <span className="section-kicker">
-              WHAT WE DO
-            </span>
-
-            <h2>
-              Full-service digital
-              <br />
-              engineering.
-            </h2>
-          </div>
-
-          <p>
-            One technology partner for everything from your first
-            digital experience to complex business systems.
-          </p>
-
-        </div>
-
-
-        <div className="services-list">
-
-          {services.map((service, index) => (
-            <article
-              data-reveal={index % 2 === 0 ? "left" : "right"}
-              className={`full-service-card ${index === 2 ? "featured-service" : ""
-                }`}
-              key={service.number}
-            >
-
-              <div className="service-number">
-                {service.number}
-              </div>
-
-              <div className="service-copy">
-
-                <span className="service-label">
-                  DIGITAL SOLUTION
-                </span>
-
-                <h3>{service.title}</h3>
-
-                <strong>
-                  {service.short}
-                </strong>
-
-                <p>
-                  {service.description}
-                </p>
-
-                <div className="service-tags">
-                  {service.tags.map((tag) => (
-                    <span key={tag}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <a
-                  href="/contact"
-                  className="service-link"
-                >
-                  Explore Service
-                  <Arrow />
-                </a>
-
-              </div>
-
-              <ServiceVisual index={index} />
-
-            </article>
-          ))}
-
-        </div>
-
-      </section>
-
 
       {/* =====================================================
           TECHNOLOGY STRIP
@@ -621,26 +278,32 @@ export default function Services() {
 
         <div className="technology-inner">
 
-          <div>
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
             <span className="section-kicker">
               TECHNOLOGY
             </span>
 
             <h2>
-              Built with modern
-              <br />
-              technology.
+              Built with modern technology
             </h2>
           </div>
 
-          <div className="technology-list">
-
-            {technologies.map((tech) => (
-              <span key={tech}>
-                {tech}
-              </span>
-            ))}
-
+          <div className="technology-marquee-container">
+            <div className="technology-marquee-content">
+              {technologies.map((tech, idx) => (
+                <div key={idx} className="tech-logo-item">
+                  <img src={tech.src} alt={tech.name} loading="lazy" />
+                  <span>{tech.name}</span>
+                </div>
+              ))}
+              {/* Duplicate list for seamless infinite scrolling */}
+              {technologies.map((tech, idx) => (
+                <div key={`dup-${idx}`} className="tech-logo-item">
+                  <img src={tech.src} alt={tech.name} loading="lazy" />
+                  <span>{tech.name}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
         </div>
@@ -652,57 +315,95 @@ export default function Services() {
           DIGITAL GROWTH CTA
       ===================================================== */}
       <section className="growth-section">
-
-        <div className="growth-overlay" />
-
-        <div className="growth-content">
-
-          <span className="section-kicker">
-            DIGITAL GROWTH
-          </span>
-
-          <h2>
-            It's your time to grow
-            <br />
-            through technology.
-          </h2>
-
-          <p>
-            Build better digital experiences, automate operations,
-            reach more customers and create systems that scale with
-            your business.
-          </p>
-
-          <div className="growth-buttons">
-
-            <a
-              href="/contact"
-              className="hero-primary-btn"
-            >
-              Get Started
-              <Arrow />
-            </a>
-
-            <a
-              href="/careers"
-              className="hero-secondary-btn"
-            >
-              See Our Work
-              <span>↗</span>
-            </a>
-
-          </div>
-
-          <div className="growth-features">
-
-            <span>✓ Lead Generation</span>
-            <span>✓ Business Automation</span>
-            <span>✓ Scalable Systems</span>
-            <span>✓ Data-driven Growth</span>
-
-          </div>
-
+        <div className="growth-bg-image">
+          <img src="/images/services/digital-marketing-new.jpg" alt="Background" loading="lazy" />
+          <div className="growth-bg-overlay"></div>
         </div>
+
+        <div className="growth-content-wrapper">
+          <div className="growth-content-left" data-reveal="right">
+            <span className="section-kicker">DIGITAL GROWTH</span>
+            <h2>
+              It's your time to grow<br />through <span className="text-blue">technology.</span>
+            </h2>
+            <p>
+              Build better digital experiences, automate operations,
+              reach more customers and create systems that scale with
+              your business.
+            </p>
+            <div className="growth-buttons">
+              <a href="/contact" className="hero-primary-btn">
+                Get Started
+                <Arrow />
+              </a>
+              <a href="/solutions" className="hero-secondary-btn alt-btn">
+                See Our Work
+                <span>↗</span>
+              </a>
+            </div>
+            <div className="growth-features">
+              <span data-reveal="fade" data-stagger="100">✓ Lead Generation</span>
+              <span data-reveal="fade" data-stagger="200">✓ Business Automation</span>
+              <span data-reveal="fade" data-stagger="300">✓ Scalable Systems</span>
+              <span data-reveal="fade" data-stagger="400">✓ Data-driven Growth</span>
+            </div>
+          </div>
+
+          <div className="growth-content-right" data-reveal="left" data-stagger="200">
+            <div className="floating-ui-container">
+              
+              <div className="float-card card-strategy" style={{ animationDelay: '0s' }}>
+                <Target size={22} strokeWidth={2} className="float-icon blue" />
+                <div className="float-text">
+                  <strong>Strategy</strong>
+                  <div className="skeleton-line w-full"></div>
+                </div>
+              </div>
+              
+              <div className="float-card card-automation" style={{ animationDelay: '1.5s' }}>
+                <Bot size={22} strokeWidth={2} className="float-icon purple" />
+                <div className="float-text">
+                  <strong>Automation</strong>
+                  <div className="skeleton-line w-half"></div>
+                </div>
+              </div>
+              
+              <div className="float-card card-growth" style={{ animationDelay: '0.7s' }}>
+                <div className="float-text">
+                  <strong>Growth</strong>
+                </div>
+                <div className="chart-line">
+                   <svg viewBox="0 0 100 40" preserveAspectRatio="none">
+                     <path d="M0,35 Q10,35 20,25 T40,20 T60,10 T80,15 T100,5" fill="none" stroke="var(--blue)" strokeWidth="2.5" />
+                     <circle cx="20" cy="25" r="3.5" fill="var(--blue)" />
+                     <circle cx="60" cy="10" r="3.5" fill="var(--blue)" />
+                     <circle cx="100" cy="5" r="3.5" fill="var(--blue)" />
+                   </svg>
+                </div>
+              </div>
+              
+              <div className="float-card card-systems" style={{ animationDelay: '2s' }}>
+                <Box size={22} strokeWidth={2} className="float-icon navy" />
+                <div className="float-text">
+                  <strong>Systems</strong>
+                  <div className="skeleton-line w-full"></div>
+                  <div className="skeleton-line w-half mt-1"></div>
+                </div>
+              </div>
+              
+              <div className="float-card card-analytics" style={{ animationDelay: '1.2s' }}>
+                <PieChart size={22} strokeWidth={2} className="float-icon blue" />
+                <div className="float-text">
+                  <strong>Analytics</strong>
+                  <div className="skeleton-line w-half"></div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+
 
       </section>
 
@@ -712,30 +413,28 @@ export default function Services() {
       ===================================================== */}
       <section className="final-service-cta">
 
-        <div>
+        <div data-reveal="up" className="final-cta-content">
           <span className="section-kicker">
             HAVE A PROJECT IN MIND?
           </span>
 
           <h2>
-            Let's build something
-            <br />
-            meaningful together.
+            Let's build something meaningful together
           </h2>
 
           <p>
             Tell us what you're building. We'll help you find the
             right technology, strategy and path forward.
           </p>
-        </div>
 
-        <a
-          href="/contact"
-          className="final-cta-button"
-        >
-          Start a Project
-          <Arrow />
-        </a>
+          <a
+            href="/contact"
+            className="final-cta-button"
+          >
+            Start a Project
+            <Arrow />
+          </a>
+        </div>
 
       </section>
 

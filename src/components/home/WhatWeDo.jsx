@@ -85,78 +85,48 @@ export default function WhatWeDo() {
   }
 
   return (
-    <section className="py-20 lg:py-24 bg-slate-50/70 border-b border-slate-200/80 font-montserrat">
-      <Container className="font-montserrat max-w-5xl">
+    <section id="faq" className="py-20 lg:py-28 bg-slate-50/70 border-b border-slate-200/80 font-montserrat scroll-mt-28">
+      <Container className="font-montserrat">
         {/* SECTION HEADER */}
-        <div data-reveal="up" className="mb-12 sm:mb-14 space-y-3 font-montserrat text-left">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 shadow-2xs font-montserrat">
-            <HelpCircle className="h-3.5 w-3.5 text-slate-500" />
-            <span className="text-[11px] font-montserrat font-bold tracking-wider text-slate-600 uppercase">
-              Help Center &amp; FAQ
+        <div data-reveal="up" className="text-center max-w-3xl mx-auto mb-16 space-y-4 font-montserrat">
+          <h2 className="text-3xl sm:text-5xl font-bold text-slate-900 tracking-tight uppercase leading-tight font-montserrat">
+            <span className="gsap-mask-wrapper">
+              <span className="gsap-mask-line">Got Questions? <span className="text-[#0062CD] font-montserrat">We Have Answers.</span></span>
             </span>
-          </div>
-
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-tight font-montserrat">
-            Frequently Asked Questions
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl font-montserrat">
+          <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto font-montserrat">
             Everything you need to know about our engineering process, service capabilities, SLA uptime guarantees, and starting your project.
           </p>
         </div>
 
-        {/* SINGLE CONTINUOUS ACCORDION CARD */}
-        <div
-          data-reveal="up"
-          className="bg-white rounded-xl sm:rounded-2xl border border-slate-200/90 shadow-sm shadow-slate-900/5 overflow-hidden font-montserrat divide-y divide-slate-100"
-        >
+        {/* ACCORDION GRID */}
+        <div className="gsap-stagger-list max-w-4xl mx-auto space-y-4 font-montserrat">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index
-            const IconComponent = faq.icon
 
             return (
               <div
                 key={faq.question}
-                className={`faq-row-item font-montserrat ${
-                  isOpen ? 'bg-slate-50/45' : 'hover:bg-slate-50/70'
+                className={`gsap-stagger-item rounded-xl overflow-hidden transition-all duration-300 border font-montserrat ${
+                  isOpen
+                    ? 'bg-white border-[#0062CD]/50 shadow-md ring-1 ring-[#0062CD]/20 -translate-y-0.5'
+                    : 'bg-white border-slate-200 shadow-2xs hover:border-slate-300 hover:shadow-sm hover:-translate-y-0.5'
                 }`}
               >
                 <button
                   type="button"
                   onClick={() => toggleFAQ(index)}
-                  aria-expanded={isOpen}
-                  aria-controls={`faq-answer-${index}`}
-                  id={`faq-question-${index}`}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 sm:gap-6 font-montserrat focus:outline-none cursor-pointer group"
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-montserrat focus:outline-none cursor-pointer group"
                 >
-                  <div className="flex items-center gap-3.5 sm:gap-4.5 min-w-0 flex-1">
-                    {/* Icon box: active = dark fill, inactive = light neutral */}
-                    <div
-                      className={`faq-icon-box h-10 w-10 sm:h-11 sm:w-11 rounded-lg sm:rounded-xl flex items-center justify-center shrink-0 border ${
-                        isOpen
-                          ? 'is-active bg-slate-900 border-slate-900 text-white shadow-2xs'
-                          : 'bg-slate-100/80 border-slate-200 text-slate-600 group-hover:bg-slate-200 group-hover:border-slate-300 group-hover:text-slate-800'
-                      }`}
-                    >
-                      <IconComponent className="h-5 w-5 stroke-[2]" />
-                    </div>
-
-                    <div className="flex flex-col min-w-0 flex-1">
-                      <span className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors duration-200 leading-snug font-montserrat truncate sm:whitespace-normal">
-                        {faq.question}
-                      </span>
-                      <span className="text-xs sm:text-[13px] font-medium text-slate-500 mt-0.5 font-montserrat">
-                        {faq.category}
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Toggle button: active = slate-900, inactive = neutral gray */}
+                  <span className="text-base sm:text-lg font-bold text-slate-900 font-montserrat">
+                    {faq.question}
+                  </span>
                   <div
-                    className={`faq-toggle-btn h-8 w-8 sm:h-9 sm:w-9 rounded-full flex items-center justify-center shrink-0 border ${
+                    className={`h-8 w-8 rounded-lg flex items-center justify-center shrink-0 transition-transform duration-300 ${
                       isOpen
-                        ? 'bg-slate-900 text-white border-slate-900 shadow-xs'
-                        : 'bg-slate-100 text-slate-600 border-slate-200/80 group-hover:border-slate-300 group-hover:bg-slate-200 group-hover:text-slate-800'
+                        ? 'bg-[#0062CD] text-white rotate-180 shadow-md'
+                        : 'bg-slate-100 text-slate-600'
                     }`}
                     aria-hidden="true"
                   >
@@ -168,21 +138,20 @@ export default function WhatWeDo() {
                   </div>
                 </button>
 
+                {/* Smooth Grid-Template-Rows Height Transition */}
                 <div
-                  id={`faq-answer-${index}`}
-                  role="region"
-                  aria-labelledby={`faq-question-${index}`}
-                  className={`faq-grid-row ${isOpen ? 'is-open' : ''} font-montserrat`}
+                  className={`grid transition-[grid-template-rows,opacity] duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                    isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                  }`}
                 >
-                  <div className="faq-answer-inner font-montserrat">
-                    <div className="faq-answer-content pb-6 pl-[58px] sm:pl-[68px] pr-5 sm:pr-8 text-sm sm:text-base text-slate-600 leading-relaxed font-montserrat">
+                  <div className="overflow-hidden">
+                    <div className="px-5 sm:px-6 pb-6 pt-1 text-sm text-slate-700 leading-relaxed border-t border-slate-100 font-montserrat">
                       <p className="font-montserrat">{faq.answer}</p>
-
                       {faq.actionLink && (
                         <div className="mt-3.5">
                           <Link
                             to={faq.actionLink}
-                            className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 hover:text-blue-700 transition-colors uppercase tracking-wider group/link"
+                            className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0062CD] hover:text-[#0050A8] transition-colors uppercase tracking-wider group/link"
                           >
                             <span>{faq.actionText}</span>
                             <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/link:translate-x-1" />
@@ -195,8 +164,15 @@ export default function WhatWeDo() {
               </div>
             )
           })}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )
+          })}
         </div>
       </Container>
     </section>
   )
 }
+

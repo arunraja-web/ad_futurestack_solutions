@@ -7,9 +7,9 @@ export default function NotFound() {
   return (
     <>
       <SEO
-        title="404 - Page Not Found | AD FutureStack"
+        title="404: Page Not Found | AD FutureStack"
         description="The page you requested could not be found. Return to AD FutureStack homepage to explore our IT services and software solutions."
-        canonicalUrl="https://adfuturestack.dev/404"
+        canonicalUrl="https://adfuturestack.com/404"
         robots="noindex, nofollow"
       />
       <div className="min-h-[70vh] flex items-center justify-center py-20 bg-slate-950">

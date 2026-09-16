@@ -4,7 +4,7 @@ export const capabilities = [
     title: 'Full-Stack Web Engineering',
     category: 'Core Engineering',
     iconName: 'Code',
-    image: '/images/services/web-engineering.webp',
+    image: '/images/services/web-development-new.jpg',
     description: 'End-to-end web applications built with TypeScript, React, Next.js, Node.js, and serverless architectures.',
     technologies: ['React', 'Next.js', 'Node.js', 'TypeScript', 'GraphQL', 'Tailwind CSS']
   },
@@ -22,7 +22,7 @@ export const capabilities = [
     title: 'AI & Intelligent Automation',
     category: 'Emerging Tech',
     iconName: 'Cpu',
-    image: '/images/capabilities/ai-automation.webp',
+    image: '/images/services/ai-automation-new.jpg',
     description: 'Custom AI integration, RAG architectures, LLM fine-tuning, and automated predictive telemetry.',
     technologies: ['PyTorch', 'OpenAI', 'Gemini', 'LangChain', 'Pinecone', 'Python']
   },
@@ -31,7 +31,7 @@ export const capabilities = [
     title: 'Cross-Platform Mobile',
     category: 'Application Development',
     iconName: 'Smartphone',
-    image: '/images/services/mobile-products.webp',
+    image: '/images/services/app-development-new.jpg',
     description: 'Native iOS & Android mobile applications engineered for ultra-fast load times and offline synchronization.',
     technologies: ['React Native', 'Swift', 'Kotlin', 'Expo', 'Firebase']
   }

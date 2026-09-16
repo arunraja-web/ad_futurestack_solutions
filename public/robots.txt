@@ -9,4 +9,4 @@ User-agent: Bingbot
 Allow: /
 
 # Sitemap Location
-Sitemap: https://adfuturestack.dev/sitemap.xml
+Sitemap: https://adfuturestack.com/sitemap.xml

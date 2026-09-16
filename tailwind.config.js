@@ -17,10 +17,12 @@ export default {
         paper: '#0F172A',
       },
       fontFamily: {
-        display: ['Outfit', 'Montserrat', 'sans-serif'],
-        body: ['Outfit', 'Montserrat', 'sans-serif'],
-        sans: ['Outfit', 'Montserrat', 'sans-serif'],
-        montserrat: ['Outfit', 'Montserrat', 'sans-serif'],
+        display: ['Inter', 'Outfit', 'Montserrat', 'sans-serif'],
+        body: ['Inter', 'Outfit', 'Montserrat', 'sans-serif'],
+        sans: ['Inter', 'Outfit', 'Montserrat', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
+        outfit: ['Outfit', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       backgroundImage: {
