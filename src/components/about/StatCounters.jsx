@@ -83,7 +83,7 @@ export default function StatCounters() {
   return (
     <section
       ref={containerRef}
-      className="bg-[#f6f2ea] pb-16 sm:pb-20 lg:pb-24 border-b border-[#eae4d8] font-montserrat"
+      className="bg-white pb-16 sm:pb-20 lg:pb-24 border-b border-[#eae4d8] font-montserrat"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center">
