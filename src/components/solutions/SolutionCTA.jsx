@@ -7,8 +7,8 @@ export default function SolutionCTA() {
       <p className="text-slate-600 max-w-xl mx-auto mb-6 text-sm leading-relaxed">
         Have specific security or data sovereignty requirements? We tailor enterprise blueprints to fit your compliance needs.
       </p>
-      <Button to="/contact" variant="primary" className="!bg-violet-700 hover:!bg-violet-700 !text-white">
-        Schedule Architectural Audit
+      <Button to="/contact" variant="primary" className="!bg-[#0062CD] hover:!bg-[#0050A8] !text-white">
+        Request Solution Architecture
       </Button>
     </div>
   )

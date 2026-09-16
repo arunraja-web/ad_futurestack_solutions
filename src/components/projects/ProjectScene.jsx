@@ -93,7 +93,7 @@ export default function ProjectScene({ project, index, totalProjects }) {
             {/* Category Tag + Live Demo */}
             <div className="scene-stagger-item scene-delay-1 flex items-center gap-3 mb-5">
               <span className="scene-category-tag">
-                <span className="w-1.5 h-1.5 rounded-full bg-violet-600 shrink-0" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#0062CD] shrink-0" />
                 {project.tag}
               </span>
               {project.liveUrl && (

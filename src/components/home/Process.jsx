@@ -35,7 +35,7 @@ export default function Process() {
               <span className="text-sm font-montserrat text-slate-500 font-medium block">
                 — Engineering Impact
               </span>
-              <h3 className="text-2xl sm:text-4xl font-bold text-slate-900 leading-snug group-hover:text-violet-700 transition-colors font-montserrat">
+              <h3 className="text-2xl sm:text-4xl font-bold text-slate-900 leading-snug group-hover:text-[#0062CD] transition-colors font-montserrat">
                 Building Scalable AI & Cloud Infrastructure for Tomorrow
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed font-montserrat max-w-2xl">
@@ -65,7 +65,7 @@ export default function Process() {
                 <span className="text-sm font-montserrat text-slate-500 font-medium block">
                   — Future-shaping projects
                 </span>
-                <h4 className="text-lg sm:text-3xl font-bold text-slate-900 leading-snug group-hover:text-violet-700 transition-colors font-montserrat">
+                <h4 className="text-lg sm:text-3xl font-bold text-slate-900 leading-snug group-hover:text-[#0062CD] transition-colors font-montserrat">
                   A unique architecture blueprint to drive digital transformation
                 </h4>
               </div>
@@ -89,7 +89,7 @@ export default function Process() {
                 <span className="text-xs font-montserrat text-slate-500 font-medium block">
                   — Culture & Talent
                 </span>
-                <h4 className="text-lg sm:text-3xl font-bold text-slate-900 leading-snug group-hover:text-violet-700 transition-colors font-montserrat">
+                <h4 className="text-lg sm:text-3xl font-bold text-slate-900 leading-snug group-hover:text-[#0062CD] transition-colors font-montserrat">
                   The code for careers in tech: Empowering young software engineers
                 </h4>
               </div>

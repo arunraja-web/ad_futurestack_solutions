@@ -9,7 +9,7 @@ const highlights = [
     title: 'H1 Enterprise Cloud Modernization',
     subtitle: 'Learn about our multi-cloud Kubernetes deployment results and 99.999% SLA uptime across distributed regions.',
     image: '/images/projects/fintech-enterprise.webp',
-    link: '/projects'
+    link: '/careers'
   },
   {
     id: 'ai-insights',
@@ -33,7 +33,7 @@ const highlights = [
     title: 'Global Payment Gateway & Compliance Engine',
     subtitle: 'Building PCI-DSS compliant transactional backend architectures processing millions of monthly transactions.',
     image: '/images/solutions/fintech-platform.webp',
-    link: '/projects'
+    link: '/careers'
   },
   {
     id: 'healthcare-telemetry',
@@ -60,16 +60,16 @@ export default function FeaturedProjects() {
         {/* SECTION TITLE */}
         <div data-reveal="up" className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4 font-montserrat">
           <div>
-            <span className="text-xs font-montserrat font-bold uppercase tracking-widest text-violet-700 block mb-1">
-              Case Studies & Portfolio
+            <span className="text-xs font-montserrat font-bold uppercase tracking-widest text-[#0062CD] block mb-1">
+              Case Studies
             </span>
-            <h2 className="text-3xl sm:text-6xl font-semibold text-slate-900 tracking-tight font-montserrat">
-              Highlights & Case Studies
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-slate-900 tracking-tight font-montserrat">
+              Featured Work
             </h2>
           </div>
           <Link
-            to="/projects"
-            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-violet-700 hover:text-violet-800 transition-colors uppercase tracking-wider font-montserrat"
+            to="/careers"
+            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#0062CD] hover:text-[#0050A8] transition-colors uppercase tracking-wider font-montserrat"
           >
             <span>Explore All Projects</span>
             <ArrowUpRight className="h-4 w-4" />
@@ -97,10 +97,10 @@ export default function FeaturedProjects() {
 
               {/* Headline & Description Below Image */}
               <div className="space-y-2 font-montserrat">
-                <span className="text-[10px] font-montserrat font-extrabold uppercase tracking-widest text-violet-700 block">
+                <span className="text-[10px] font-montserrat font-extrabold uppercase tracking-widest text-[#0062CD] block">
                   {item.category}
                 </span>
-                <h3 className="text-base sm:text-3xl font-semibold text-slate-900 leading-snug group-hover:text-violet-700 transition-colors font-montserrat">
+                <h3 className="text-base sm:text-3xl font-semibold text-slate-900 leading-snug group-hover:text-[#0062CD] transition-colors font-montserrat">
                   {item.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed font-montserrat">

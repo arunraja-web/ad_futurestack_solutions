@@ -21,15 +21,15 @@ export default function StatCounterBadge({ stat, label, isInView, className = ''
   return (
     <div
       className={`stat-counter-badge inline-flex items-center gap-2 px-3.5 py-1.5 
-        bg-slate-950/85 backdrop-blur-md border border-violet-500/40 
-        rounded-md shadow-lg shadow-violet-950/50 text-white z-20 
+        bg-slate-950/85 backdrop-blur-md border border-[#0062CD]/40 
+        rounded-md shadow-lg shadow-[#0062CD]/30 text-white z-20 
         transition-[opacity,transform] duration-700 ${isInView ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 -translate-y-2 scale-95'} ${className}`}
       style={{
-        boxShadow: '0 8px 24px -4px rgba(109, 40, 217, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.15)'
+        boxShadow: '0 8px 24px -4px rgba(0, 98, 205, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.15)'
       }}
     >
-      <div className="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse shadow-[0_0_8px_rgba(167,139,250,0.9)]" />
-      <span className="font-mono font-extrabold text-sm text-transparent bg-clip-text bg-gradient-to-r from-white via-violet-200 to-violet-400 tracking-tight">
+      <div className="w-1.5 h-1.5 rounded-full bg-[#3894FF] animate-pulse shadow-[0_0_8px_rgba(56,148,255,0.9)]" />
+      <span className="font-mono font-extrabold text-sm text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-200 to-[#3894FF] tracking-tight">
         {animatedValue}
       </span>
       {displayLabel && (

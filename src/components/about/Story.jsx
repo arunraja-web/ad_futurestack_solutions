@@ -41,7 +41,7 @@ export default function Story() {
 
           {/* Main Title */}
           <h2 className="text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight leading-[1.2] sm:leading-[1.15] uppercase font-montserrat">
-            Turning Complex Ideas Into <span className="text-violet-700">Digital Reality</span>
+            Turning Complex Ideas Into <span className="text-[#0062CD]">Digital Reality</span>
           </h2>
 
           {/* Sub-headline / Narrative Story */}
@@ -81,7 +81,7 @@ export default function Story() {
           <div className="pt-2 sm:pt-4">
             <Link
               to="/about"
-              className="group inline-flex items-center justify-center gap-3 bg-violet-700 text-white font-extrabold text-xs uppercase tracking-widest px-8 sm:px-9 py-3.5 sm:py-4 rounded-xl hover:bg-violet-800 transition-all duration-300 shadow-lg hover:shadow-violet-700/30 active:scale-95 cursor-pointer w-full sm:w-auto font-montserrat"
+              className="group inline-flex items-center justify-center gap-3 bg-[#0062CD] text-white font-extrabold text-xs uppercase tracking-widest px-8 sm:px-9 py-3.5 sm:py-4 rounded-xl hover:bg-[#0050A8] transition-all duration-300 shadow-lg hover:shadow-[#0062CD]/30 active:scale-95 cursor-pointer w-full sm:w-auto font-montserrat"
             >
               <span>EXPLORE OUR JOURNEY</span>
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />

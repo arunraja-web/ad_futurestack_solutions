@@ -38,6 +38,16 @@
   ],
   "routes": [
     {
+      "src": "/projects",
+      "status": 301,
+      "headers": { "Location": "/careers" }
+    },
+    {
+      "src": "/case-studies",
+      "status": 301,
+      "headers": { "Location": "/careers" }
+    },
+    {
       "handle": "filesystem"
     },
     {

@@ -3,10 +3,10 @@
 ========================================================= */
 
 .services-page {
-  --blue: #6d28d9;
-  --blue-dark: #5b21b6;
-  --violet: #6d28d9;
-  --violet-dark: #5b21b6;
+  --blue: #0062CD;
+  --blue-dark: #0050A8;
+  --violet: #0062CD;
+  --violet-dark: #0050A8;
   --navy: #07111f;
   --text: #111827;
   --muted: #667085;
@@ -160,7 +160,7 @@
 }
 
 .hero-primary-btn:hover {
-  background: #5b21b6;
+  background: #0050A8;
   transform: translateY(-2px);
 }
 
@@ -451,7 +451,7 @@
   color: white;
 
   box-shadow:
-    0 18px 40px rgba(109,40,217,0.25);
+    0 18px 40px rgba(0,98,205,0.25);
 }
 
 .award-card strong {
@@ -955,8 +955,8 @@
   background:
     linear-gradient(
       135deg,
-      #6d28d9,
-      #c4b5fd
+      #0062CD,
+      #93c5fd
     );
 }
 
@@ -1035,7 +1035,7 @@
   transform: translate(-50%, -50%);
 
   box-shadow:
-    0 0 70px rgba(109,40,217,0.18);
+    0 0 70px rgba(0,98,205,0.18);
 }
 
 .automation-core span {
@@ -1298,7 +1298,7 @@
 
   border-radius: 7px;
 
-  background: #6d28d9;
+  background: #0062CD;
 }
 
 .saas-sidebar i {
@@ -1397,7 +1397,7 @@
 
   border-radius: 50%;
 
-  background: #6d28d9;
+  background: #0062CD;
 
   color: white;
 
@@ -1405,7 +1405,7 @@
   font-weight: 800;
 
   box-shadow:
-    0 8px 20px rgba(109,40,217,0.25);
+    0 8px 20px rgba(0,98,205,0.25);
 }
 
 .bubble-a {

@@ -95,7 +95,7 @@ function SolutionVisualWidget({ bgImage, tag }) {
       />
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300 pointer-events-none" />
       <div className="absolute top-4 right-4 z-10">
-        <span className="text-[10px] font-mono font-bold text-white bg-violet-700/90 backdrop-blur-md px-3 py-1 rounded-full border border-violet-400/40 uppercase tracking-widest shadow-md">
+        <span className="text-[10px] font-mono font-bold text-white bg-[#0062CD]/90 backdrop-blur-md px-3 py-1 rounded-full border border-[#3894FF]/40 uppercase tracking-widest shadow-md">
           {tag}
         </span>
       </div>

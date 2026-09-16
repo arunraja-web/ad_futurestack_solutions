@@ -33,7 +33,7 @@ AD FutureStack partners with ambitious startups and enterprises to design, build
 - [Services](https://adfuturestack.dev/services): Full-stack product engineering services.
 - [Capabilities](https://adfuturestack.dev/capabilities): Technical ecosystem, architecture matrix, and tooling.
 - [Solutions](https://adfuturestack.dev/solutions): Enterprise software blueprints and operational accelerators.
-- [Case Studies](https://adfuturestack.dev/projects): Portfolio of client deployments and performance metrics.
+- [Careers](https://adfuturestack.dev/careers): Career opportunities and open positions at AD FutureStack. (Note: previous /projects and /case-studies URLs now redirect to /careers.)
 - [About Studio](https://adfuturestack.dev/about): Senior engineering team culture, vision, and operational principles.
 - [Technical Consultation](https://adfuturestack.dev/contact): Get in touch with our engineering team.
 

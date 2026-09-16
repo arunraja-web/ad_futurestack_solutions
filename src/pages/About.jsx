@@ -169,10 +169,10 @@ export default function About() {
           {/* MISSION & VISION DUAL CARDS */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
             <div data-reveal="left" className="bg-slate-900 text-white p-8 rounded-3xl border border-slate-800 shadow-xl relative overflow-hidden">
-              <div className="h-12 w-12 rounded-xl bg-violet-700/30 border border-violet-500/40 text-violet-400 flex items-center justify-center mb-6">
+              <div className="h-12 w-12 rounded-xl bg-[#0062CD]/30 border border-[#0062CD]/40 text-[#3894FF] flex items-center justify-center mb-6">
                 <Target className="h-6 w-6" />
               </div>
-              <span className="text-xs font-mono font-bold text-violet-400 uppercase tracking-widest block mb-2">OUR MISSION</span>
+              <span className="text-xs font-mono font-bold text-[#3894FF] uppercase tracking-widest block mb-2">OUR MISSION</span>
               <h3 className="text-2xl font-bold text-white mb-4">Architect Resilient Digital Products</h3>
               <p className="text-slate-300 text-sm leading-relaxed">
                 To engineer scalable, secure, and maintainable software systems that empower companies to scale seamlessly, reduce operational friction, and lead in their industries.
@@ -180,10 +180,10 @@ export default function About() {
             </div>
 
             <div data-reveal="right" className="bg-slate-900 text-white p-8 rounded-3xl border border-slate-800 shadow-xl relative overflow-hidden">
-              <div className="h-12 w-12 rounded-xl bg-violet-700/30 border border-violet-500/40 text-violet-400 flex items-center justify-center mb-6">
+              <div className="h-12 w-12 rounded-xl bg-[#0062CD]/30 border border-[#0062CD]/40 text-[#3894FF] flex items-center justify-center mb-6">
                 <Rocket className="h-6 w-6" />
               </div>
-              <span className="text-xs font-mono font-bold text-violet-400 uppercase tracking-widest block mb-2">OUR VISION</span>
+              <span className="text-xs font-mono font-bold text-[#3894FF] uppercase tracking-widest block mb-2">OUR VISION</span>
               <h3 className="text-2xl font-bold text-white mb-4">The Premier Technology Partner</h3>
               <p className="text-slate-300 text-sm leading-relaxed">
                 To be the global technology partner of choice for ambitious enterprises seeking production-grade engineering, continuous innovation, and zero technical debt.
@@ -204,7 +204,7 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {valuesList.map((item, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-violet-300 transition-colors">
+              <div key={idx} className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-[#0062CD]/30 transition-colors">
                 <div>
                   <span className="showcase-tag">{item.tag}</span>
                   <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
@@ -213,7 +213,7 @@ export default function About() {
                 <div className="space-y-2.5 pt-4 border-t border-slate-100">
                   {item.bullets.map((b, bIdx) => (
                     <div key={bIdx} className="flex items-center gap-2 text-xs font-semibold text-slate-700">
-                      <CheckCircle2 className="h-4 w-4 text-violet-600 shrink-0" />
+                      <CheckCircle2 className="h-4 w-4 text-[#0062CD] shrink-0" />
                       <span>{b}</span>
                     </div>
                   ))}

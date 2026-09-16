@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Building2, Mail, PhoneCall, CheckCircle2, AlertCircle } from "lucide-react";
 import SEO from "../components/common/SEO.jsx";
 import { CONTACT_EMAIL, CONTACT_PHONE, SITE_NAME } from "../utils/constants.js";
+import FAQ from "../components/contact/FAQ.jsx";
 
 const PORTRAIT_IMAGE = "/contact.avif";
 const MESSAGE_MAX_LENGTH = 1500;
@@ -26,13 +27,13 @@ const TextField = ({ label, required, id, ...props }) => {
     <label htmlFor={fieldId} className="block text-left font-montserrat">
       <span className="text-sm font-medium text-white font-montserrat">
         {label}
-        {required && <span className="text-violet-400 ml-0.5">*</span>}
+        {required && <span className="text-[#3894FF] ml-0.5">*</span>}
       </span>
       <input
         id={fieldId}
         {...props}
         required={required}
-        className="mt-3 w-full border-0 border-b border-white/25 bg-transparent pb-2 text-base text-white outline-none transition-colors duration-200 placeholder:text-white/30 focus:border-violet-400 focus-visible:ring-2 focus-visible:ring-violet-400 font-montserrat"
+        className="mt-3 w-full border-0 border-b border-white/25 bg-transparent pb-2 text-base text-white outline-none transition-colors duration-200 placeholder:text-white/30 focus:border-[#0062CD] focus-visible:ring-2 focus-visible:ring-[#0062CD] font-montserrat"
       />
     </label>
   )
@@ -134,7 +135,7 @@ export default function Contact() {
 
           {/* HEADER BADGE */}
           <div className="inline-flex items-center justify-center gap-3 font-montserrat mx-auto">
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-violet-600/30 border border-violet-500/40 text-violet-400 backdrop-blur-md">
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#0062CD]/30 border border-[#0062CD]/40 text-[#3894FF] backdrop-blur-md">
               <Building2 className="h-5 w-5" />
             </span>
             <span className="text-xs sm:text-sm font-bold uppercase tracking-[0.25em] text-white font-montserrat">
@@ -144,7 +145,7 @@ export default function Contact() {
 
           {/* MAIN TITLE & INTRO */}
           <h1 className="mt-6 text-3xl sm:text-5xl font-semibold text-white tracking-tight uppercase leading-tight font-montserrat text-center">
-            Let's Engineer Your <span className="text-violet-400 font-montserrat">Digital Future</span>
+            Let's Engineer Your <span className="text-[#3894FF] font-montserrat">Digital Future</span>
           </h1>
 
           <p className="mt-6 text-sm sm:text-base text-slate-200 font-normal leading-relaxed font-montserrat text-center max-w-2xl mx-auto">
@@ -190,7 +191,7 @@ export default function Contact() {
 
             <label htmlFor="field-message" className="block text-left font-montserrat">
               <span className="text-sm font-medium text-white font-montserrat">
-                How can we help you?<span className="text-violet-400 ml-0.5">*</span>
+                How can we help you?<span className="text-[#3894FF] ml-0.5">*</span>
               </span>
               <textarea
                 id="field-message"
@@ -200,7 +201,7 @@ export default function Contact() {
                 value={form.message}
                 onChange={updateField("message")}
                 placeholder="Briefly describe your project requirements, target architecture, or timeline..."
-                className="mt-3 w-full border-0 border-b border-white/25 bg-transparent pb-2 text-base text-white outline-none transition-colors duration-200 placeholder:text-white/30 focus:border-violet-400 focus-visible:ring-2 focus-visible:ring-violet-400 font-montserrat"
+                className="mt-3 w-full border-0 border-b border-white/25 bg-transparent pb-2 text-base text-white outline-none transition-colors duration-200 placeholder:text-white/30 focus:border-[#0062CD] focus-visible:ring-2 focus-visible:ring-[#0062CD] font-montserrat"
               />
               <span className="mt-2 block text-right text-xs text-slate-300 font-montserrat">
                 ({form.message.length}/{MESSAGE_MAX_LENGTH})
@@ -216,10 +217,10 @@ export default function Contact() {
                   required
                   checked={form.consentContact}
                   onChange={updateField("consentContact")}
-                  className="mt-0.5 h-4 w-4 shrink-0 rounded-sm border-slate-600 bg-transparent accent-violet-600 focus-visible:ring-2 focus-visible:ring-violet-400 cursor-pointer"
+                  className="mt-0.5 h-4 w-4 shrink-0 rounded-sm border-slate-600 bg-transparent accent-[#0062CD] focus-visible:ring-2 focus-visible:ring-[#0062CD] cursor-pointer"
                 />
                 <span>
-                  I consent to the processing of my personal data entered above for {SITE_NAME} to contact me regarding this inquiry.<span className="text-violet-400 ml-0.5">*</span>
+                  I consent to the processing of my personal data entered above for {SITE_NAME} to contact me regarding this inquiry.<span className="text-[#3894FF] ml-0.5">*</span>
                 </span>
               </label>
 
@@ -229,7 +230,7 @@ export default function Contact() {
                   type="checkbox"
                   checked={form.consentMarketing}
                   onChange={updateField("consentMarketing")}
-                  className="mt-0.5 h-4 w-4 shrink-0 rounded-sm border-slate-600 bg-transparent accent-violet-600 focus-visible:ring-2 focus-visible:ring-violet-400 cursor-pointer"
+                  className="mt-0.5 h-4 w-4 shrink-0 rounded-sm border-slate-600 bg-transparent accent-[#0062CD] focus-visible:ring-2 focus-visible:ring-[#0062CD] cursor-pointer"
                 />
                 <span>
                   I would like to receive technological insights, whitepapers, and engineering updates from {SITE_NAME}.
@@ -246,7 +247,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="inline-flex items-center justify-center rounded-xl bg-violet-700 hover:bg-violet-800 px-12 py-4 text-xs font-bold text-white uppercase tracking-widest transition-all shadow-lg hover:shadow-violet-700/30 active:scale-95 disabled:opacity-50 cursor-pointer font-montserrat"
+                className="inline-flex items-center justify-center rounded-xl bg-[#0062CD] hover:bg-[#0050A8] px-12 py-4 text-xs font-bold text-white uppercase tracking-widest transition-all shadow-lg hover:shadow-[#0062CD]/30 active:scale-95 disabled:opacity-50 cursor-pointer font-montserrat"
               >
                 {status === "sending" ? "Submitting Inquiry..." : "Submit Service Request"}
               </button>
@@ -270,24 +271,24 @@ export default function Contact() {
           {/* CONTACT INFO CARDS BELOW FORM */}
           <div className="mt-16 pt-12 border-t border-slate-800/80 grid grid-cols-1 sm:grid-cols-2 gap-6 font-montserrat w-full text-left">
             <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-900/80 backdrop-blur-md border border-slate-800 font-montserrat">
-              <div className="h-10 w-10 rounded-lg bg-violet-700/30 text-violet-400 flex items-center justify-center shrink-0">
+              <div className="h-10 w-10 rounded-lg bg-[#0062CD]/30 text-[#3894FF] flex items-center justify-center shrink-0">
                 <Mail className="h-5 w-5" />
               </div>
               <div className="flex flex-col font-montserrat">
                 <span className="text-[10px] uppercase font-bold text-slate-400">Direct Inbox</span>
-                <a href={`mailto:${CONTACT_EMAIL}`} className="text-xs font-bold text-white hover:text-violet-400 transition-colors">
+                <a href={`mailto:${CONTACT_EMAIL}`} className="text-xs font-bold text-white hover:text-[#3894FF] transition-colors">
                   {CONTACT_EMAIL}
                 </a>
               </div>
             </div>
 
             <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-900/80 backdrop-blur-md border border-slate-800 font-montserrat">
-              <div className="h-10 w-10 rounded-lg bg-violet-700/30 text-violet-400 flex items-center justify-center shrink-0">
+              <div className="h-10 w-10 rounded-lg bg-[#0062CD]/30 text-[#3894FF] flex items-center justify-center shrink-0">
                 <PhoneCall className="h-5 w-5" />
               </div>
               <div className="flex flex-col font-montserrat">
                 <span className="text-[10px] uppercase font-bold text-slate-400">Direct Hotline</span>
-                <a href={`tel:${CONTACT_PHONE}`} className="text-xs font-bold text-white hover:text-violet-400 transition-colors">
+                <a href={`tel:${CONTACT_PHONE}`} className="text-xs font-bold text-white hover:text-[#3894FF] transition-colors">
                   {CONTACT_PHONE}
                 </a>
               </div>
@@ -296,6 +297,13 @@ export default function Contact() {
 
         </div>
       </div>
+
+      {/* FAQ TWO-COLUMN SECTION */}
+      <section className="relative z-10 w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 bg-slate-50 border-t border-slate-200">
+        <div className="max-w-5xl mx-auto">
+          <FAQ />
+        </div>
+      </section>
     </div>
   );
 }

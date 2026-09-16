@@ -9,6 +9,6 @@ export const NAV_LINKS = [
       { label: 'Solutions', to: '/solutions', description: 'Pre-engineered enterprise platform blueprints', iconName: 'Sparkles' },
     ],
   },
-  { label: 'Projects', to: '/projects' },
+  { label: 'Careers', to: '/careers' },
   { label: 'About Us', to: '/about' },
 ]

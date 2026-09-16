@@ -684,7 +684,7 @@ export default function Services() {
             </a>
 
             <a
-              href="/projects"
+              href="/careers"
               className="hero-secondary-btn"
             >
               See Our Work

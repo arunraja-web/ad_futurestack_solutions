@@ -38,7 +38,7 @@ export default function Technologies() {
                 Realizing augmented engineering
               </h3>
               <div className="mt-8 pt-4 border-t border-slate-100 font-montserrat">
-                <span className="text-[10px] font-montserrat font-bold uppercase tracking-widest text-violet-700 block">
+                <span className="text-[10px] font-montserrat font-bold uppercase tracking-widest text-[#0062CD] block">
                   RESEARCH INSTITUTE REPORT
                 </span>
               </div>
@@ -50,9 +50,9 @@ export default function Technologies() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 font-montserrat">
 
             {/* LEFT BLUE CARD */}
-            <div className="lg:col-span-5 bg-violet-800 text-white rounded-2xl p-8 sm:p-10 shadow-xl flex flex-col justify-between space-y-8 font-montserrat group hover:bg-violet-900 transition-colors">
+            <div className="lg:col-span-5 bg-[#0062CD] text-white rounded-2xl p-8 sm:p-10 shadow-xl flex flex-col justify-between space-y-8 font-montserrat group hover:bg-[#0050A8] transition-colors">
               <div className="space-y-4 font-montserrat">
-                <span className="text-xs font-montserrat text-violet-200 font-semibold block">
+                <span className="text-xs font-montserrat text-blue-100 font-semibold block">
                   — AD FutureStack Research Institute
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-snug font-montserrat">
@@ -62,7 +62,7 @@ export default function Technologies() {
 
               <Link
                 to="/capabilities"
-                className="text-xs font-montserrat font-bold uppercase tracking-wider text-violet-200 group-hover:text-white transition-colors"
+                className="text-xs font-montserrat font-bold uppercase tracking-wider text-blue-100 group-hover:text-white transition-colors"
               >
                 Read Full Whitepaper →
               </Link>
@@ -74,7 +74,7 @@ export default function Technologies() {
                 <span className="text-xs font-montserrat text-slate-500 font-semibold block">
                   — Report
                 </span>
-                <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight leading-snug font-montserrat group-hover:text-violet-700 transition-colors">
+                <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight leading-snug font-montserrat group-hover:text-[#0062CD] transition-colors">
                   Data-powered Innovation Review | Wave 12
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed font-montserrat">

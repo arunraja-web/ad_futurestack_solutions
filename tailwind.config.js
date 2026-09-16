@@ -10,7 +10,7 @@ export default {
           line: '#E2E8F0',
         },
         signal: {
-          violet: '#2563EB',
+          blue: '#2563EB',
           amber: '#D97706',
         },
         fog: '#475569',
@@ -24,7 +24,7 @@ export default {
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       backgroundImage: {
-        'grid-fade': 'linear-gradient(180deg, rgba(37,99,235,0.05) 0%, rgba(255,255,255,0) 60%)',
+        'grid-fade': 'linear-gradient(180deg, rgba(37,99,235,0.04) 0%, rgba(255,255,255,0) 60%)',
       },
       keyframes: {
         stackUp: {
