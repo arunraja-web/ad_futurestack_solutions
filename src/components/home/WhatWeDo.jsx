@@ -164,12 +164,6 @@ export default function WhatWeDo() {
               </div>
             )
           })}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )
-          })}
         </div>
       </Container>
     </section>
