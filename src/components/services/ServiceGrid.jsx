@@ -94,12 +94,12 @@ const Services = () => {
                         >
                           <stop
                             offset="0%"
-                            stopColor="#7c3aed"
+                            stopColor="#0062CD"
                             stopOpacity="0.25"
                           />
                           <stop
                             offset="100%"
-                            stopColor="#7c3aed"
+                            stopColor="#0062CD"
                             stopOpacity="0"
                           />
                         </linearGradient>
@@ -113,7 +113,7 @@ const Services = () => {
                       <path
                         d="M0,150 C60,130 70,145 115,105 C160,65 170,120 215,90 C260,60 275,85 315,55 C355,25 380,60 410,35 C445,15 470,30 500,10"
                         fill="none"
-                        stroke="#6d28d9"
+                        stroke="#0062CD"
                         strokeWidth="4"
                       />
                     </svg>

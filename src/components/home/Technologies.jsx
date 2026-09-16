@@ -93,7 +93,7 @@ export default function Technologies() {
                 <span className="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-mono font-bold uppercase tracking-wider bg-[#EAF2FC] text-[#0062CD] border border-[#0062CD]/20 block w-fit">
                   Technical Report
                 </span>
-                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight leading-snug font-montserrat">
+                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight leading-snug font-montserrat group-hover:text-[#0062CD] transition-colors">
                   Data-powered Innovation Review | Wave 12
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed font-montserrat">

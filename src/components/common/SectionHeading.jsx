@@ -8,8 +8,8 @@ export default function SectionHeading({
   return (
     <div className={`space-y-3 ${centered ? 'text-center max-w-3xl mx-auto' : 'max-w-2xl'} ${className}`}>
       {eyebrow && (
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-50 border border-violet-200 text-[11px] font-mono font-bold tracking-widest text-violet-700 uppercase">
-          <span className="h-1.5 w-1.5 rounded-full bg-violet-700 animate-ping"></span>
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[11px] font-mono font-bold tracking-widest text-[#0062CD] uppercase">
+          <span className="h-1.5 w-1.5 rounded-full bg-[#0062CD] animate-ping"></span>
           <span>{eyebrow}</span>
         </div>
       )}

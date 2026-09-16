@@ -12,7 +12,7 @@ export default function CapabilitiesInteractiveShowcase() {
       {/* SECTION HEADER */}
       <div className="flex flex-col md:flex-row md:items-end justify-between pb-8 border-b border-slate-200 mb-12 gap-6">
         <div>
-          <span className="text-xs font-mono font-bold tracking-[0.2em] text-violet-700 uppercase block mb-2">
+          <span className="text-xs font-mono font-bold tracking-[0.2em] text-[#0062CD] uppercase block mb-2">
             01 / ENTERPRISE MATRIX
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight uppercase">
@@ -46,7 +46,7 @@ export default function CapabilitiesInteractiveShowcase() {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                      <span className={`font-mono text-sm font-bold ${isActive ? 'text-violet-400' : 'text-slate-400 group-hover:text-slate-600'
+                      <span className={`font-mono text-sm font-bold ${isActive ? 'text-[#3894FF]' : 'text-slate-400 group-hover:text-slate-600'
                         }`}>
                         {itemNum}
                       </span>
@@ -56,7 +56,7 @@ export default function CapabilitiesInteractiveShowcase() {
                       </h3>
                     </div>
 
-                    <div className={`h-8 w-8 rounded-full flex items-center justify-center transition-all ${isActive ? 'bg-violet-700 text-white' : 'bg-slate-100 text-slate-400 group-hover:text-slate-700'
+                    <div className={`h-8 w-8 rounded-full flex items-center justify-center transition-all ${isActive ? 'bg-[#0062CD] text-white' : 'bg-slate-100 text-slate-400 group-hover:text-slate-700'
                       }`}>
                       <ArrowRight className={`h-4 w-4 transition-transform ${isActive ? 'translate-x-0.5' : ''}`} />
                     </div>
@@ -66,9 +66,9 @@ export default function CapabilitiesInteractiveShowcase() {
             })}
           </div>
 
-          <div className="p-6 rounded-2xl bg-violet-50 border border-violet-100 hidden lg:block">
-            <div className="flex items-center gap-3 text-violet-900 font-bold text-xs uppercase tracking-wider mb-1">
-              <Zap className="h-4 w-4 text-violet-700" />
+          <div className="p-6 rounded-2xl bg-[#EFF6FF] border border-[#BFDBFE] hidden lg:block">
+            <div className="flex items-center gap-3 text-[#0062CD] font-bold text-xs uppercase tracking-wider mb-1">
+              <Zap className="h-4 w-4 text-[#0062CD]" />
               <span>Dedicated Engineering Pods</span>
             </div>
             <p className="text-xs text-slate-600 leading-relaxed">
@@ -95,11 +95,11 @@ export default function CapabilitiesInteractiveShowcase() {
 
             {/* Top Bar Overlay */}
             <div className="relative z-10 p-8 flex items-center justify-between">
-              <span className="text-xs font-mono font-bold uppercase tracking-widest text-violet-400 bg-slate-900/80 border border-violet-500/40 px-3.5 py-1 rounded-full backdrop-blur-md">
+              <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#93c5fd] bg-slate-900/80 border border-[#0062CD]/40 px-3.5 py-1 rounded-full backdrop-blur-md">
                 {activeCapability.category}
               </span>
               <div className="flex items-center gap-2 text-xs font-mono text-slate-300 bg-slate-900/60 backdrop-blur-md px-3 py-1 rounded-full border border-slate-800">
-                <ShieldCheck className="h-4 w-4 text-violet-400" />
+                <ShieldCheck className="h-4 w-4 text-[#3894FF]" />
                 <span>Enterprise Verified</span>
               </div>
             </div>
@@ -135,7 +135,7 @@ export default function CapabilitiesInteractiveShowcase() {
               <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center gap-3 bg-violet-700 text-white font-extrabold text-xs uppercase tracking-widest px-8 py-3.5 rounded-xl hover:bg-violet-700 transition-all shadow-lg hover:shadow-violet-700/30"
+                  className="inline-flex items-center justify-center gap-3 bg-[#0062CD] text-white font-extrabold text-xs uppercase tracking-widest px-8 py-3.5 rounded-xl hover:bg-[#0050A8] transition-all shadow-lg hover:shadow-[#0062CD]/30"
                 >
                   <span>REQUEST ARCHITECTURE SCOPE</span>
                   <ArrowRight className="h-4 w-4" />

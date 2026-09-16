@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/layout/Navbar.jsx'
 import Footer from './components/layout/Footer.jsx'
 import ScrollToTop from './components/layout/ScrollToTop.jsx'
@@ -10,7 +10,7 @@ import Home from './pages/Home.jsx'
 import Services from './pages/Services.jsx'
 import Capabilities from './pages/Capabilities.jsx'
 import Solutions from './pages/Solutions.jsx'
-import Projects from './pages/Projects.jsx'
+import Careers from './pages/Careers.jsx'
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
 import NotFound from './pages/NotFound.jsx'
@@ -53,7 +53,7 @@ export default function App() {
 
   return (
     <ErrorBoundary>
-      <div className="flex min-h-screen flex-col bg-white text-slate-900 font-montserrat selection:bg-violet-700 selection:text-white w-full">
+      <div className="flex min-h-screen flex-col bg-white text-slate-900 font-montserrat selection:bg-[#0062CD] selection:text-white w-full">
         <ScrollProgressBar />
         <ScrollToTop />
         <Navbar />
@@ -65,8 +65,9 @@ export default function App() {
             <Route path="/what-we-do" element={<WhatWeDo />} />
             <Route path="/capabilities" element={<Capabilities />} />
             <Route path="/solutions" element={<Solutions />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/case-studies" element={<Projects />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/projects" element={<Navigate to="/careers" replace />} />
+            <Route path="/case-studies" element={<Navigate to="/careers" replace />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />

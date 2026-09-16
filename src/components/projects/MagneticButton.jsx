@@ -57,10 +57,10 @@ export default function MagneticButton({
         transition: isHovered ? 'transform 0.12s ease-out' : 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.25s ease, box-shadow 0.25s ease'
       }}
       className={`group relative inline-flex items-center justify-center gap-3 w-full py-3 px-5 
-        bg-gradient-to-r from-violet-700 via-violet-600 to-indigo-700 
-        hover:from-violet-600 hover:via-violet-500 hover:to-indigo-600 
-        text-white font-montserrat font-semibold text-sm rounded-lg shadow-lg shadow-violet-900/25 
-        border border-violet-400/30 hover:border-violet-300/60 
+        bg-gradient-to-r from-[#0062CD] via-[#0050A8] to-[#004085] 
+        hover:from-[#0050A8] hover:via-[#0062CD] hover:to-[#0050A8] 
+        text-white font-montserrat font-semibold text-sm rounded-lg shadow-lg shadow-[#0062CD]/25 
+        border border-[#0062CD]/30 hover:border-[#3894FF]/60 
         active:scale-[0.98] ${className}`}
     >
       {/* Live status dot with concentric ping animation */}

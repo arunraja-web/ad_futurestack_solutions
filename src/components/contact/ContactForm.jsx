@@ -18,8 +18,8 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="bg-white rounded-3xl p-10 text-center space-y-4 border border-violet-200 shadow-xl">
-        <div className="h-16 w-16 bg-violet-50 text-violet-700 rounded-full flex items-center justify-center mx-auto border border-violet-100">
+      <div className="bg-white rounded-3xl p-10 text-center space-y-4 border border-[#BFDBFE] shadow-xl">
+        <div className="h-16 w-16 bg-[#EFF6FF] text-[#0062CD] rounded-full flex items-center justify-center mx-auto border border-[#BFDBFE]">
           <CheckCircle2 className="h-8 w-8" />
         </div>
         <h3 className="text-2xl font-bold text-slate-900 uppercase">Inquiry Received!</h3>
@@ -28,7 +28,7 @@ export default function ContactForm() {
         </p>
         <button
           onClick={() => setSubmitted(false)}
-          className="text-xs font-mono font-bold text-violet-700 underline pt-4 cursor-pointer hover:text-violet-700"
+          className="text-xs font-mono font-bold text-[#0062CD] underline pt-4 cursor-pointer hover:text-[#0050A8]"
         >
           Send Another Message
         </button>
@@ -49,7 +49,7 @@ export default function ContactForm() {
             placeholder="John Doe"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-violet-700 transition-colors"
+            className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#0062CD] transition-colors"
           />
         </div>
 
@@ -61,7 +61,7 @@ export default function ContactForm() {
             placeholder="john@company.com"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-violet-700 transition-colors"
+            className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#0062CD] transition-colors"
           />
         </div>
       </div>
@@ -74,7 +74,7 @@ export default function ContactForm() {
             placeholder="Acme Inc."
             value={formData.company}
             onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-            className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-violet-700 transition-colors"
+            className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#0062CD] transition-colors"
           />
         </div>
 
@@ -83,7 +83,7 @@ export default function ContactForm() {
           <select
             value={formData.service}
             onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-            className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-violet-700 transition-colors"
+            className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:border-[#0062CD] transition-colors"
           >
             <option>Full-Stack Engineering</option>
             <option>Cloud Infrastructure & DevOps</option>
@@ -102,13 +102,13 @@ export default function ContactForm() {
           placeholder="Tell us about your timeline, key requirements, and current tech stack..."
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-violet-700 transition-colors"
+          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#0062CD] transition-colors"
         ></textarea>
       </div>
 
       <button
         type="submit"
-        className="w-full inline-flex items-center justify-center gap-2 bg-violet-700 text-white font-bold py-4 px-8 rounded-xl hover:bg-violet-700 transition-all cursor-pointer shadow-lg shadow-violet-700/20 active:scale-95 text-xs uppercase tracking-wider"
+        className="w-full inline-flex items-center justify-center gap-2 bg-[#0062CD] text-white font-bold py-4 px-8 rounded-xl hover:bg-[#0050A8] transition-all cursor-pointer shadow-lg shadow-[#0062CD]/20 active:scale-95 text-xs uppercase tracking-wider"
       >
         <span>Submit Technical Request</span>
         <Send className="h-4 w-4" />

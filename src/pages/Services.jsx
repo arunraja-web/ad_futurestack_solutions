@@ -336,7 +336,7 @@ export default function Services() {
                 Get Started
                 <Arrow />
               </a>
-              <a href="/projects" className="hero-secondary-btn alt-btn">
+              <a href="/solutions" className="hero-secondary-btn alt-btn">
                 See Our Work
                 <span>↗</span>
               </a>

@@ -9,7 +9,7 @@ const highlights = [
     title: 'H1 Enterprise Cloud Modernization',
     subtitle: 'Multi-cloud Kubernetes deployment delivering 99.999% SLA uptime across distributed global regions.',
     image: '/images/projects/fintech-enterprise.webp',
-    link: '/projects',
+    link: '/solutions',
     reveal: 'left'
   },
   {
@@ -36,7 +36,7 @@ const highlights = [
     title: 'Global Payment Gateway Engine',
     subtitle: 'PCI-DSS compliant transactional backend architectures processing millions of monthly transactions.',
     image: '/images/solutions/fintech-platform.webp',
-    link: '/projects',
+    link: '/solutions',
     reveal: 'left'
   },
   {
@@ -76,10 +76,10 @@ export default function FeaturedProjects() {
             </h2>
           </div>
           <Link
-            to="/projects"
+            to="/solutions"
             className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#0062CD] hover:text-[#0050A8] transition-colors uppercase tracking-wider font-montserrat group"
           >
-            <span>Explore All Projects</span>
+            <span>Explore All Solutions</span>
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
         </div>

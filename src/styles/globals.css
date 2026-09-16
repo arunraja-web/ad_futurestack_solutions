@@ -22,7 +22,7 @@
   }
 
   body {
-    @apply bg-white text-slate-900 antialiased selection:bg-violet-700 selection:text-white;
+    @apply bg-white text-slate-900 antialiased selection:bg-slate-900 selection:text-white;
     font-family: 'Outfit', 'Montserrat', system-ui, -apple-system, sans-serif;
     overflow-x: clip;
     max-width: 100%;
@@ -45,6 +45,38 @@
 @layer utilities {
   .font-montserrat {
     font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* =========================================================
+   HERO ENTRANCE ANIMATIONS
+========================================================= */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-line {
+  opacity: 0;
+  animation: heroFadeUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-line-1 { animation-delay: 0ms; }
+.hero-line-2 { animation-delay: 140ms; }
+.hero-line-3 { animation-delay: 280ms; }
+.hero-line-4 { animation-delay: 420ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-line {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
 
@@ -147,7 +179,7 @@
 }
 
 .text-gradient-cyan {
-  @apply bg-gradient-to-r from-violet-700 via-indigo-600 to-purple-700 bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-[#0062CD] via-blue-600 to-sky-500 bg-clip-text text-transparent;
 }
 
 /* Custom scrollbars */
@@ -169,9 +201,108 @@
   background: #94a3b8;
 }
 
-/* Accessibility Reduced Motion Scroll Override */
+/* =========================================================
+   FAQ ACCORDION MICRO-ANIMATIONS (GLOBAL)
+========================================================= */
+
+/* Grid row height expand / collapse */
+.faq-grid-row {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition:
+    grid-template-rows 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 200ms ease;
+  will-change: grid-template-rows, opacity;
+}
+
+.faq-grid-row.is-open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transition:
+    grid-template-rows 350ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 300ms ease;
+}
+
+/* Inner answer text reveal (slight upward slide + delayed fade) */
+.faq-answer-inner {
+  overflow: hidden;
+}
+
+.faq-answer-content {
+  transform: translateY(6px);
+  opacity: 0;
+  transition:
+    transform 200ms ease,
+    opacity 180ms ease;
+  will-change: transform, opacity;
+}
+
+.faq-grid-row.is-open .faq-answer-content {
+  transform: translateY(0);
+  opacity: 1;
+  transition:
+    transform 320ms cubic-bezier(0.16, 1, 0.3, 1) 90ms,
+    opacity 320ms cubic-bezier(0.16, 1, 0.3, 1) 90ms;
+}
+
+/* Icon rotation for "+" to "x" */
+.faq-toggle-icon {
+  transform: rotate(0deg);
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.faq-toggle-icon.is-open {
+  transform: rotate(45deg);
+}
+
+/* Row hover and active state */
+.faq-row-item {
+  transition: background-color 150ms ease;
+}
+
+/* Left square icon box */
+.faq-icon-box {
+  transition:
+    transform 300ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 300ms ease,
+    border-color 300ms ease,
+    color 300ms ease;
+}
+
+.faq-icon-box.is-active {
+  transform: scale(1.05);
+}
+
+/* Toggle button */
+.faq-toggle-btn {
+  transition:
+    background-color 300ms ease,
+    border-color 300ms ease,
+    color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+/* Accessibility: prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .faq-grid-row,
+  .faq-grid-row.is-open,
+  .faq-answer-content,
+  .faq-grid-row.is-open .faq-answer-content,
+  .faq-toggle-icon,
+  .faq-toggle-icon.is-open,
+  .faq-row-item,
+  .faq-icon-box,
+  .faq-icon-box.is-active,
+  .faq-toggle-btn {
+    transition: none !important;
+    transform: none !important;
+    animation: none !important;
+    will-change: auto !important;
   }
 }

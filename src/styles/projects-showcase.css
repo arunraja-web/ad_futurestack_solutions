@@ -253,7 +253,7 @@
   align-items: center;
   gap: 6px;
   padding: 7px 14px;
-  background: #6d28d9;
+  background: #111111;
   color: #ffffff;
   font-size: 12px;
   font-weight: 600;
@@ -269,9 +269,9 @@
 }
 
 .prow-cta-btn:hover {
-  background: #5b21b6;
+  background: #1A1A1A;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px -4px rgba(109, 40, 217, 0.5);
+  box-shadow: 0 6px 16px -4px rgba(17, 17, 17, 0.35);
 }
 
 .prow-cta-btn:active {
@@ -303,14 +303,14 @@
 .prow-category-tag {
   display: inline-block;
   padding: 4px 10px;
-  background: #f5f3ff;
-  color: #6d28d9;
+  background: #f1f5f9;
+  color: #334155;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   border-radius: 6px;
-  border: 1px solid #ede9fe;
+  border: 1px solid #e2e8f0;
 }
 
 /* Live demo text link */
@@ -318,7 +318,7 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  color: #6d28d9;
+  color: #2563eb;
   font-size: 12px;
   font-weight: 600;
   text-decoration: none;
@@ -381,8 +381,8 @@
   width: 18px;
   height: 18px;
   border-radius: 4px;
-  background: #ede9fe;
-  color: #7c3aed;
+  background: #f1f5f9;
+  color: #334155;
   flex-shrink: 0;
   margin-top: 1px;
 }
@@ -443,7 +443,7 @@
 .pfcta-section {
   background: #ffffff;
   border-top: 1px solid #f1f5f9;
-  padding: clamp(64px, 8vw, 96px) clamp(20px, 4vw, 48px);
+  padding: clamp(36px, 5vw, 56px) clamp(20px, 4vw, 48px);
   position: relative;
   overflow: hidden;
 }
@@ -473,7 +473,7 @@
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.12em;
-  color: #6d28d9;
+  color: #64748b;
   text-transform: uppercase;
   margin-bottom: 12px;
 }
@@ -501,14 +501,14 @@
   align-items: center;
   gap: 10px;
   padding: 13px 26px;
-  background: #6d28d9;
+  background: #111111;
   color: #ffffff;
   font-size: 14px;
   font-weight: 700;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   text-decoration: none;
-  box-shadow: 0 4px 14px -2px rgba(109, 40, 217, 0.35);
+  box-shadow: 0 4px 14px -2px rgba(17, 17, 17, 0.18);
   transition:
     background   0.2s ease,
     transform    0.2s ease,
@@ -516,9 +516,9 @@
 }
 
 .pfcta-btn:hover {
-  background: #5b21b6;
+  background: #1A1A1A;
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px -4px rgba(109, 40, 217, 0.45);
+  box-shadow: 0 10px 24px -4px rgba(17, 17, 17, 0.25);
 }
 
 .pfcta-btn:active {

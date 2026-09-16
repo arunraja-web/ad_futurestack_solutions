@@ -36,8 +36,13 @@
   ],
   "redirects": [
     {
+      "source": "/projects",
+      "destination": "/careers",
+      "permanent": true
+    },
+    {
       "source": "/case-studies",
-      "destination": "/projects",
+      "destination": "/careers",
       "permanent": true
     },
     {

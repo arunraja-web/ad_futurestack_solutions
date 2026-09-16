@@ -35,8 +35,8 @@ export default function Values() {
         {valuesList.map((v) => {
           const Icon = v.icon
           return (
-            <div key={v.title} className="bg-white rounded-2xl p-6 border border-slate-200 shadow-md hover:border-violet-500/50 hover:shadow-xl transition-all">
-              <div className="h-10 w-10 rounded-xl bg-violet-50 border border-violet-100 flex items-center justify-center text-violet-700 mb-4">
+            <div key={v.title} className="bg-white rounded-2xl p-6 border border-slate-200 shadow-md hover:border-[#0062CD]/50 hover:shadow-xl transition-all">
+              <div className="h-10 w-10 rounded-xl bg-[#EFF6FF] border border-[#BFDBFE] flex items-center justify-center text-[#0062CD] mb-4">
                 <Icon className="h-5 w-5" />
               </div>
               <h4 className="text-lg font-bold text-slate-900 mb-2">{v.title}</h4>

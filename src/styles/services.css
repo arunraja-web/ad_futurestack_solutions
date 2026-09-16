@@ -4,9 +4,9 @@
 
 .services-page {
   --blue: #0062CD;
-  --blue-dark: #004FAD;
+  --blue-dark: #0050A8;
   --violet: #0062CD;
-  --violet-dark: #004FAD;
+  --violet-dark: #0050A8;
   --navy: #0B1B33;
   --text: #111827;
   --muted: #667085;
@@ -478,7 +478,7 @@
   color: white;
 
   box-shadow:
-    0 18px 40px rgba(109,40,217,0.25);
+    0 18px 40px rgba(0,98,205,0.25);
 }
 
 .award-card strong {
@@ -983,7 +983,7 @@
     linear-gradient(
       135deg,
       var(--blue),
-      #c4b5fd
+      #93c5fd
     );
 }
 
@@ -1062,7 +1062,7 @@
   transform: translate(-50%, -50%);
 
   box-shadow:
-    0 0 70px rgba(109,40,217,0.18);
+    0 0 70px rgba(0,98,205,0.18);
 }
 
 .automation-core span {
@@ -1432,7 +1432,7 @@
   font-weight: 800;
 
   box-shadow:
-    0 8px 20px rgba(109,40,217,0.25);
+    0 8px 20px rgba(0,98,205,0.25);
 }
 
 .bubble-a {
