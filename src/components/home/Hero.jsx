@@ -1,55 +1,71 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import HeroBackground from './HeroBackground.jsx'
-import Container from '../common/Container.jsx'
 
 export default function Hero() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
+  const [isTouch, setIsTouch] = useState(false)
 
-  const handleMouseMove = (e) => {
-    const { clientX, clientY } = e
-    const { innerWidth, innerHeight } = window
-    const x = (clientX / innerWidth - 0.5) * 2
-    const y = (clientY / innerHeight - 0.5) * 2
-    setMousePos({ x, y })
-  }
+  useEffect(() => {
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+      setIsTouch(true)
+      return
+    }
+
+    const handleMouseMove = (e) => {
+      const { innerWidth, innerHeight } = window
+      const x = (e.clientX / innerWidth - 0.5) * 20
+      const y = (e.clientY / innerHeight - 0.5) * 20
+      setMousePos({ x, y })
+    }
+
+    window.addEventListener('mousemove', handleMouseMove, { passive: true })
+    return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, [])
 
   return (
-    <section
-      onMouseMove={handleMouseMove}
-      className="relative min-h-[550px] lg:min-h-[85vh] flex flex-col justify-end items-start bg-slate-950 text-white overflow-hidden select-none pt-28 lg:pt-32 pb-0 sm:pb-10 lg:pb-14 font-montserrat"
-    >
-      {/* Background Image Layer */}
-      <HeroBackground mousePos={mousePos} />
+    <section id="hero" className="hero-section relative w-full h-screen min-h-[650px] max-h-[1080px] flex items-center justify-center overflow-hidden bg-slate-950 text-white font-montserrat">
+      {/* 1. AUTO-ROTATING IMAGE SLIDESHOW BACKGROUND */}
+      <HeroBackground mousePos={mousePos} isTouch={isTouch} />
 
-      {/* FLOATING CARD OVERLAY MATCHING REFERENCE CAPGEMINI DESIGN (SHARP RECTANGULAR EDGES, SHIFTED LEFT) */}
-      <Container className="relative z-10 w-full font-montserrat px-0 sm:px-6 lg:px-8">
-        <div data-reveal="up" className="max-w-3xl lg:max-w-4xl xl:max-w-5xl bg-violet-950/95 sm:bg-violet-900 text-white p-6 sm:p-10 lg:p-12 shadow-2xl rounded-none border-y sm:border border-violet-400/30 backdrop-blur-md space-y-5 sm:space-y-6 font-montserrat -ml-0 sm:-ml-2 lg:-ml-4">
+      {/* 2. HERO CONTENT: CENTERED HORIZONTALLY & VERTICALLY */}
+      <div className="hero-content-wrap relative z-20 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center font-montserrat will-change-transform">
+        
+        {/* Main Masked Headline: Refined Light Weight, Large Display Size */}
+        <h1 className="font-montserrat font-light text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white tracking-[-0.02em] leading-[1.15] max-w-5xl drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
+          <span className="hero-masked-wrapper">
+            <span className="hero-masked-line">We Build Digital Experiences</span>
+          </span>
+          <span className="hero-masked-wrapper mt-1 sm:mt-2">
+            <span className="hero-masked-line">That Matter</span>
+          </span>
+        </h1>
 
-          {/* Main Headline */}
-          <h1 className="font-montserrat font-semibold text-2xl sm:text-4xl lg:text-5xl text-white tracking-tight uppercase leading-[1.12] sm:leading-[1.08] drop-shadow-md">
-            WE BUILD DIGITAL EXPERIENCES THAT MATTER
-          </h1>
+        {/* Supporting Description */}
+        <p className="hero-anim-subtext mt-6 sm:mt-8 text-base sm:text-lg lg:text-xl text-slate-100 font-normal leading-relaxed font-montserrat max-w-2xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
+          We partner with ambitious companies to deliver scalable cloud architecture, custom software development, and intelligent digital transformation.
+        </p>
 
-          {/* Supporting Text */}
-          <p className="text-sm sm:text-base lg:text-lg text-slate-100 font-normal leading-relaxed drop-shadow-xs font-montserrat">
-            We partner with ambitious companies to deliver scalable cloud architecture, custom software development, and intelligent digital transformation.
-          </p>
+        {/* Primary CTA Buttons */}
+        <div className="hero-anim-cta mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-4 font-montserrat">
+          <Link
+            to="/services"
+            className="group inline-flex items-center gap-3 bg-[#0062CD] text-white px-8 py-4 rounded-lg font-bold text-xs uppercase tracking-widest hover:bg-[#0052b0] transition-all duration-300 shadow-xl shadow-[#0062CD]/35 hover:-translate-y-0.5 active:scale-95 cursor-pointer font-montserrat"
+          >
+            <span>Let's Build</span>
+            <ArrowRight className="h-4 w-4 text-white group-hover:translate-x-1 transition-transform duration-300" />
+          </Link>
 
-          {/* Action CTA Button */}
-          <div className="pt-2 font-montserrat">
-            <Link
-              to="/services"
-              className="group inline-flex items-center gap-3 bg-white text-violet-900 px-8 py-3.5 rounded-none font-bold text-xs uppercase tracking-widest hover:bg-slate-100 hover:text-violet-950 transition-all shadow-lg hover:shadow-white/20 active:scale-95 focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none font-montserrat cursor-pointer"
-            >
-              <span>Let's Build</span>
-              <ArrowRight className="h-4 w-4 text-violet-900 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white hover:text-white transition-colors py-3.5 px-6 rounded-lg border border-white/30 hover:border-white/60 bg-slate-950/40 hover:bg-slate-950/60 backdrop-blur-md font-montserrat shadow-md"
+          >
+            <span>Talk to an Architect →</span>
+          </Link>
         </div>
-      </Container>
+
+      </div>
     </section>
   )
 }

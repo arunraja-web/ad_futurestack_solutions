@@ -5,6 +5,14 @@ export default function useScrollReveal() {
   const location = useLocation()
 
   useEffect(() => {
+    // Respect user's motion preferences
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('[data-reveal]').forEach((el) => {
+        el.classList.add('is-revealed')
+      })
+      return
+    }
+
     const handleObserver = (entries, observer) => {
       entries.forEach((entry) => {
         const isOnce = entry.target.getAttribute('data-reveal-once') === 'true'
@@ -12,7 +20,7 @@ export default function useScrollReveal() {
         if (entry.isIntersecting) {
           const stagger = entry.target.getAttribute('data-stagger')
           if (stagger && !entry.target.style.transitionDelay) {
-            const delay = Math.min(parseInt(stagger, 10) || 0, 300)
+            const delay = Math.min(parseInt(stagger, 10) || 0, 450)
             entry.target.style.transitionDelay = `${delay}ms`
           }
           entry.target.classList.add('is-revealed')
@@ -33,7 +41,13 @@ export default function useScrollReveal() {
 
     const elements = document.querySelectorAll('[data-reveal]')
     elements.forEach((el) => {
-      observer.observe(el)
+      const rect = el.getBoundingClientRect()
+      // If already in top viewport on load, reveal immediately
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add('is-revealed')
+      } else {
+        observer.observe(el)
+      }
     })
 
     return () => {

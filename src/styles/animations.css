@@ -16,37 +16,30 @@
 @keyframes heroFadeUp {
   0% {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translate3d(0, 24px, 0);
+    filter: blur(4px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+  }
+}
+
+@keyframes heroScaleIn {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.97, 0.97, 1) translate3d(0, 16px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
   }
 }
 
 @keyframes pulseGlow {
   0%, 100% { opacity: 0.4; transform: scale(1); }
   50% { opacity: 0.8; transform: scale(1.08); }
-}
-
-.animate-float-1 {
-  animation: float1 6s ease-in-out infinite;
-}
-
-.animate-float-2 {
-  animation: float2 7s ease-in-out infinite 1s;
-}
-
-.animate-float-3 {
-  animation: float3 8s ease-in-out infinite 2s;
-}
-
-.animate-hero-fade-up {
-  animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.animate-pulse-glow {
-  animation: pulseGlow 4s ease-in-out infinite;
 }
 
 @keyframes heroBgPan {
@@ -61,6 +54,182 @@
   }
 }
 
+.animate-float-1 {
+  animation: float1 6s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  animation: float2 7s ease-in-out infinite 1s;
+}
+
+.animate-float-3 {
+  animation: float3 8s ease-in-out infinite 2s;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
 .animate-hero-pan {
   animation: heroBgPan 8s ease-in-out infinite alternate;
+}
+
+.animate-hero-fade-up {
+  animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-hero-scale-in {
+  animation: heroScaleIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Home Page MNC Directional Scroll Reveal System */
+[data-reveal] {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+[data-reveal="left"] {
+  transform: translate3d(-40px, 0, 0) scale3d(0.98, 0.98, 1);
+}
+
+[data-reveal="right"] {
+  transform: translate3d(40px, 0, 0) scale3d(0.98, 0.98, 1);
+}
+
+[data-reveal="up"] {
+  transform: translate3d(0, 32px, 0) scale3d(0.98, 0.98, 1);
+}
+
+[data-reveal].is-revealed {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1) !important;
+}
+
+/* MNC Enterprise Card System with Refined 12px Border-Radius */
+.mnc-card {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), border-color 300ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mnc-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0062CD;
+  transition: width 350ms cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 10;
+}
+
+.mnc-card:hover {
+  transform: translate3d(0, -4px, 0);
+  border-color: rgba(0, 98, 205, 0.4);
+  box-shadow: 0 16px 36px -8px rgba(15, 23, 42, 0.09);
+}
+
+.mnc-card:hover::before {
+  width: 100%;
+}
+
+/* Card Text Smooth Hover Motion Utilities */
+.mnc-hover-text-lift {
+  transition: transform 250ms cubic-bezier(0.16, 1, 0.3, 1), opacity 250ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .mnc-hover-text-lift {
+  transform: translate3d(0, -4px, 0);
+}
+
+
+/* When GSAP is managing reveals on Home page, remove CSS transitions to prevent frame lag */
+.home-page [data-reveal],
+[data-gsap-reveal],
+.gsap-reveal {
+  transition: none !important;
+}
+
+/* Masked Heading Wrappers */
+.hero-masked-wrapper,
+.gsap-mask-wrapper {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+
+.hero-masked-line,
+.gsap-mask-line {
+  display: inline-block;
+  width: 100%;
+  will-change: transform, opacity;
+}
+
+/* Cinematic Image Wrapper */
+.cinematic-image-wrapper {
+  overflow: hidden;
+  position: relative;
+  will-change: clip-path;
+}
+
+.cinematic-image-wrapper img {
+  will-change: transform, opacity;
+}
+
+/* Hero Slideshow Ken Burns effect */
+@keyframes heroKenBurns {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.06);
+  }
+}
+
+.ken-burns-active {
+  animation: heroKenBurns 5s ease-out forwards;
+  will-change: transform;
+}
+
+/* Accessibility Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .ken-burns-active {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .animate-hero-fade-up,
+  .animate-hero-scale-in {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+  }
+
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .cinematic-image-wrapper {
+    clip-path: none !important;
+  }
+
+  .cinematic-image-wrapper img {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .hero-masked-line,
+  .gsap-mask-line {
+    transform: none !important;
+    opacity: 1 !important;
+  }
 }

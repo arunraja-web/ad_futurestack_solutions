@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import {
   Menu,
@@ -15,17 +15,27 @@ import { NAV_LINKS } from '../../data/navigation.js'
 import { SITE_NAME, CONTACT_PHONE } from '../../utils/constants.js'
 
 const iconMap = {
-  Layers: <Layers className="h-4 w-4 text-violet-600" />,
-  Sparkles: <Sparkles className="h-4 w-4 text-violet-600" />,
-  ShieldCheck: <ShieldCheck className="h-4 w-4 text-violet-600" />,
-  Code: <Code className="h-4 w-4 text-violet-600" />
+  Layers: <Layers className="h-4 w-4 text-[#0062CD]" />,
+  Sparkles: <Sparkles className="h-4 w-4 text-[#0062CD]" />,
+  ShieldCheck: <ShieldCheck className="h-4 w-4 text-[#0062CD]" />,
+  Code: <Code className="h-4 w-4 text-[#0062CD]" />
 }
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState(null)
+  const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
   const timeoutRef = useRef(null)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const handleMouseEnter = (label) => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current)
@@ -56,7 +66,7 @@ export default function Navbar() {
             <span className="font-montserrat text-base sm:text-lg xl:text-xl font-bold tracking-tight text-slate-900 leading-tight">
               AD FUTURE STACK
             </span>
-            <span className="text-[9px] sm:text-[10px] font-montserrat font-extrabold tracking-widest text-violet-600 uppercase">
+            <span className="text-[9px] sm:text-[10px] font-montserrat font-extrabold tracking-widest text-[#0062CD] uppercase">
               IT SOLUTIONS & SERVICES
             </span>
           </div>
@@ -81,17 +91,19 @@ export default function Navbar() {
                   to={link.to}
                   end={link.to === '/'}
                   className={({ isActive }) =>
-                    `flex items-center gap-1 text-xs sm:text-sm font-semibold transition-colors uppercase tracking-wider font-montserrat ${isActive || isParentActive
-                      ? 'text-violet-700 font-extrabold'
-                      : 'text-slate-800 hover:text-violet-700'
+                    `flex items-center gap-1 text-xs sm:text-sm font-semibold transition-colors uppercase tracking-wider font-montserrat ${
+                      isActive || isParentActive
+                        ? 'text-[#0062CD] font-extrabold'
+                        : 'text-slate-800 hover:text-[#0062CD]'
                     }`
                   }
                 >
                   <span>{link.label}</span>
                   {hasChildren && (
                     <ChevronDown
-                      className={`h-4 w-4 text-slate-500 transition-transform duration-200 ${activeDropdown === link.label ? 'rotate-180 text-violet-700' : ''
-                        }`}
+                      className={`h-4 w-4 text-slate-500 transition-transform duration-200 ${
+                        activeDropdown === link.label ? 'rotate-180 text-[#0062CD]' : ''
+                      }`}
                     />
                   )}
                 </NavLink>
@@ -111,11 +123,12 @@ export default function Navbar() {
                             to={child.to}
                             onClick={() => setActiveDropdown(null)}
                             className={({ isActive }) =>
-                              `group flex items-center gap-3.5 rounded-xl p-3 transition-colors font-montserrat ${isActive ? 'bg-violet-50 text-violet-700' : 'hover:bg-slate-50 text-slate-700'
+                              `group flex items-center gap-3.5 rounded-xl p-3 transition-colors font-montserrat ${
+                                isActive ? 'bg-blue-50/80 text-[#0062CD]' : 'hover:bg-slate-50 text-slate-700'
                               }`
                             }
                           >
-                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-100 border border-slate-200 text-slate-800 group-hover:bg-violet-700 group-hover:text-white transition-all font-montserrat">
+                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-100 border border-slate-200 text-slate-800 group-hover:bg-[#0062CD] group-hover:text-white transition-all font-montserrat">
                               {iconMap[child.iconName] || <Layers className="h-5 w-5" />}
                             </div>
 
@@ -142,14 +155,14 @@ export default function Navbar() {
         {/* RIGHT SIDE: Phone Call Badge & CTA */}
         <div className="flex items-center gap-5 sm:gap-6 font-montserrat">
           <div className="hidden xl:flex items-center gap-3 font-montserrat">
-            <div className="h-10 w-10 rounded-full bg-violet-700 text-white flex items-center justify-center shadow-md shrink-0">
+            <div className="h-10 w-10 rounded-full bg-[#0062CD] text-white flex items-center justify-center shadow-md shrink-0">
               <PhoneCall className="h-5 w-5" />
             </div>
             <div className="flex flex-col font-montserrat">
               <span className="text-[10px] font-montserrat uppercase font-bold text-slate-500">
                 Let's Talk
               </span>
-              <a href={`tel:${CONTACT_PHONE}`} className="text-xs font-bold text-slate-900 hover:text-violet-700 transition-colors font-montserrat">
+              <a href={`tel:${CONTACT_PHONE}`} className="text-xs font-bold text-slate-900 hover:text-[#0062CD] transition-colors font-montserrat">
                 {CONTACT_PHONE}
               </a>
             </div>
@@ -157,7 +170,7 @@ export default function Navbar() {
 
           <Link
             to="/contact"
-            className="hidden sm:inline-flex items-center justify-center rounded-xl bg-violet-700 px-5 sm:px-6 py-2.5 sm:py-3 text-xs font-bold text-white uppercase tracking-wider hover:bg-violet-800 transition-all shadow-md hover:shadow-violet-700/30 active:scale-95 font-montserrat shrink-0"
+            className="hidden sm:inline-flex items-center justify-center rounded-xl bg-[#0062CD] px-5 sm:px-6 py-2.5 sm:py-3 text-xs font-bold text-white uppercase tracking-wider hover:bg-[#0052b0] transition-all shadow-md hover:shadow-[#0062CD]/25 active:scale-95 font-montserrat shrink-0"
           >
             Contact us
           </Link>
@@ -169,7 +182,7 @@ export default function Navbar() {
             aria-label="Toggle Navigation Menu"
             aria-expanded={open}
             aria-controls="mobile-navigation-menu"
-            className="inline-flex items-center justify-center rounded-xl p-2.5 text-slate-900 bg-slate-100 hover:bg-slate-200 transition-colors lg:hidden focus-visible:ring-2 focus-visible:ring-violet-600 focus-visible:outline-none cursor-pointer"
+            className="inline-flex items-center justify-center rounded-xl p-2.5 text-slate-900 bg-slate-100 hover:bg-slate-200 transition-colors lg:hidden focus-visible:ring-2 focus-visible:ring-[#0062CD] focus-visible:outline-none cursor-pointer"
           >
             {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -189,7 +202,8 @@ export default function Navbar() {
                     end={link.to === '/'}
                     onClick={() => !hasChildren && setOpen(false)}
                     className={({ isActive }) =>
-                      `text-sm font-bold flex items-center justify-between uppercase tracking-wider font-montserrat ${isActive ? 'text-violet-700 font-extrabold' : 'text-slate-800'
+                      `text-sm font-bold flex items-center justify-between uppercase tracking-wider font-montserrat ${
+                        isActive ? 'text-[#0062CD] font-extrabold' : 'text-slate-800'
                       }`
                     }
                   >
@@ -204,7 +218,8 @@ export default function Navbar() {
                           to={child.to}
                           onClick={() => setOpen(false)}
                           className={({ isActive }) =>
-                            `text-xs py-1.5 transition-colors flex items-center gap-2 font-montserrat ${isActive ? 'text-violet-700 font-bold' : 'text-slate-600 hover:text-slate-950'
+                            `text-xs py-1.5 transition-colors flex items-center gap-2 font-montserrat ${
+                              isActive ? 'text-[#0062CD] font-bold' : 'text-slate-600 hover:text-slate-950'
                             }`
                           }
                         >
@@ -222,13 +237,13 @@ export default function Navbar() {
                 href={`tel:${CONTACT_PHONE}`}
                 className="text-xs font-bold text-slate-800 flex items-center gap-2 font-montserrat"
               >
-                <PhoneCall className="h-4 w-4 text-violet-700" />
+                <PhoneCall className="h-4 w-4 text-[#0062CD]" />
                 <span>{CONTACT_PHONE}</span>
               </a>
               <Link
                 to="/contact"
                 onClick={() => setOpen(false)}
-                className="inline-flex items-center justify-center rounded-xl bg-violet-700 px-5 py-3 text-xs font-bold text-white uppercase tracking-wider hover:bg-violet-800 transition-all font-montserrat"
+                className="inline-flex items-center justify-center rounded-xl bg-[#0062CD] px-5 py-3 text-xs font-bold text-white uppercase tracking-wider hover:bg-[#0052b0] transition-all font-montserrat"
               >
                 Contact us
               </Link>

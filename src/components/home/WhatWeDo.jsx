@@ -54,19 +54,14 @@ export default function WhatWeDo() {
   }
 
   return (
-    <section className="py-20 lg:py-24 bg-slate-50/70 border-b border-slate-200/80 font-montserrat">
+    <section id="faq" className="py-20 lg:py-28 bg-slate-50/70 border-b border-slate-200/80 font-montserrat scroll-mt-28">
       <Container className="font-montserrat">
         {/* SECTION HEADER */}
         <div data-reveal="up" className="text-center max-w-3xl mx-auto mb-16 space-y-4 font-montserrat">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50 border border-violet-200 shadow-2xs font-montserrat">
-            <HelpCircle className="h-4 w-4 text-violet-700" />
-            <span className="text-xs font-montserrat font-bold tracking-widest text-violet-700 uppercase">
-              Frequently Asked Questions
-            </span>
-          </div>
-
           <h2 className="text-3xl sm:text-5xl font-bold text-slate-900 tracking-tight uppercase leading-tight font-montserrat">
-            Got Questions? <span className="text-violet-700 font-montserrat">We Have Answers.</span>
+            <span className="gsap-mask-wrapper">
+              <span className="gsap-mask-line">Got Questions? <span className="text-[#0062CD] font-montserrat">We Have Answers.</span></span>
+            </span>
           </h2>
 
           <p className="text-base text-slate-600 leading-relaxed font-montserrat">
@@ -75,43 +70,51 @@ export default function WhatWeDo() {
         </div>
 
         {/* ACCORDION GRID */}
-        <div data-reveal="up" className="max-w-4xl mx-auto space-y-4 font-montserrat">
+        <div className="gsap-stagger-list max-w-4xl mx-auto space-y-4 font-montserrat">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index
 
             return (
               <div
                 key={faq.question}
-                className={`rounded-xl transition-all duration-300 border font-montserrat ${
+                className={`gsap-stagger-item rounded-xl overflow-hidden transition-all duration-300 border font-montserrat ${
                   isOpen
-                    ? 'bg-white border-violet-500/50 shadow-lg ring-1 ring-violet-500/20'
-                    : 'bg-white border-slate-200 shadow-2xs hover:border-slate-300'
+                    ? 'bg-white border-[#0062CD]/50 shadow-md ring-1 ring-[#0062CD]/20 -translate-y-0.5'
+                    : 'bg-white border-slate-200 shadow-2xs hover:border-slate-300 hover:shadow-sm hover:-translate-y-0.5'
                 }`}
               >
                 <button
                   type="button"
                   onClick={() => toggleFAQ(index)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 font-montserrat focus:outline-none cursor-pointer"
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-montserrat focus:outline-none cursor-pointer group"
                 >
-                  <span className="text-base sm:text-2xl font-semibold text-slate-900 font-montserrat">
+                  <span className="text-base sm:text-lg font-bold text-slate-900 font-montserrat">
                     {faq.question}
                   </span>
                   <div
-                    className={`h-9 w-9 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${
+                    className={`h-8 w-8 rounded-lg flex items-center justify-center shrink-0 transition-transform duration-300 ${
                       isOpen
-                        ? 'bg-violet-700 text-white rotate-180 shadow-md'
-                        : 'bg-slate-100 text-slate-500 hover:bg-slate-200 hover:text-slate-900'
+                        ? 'bg-[#0062CD] text-white rotate-180 shadow-md'
+                        : 'bg-slate-100 text-slate-600'
                     }`}
                   >
                     <ChevronDown className="h-5 w-5" />
                   </div>
                 </button>
 
-                {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-sm text-slate-800 leading-relaxed border-t border-slate-100 font-montserrat animate-in fade-in duration-200">
-                    <p className="font-montserrat">{faq.answer}</p>
+
+                {/* Smooth Grid-Template-Rows Height Transition */}
+                <div
+                  className={`grid transition-[grid-template-rows,opacity] duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                    isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="px-5 sm:px-6 pb-6 pt-1 text-sm text-slate-700 leading-relaxed border-t border-slate-100 font-montserrat">
+                      <p className="font-montserrat">{faq.answer}</p>
+                    </div>
                   </div>
-                )}
+                </div>
               </div>
             )
           })}
@@ -120,3 +123,4 @@ export default function WhatWeDo() {
     </section>
   )
 }
+
