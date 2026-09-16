@@ -35,10 +35,10 @@ export default function Hero() {
         {/* Main Masked Headline: Refined Light Weight, Large Display Size */}
         <h1 className="font-montserrat font-light text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white tracking-[-0.02em] leading-[1.15] max-w-5xl drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
           <span className="hero-masked-wrapper">
-            <span className="hero-masked-line">We Build Digital Experiences</span>
-          </span>
-          <span className="hero-masked-wrapper mt-1 sm:mt-2">
-            <span className="hero-masked-line">That Matter</span>
+            <span className="hero-masked-line">
+              <span className="block">We Build Digital Experiences</span>
+              <span className="block mt-1 sm:mt-2">That Matter</span>
+            </span>
           </span>
         </h1>
 

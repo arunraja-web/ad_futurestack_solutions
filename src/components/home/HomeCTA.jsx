@@ -20,12 +20,6 @@ export default function HomeCTA() {
       <Container data-reveal="up" className="home-cta-content relative z-10 text-center font-montserrat px-4 sm:px-6">
         <div className="max-w-3xl mx-auto space-y-8 font-montserrat">
           
-          {/* Eyebrow Label with Violet Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-violet-50 border border-violet-200 text-[11px] font-mono font-bold tracking-widest text-violet-700 uppercase">
-            <span className="h-1.5 w-1.5 rounded-full bg-violet-700 animate-ping" />
-            <span>READY TO SCALE?</span>
-          </div>
-
           {/* Headline */}
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-slate-900 uppercase tracking-tight font-montserrat leading-[1.12]">
             <span className="gsap-mask-wrapper">
@@ -44,7 +38,7 @@ export default function HomeCTA() {
               to="/contact"
               variant="primary"
               size="lg"
-              className="!bg-[#0062CD] hover:!bg-[#0052b0] !text-white !rounded-lg w-full sm:w-auto font-montserrat shadow-lg shadow-[#0062CD]/25 hover:-translate-y-0.5 active:scale-95 transition-all duration-300"
+              className="!bg-[#0062CD] hover:!bg-[#0050A8] !text-white !rounded-lg w-full sm:w-auto font-montserrat shadow-lg shadow-[#0062CD]/25 hover:-translate-y-0.5 active:scale-95 transition-all duration-300"
             >
               Schedule Architecture Call
             </Button>

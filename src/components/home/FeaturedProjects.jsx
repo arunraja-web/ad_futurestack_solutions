@@ -17,7 +17,7 @@ const highlights = [
     category: 'AI & Data Systems',
     title: 'Conversations for Tomorrow: AI Systems',
     subtitle: 'Intelligent automated workflows, RAG knowledge bases, and digital sovereignty for high-growth enterprises.',
-    image: '/images/home/ai-augmented-engineering.webp',
+    image: '/images/home/ai-data-systems.webp',
     link: '/solutions',
     reveal: 'up'
   },
@@ -66,7 +66,7 @@ export default function FeaturedProjects() {
         {/* SECTION TITLE */}
         <div data-reveal="up" className="flex flex-col sm:flex-row sm:items-end justify-between mb-14 gap-4 font-montserrat">
           <div>
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-violet-700 block mb-2">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0062CD] block mb-2">
               Case Studies & Portfolio
             </span>
             <h2 className="text-3xl sm:text-5xl font-bold text-slate-900 tracking-tight font-montserrat uppercase">
@@ -77,7 +77,7 @@ export default function FeaturedProjects() {
           </div>
           <Link
             to="/projects"
-            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#0062CD] hover:text-[#0052b0] transition-colors uppercase tracking-wider font-montserrat group"
+            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#0062CD] hover:text-[#0050A8] transition-colors uppercase tracking-wider font-montserrat group"
           >
             <span>Explore All Projects</span>
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -90,7 +90,8 @@ export default function FeaturedProjects() {
             <Link
               key={item.id}
               to={item.link}
-              className="gsap-card-item group relative flex flex-col justify-end aspect-[4/5] sm:aspect-[3/4] bg-slate-950 rounded-2xl p-6 sm:p-7 border border-slate-800/80 hover:border-slate-700 shadow-xl hover:shadow-2xl hover:shadow-slate-950/30 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] font-montserrat overflow-hidden select-none"
+              data-reveal={item.reveal}
+              className="gsap-card-item group relative flex flex-col justify-end aspect-[4/5] sm:aspect-[3/4] bg-slate-950 p-6 sm:p-7 border border-slate-800/80 hover:border-[#0062CD]/50 shadow-xl hover:shadow-2xl hover:shadow-slate-950/30 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] font-montserrat overflow-hidden select-none"
             >
               {/* Full-bleed Background Image */}
               <img
@@ -124,7 +125,7 @@ export default function FeaturedProjects() {
               {/* Content Overlay pinned to bottom */}
               <div className="relative z-20 space-y-2.5 font-montserrat">
                 {/* Category Label */}
-                <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-violet-300 block">
+                <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-[#93c5fd] block">
                   {item.category}
                 </span>
 

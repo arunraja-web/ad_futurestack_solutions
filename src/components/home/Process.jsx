@@ -54,7 +54,8 @@ export default function Process() {
             <Link
               key={item.id}
               to={item.link}
-              className={`gsap-card-item ${idx === 0 ? 'process-left-feature' : 'process-right-card'} group relative flex flex-col justify-end aspect-[4/5] sm:aspect-[3/4] bg-slate-950 rounded-none border border-slate-200/90 shadow-sm hover:border-slate-300 hover:shadow-xl transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] font-montserrat select-none cursor-pointer overflow-hidden`}
+              data-reveal={item.reveal}
+              className={`gsap-card-item ${idx === 0 ? 'process-left-feature' : 'process-right-card'} group relative flex flex-col justify-end aspect-[4/5] sm:aspect-[3/4] bg-slate-950 rounded-none border border-slate-200/90 shadow-sm hover:border-[#0062CD]/50 hover:shadow-xl transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] font-montserrat select-none cursor-pointer overflow-hidden`}
             >
               {/* Full-bleed Background Image with Parallax on left feature */}
               <img
@@ -80,7 +81,7 @@ export default function Process() {
                   <h3 className="text-lg sm:text-xl font-bold text-white leading-snug font-montserrat">
                     {item.title}
                   </h3>
-                  <div className="h-8 w-8 rounded-none bg-white/10 text-white flex items-center justify-center shrink-0">
+                  <div className="h-8 w-8 rounded-none bg-white/10 group-hover:bg-[#0062CD] text-white flex items-center justify-center shrink-0 transition-colors duration-300">
                     <ArrowUpRight className="h-4 w-4" />
                   </div>
                 </div>
