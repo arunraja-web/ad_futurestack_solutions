@@ -7,7 +7,7 @@ export default function PurposeBanner() {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#f6f2ea] pt-16 sm:pt-20 lg:pt-24 pb-10 sm:pb-12 border-t border-[#eae4d8] font-montserrat overflow-hidden"
+      className="bg-white pt-16 sm:pt-20 lg:pt-24 pb-10 sm:pb-12 border-t border-[#eae4d8] font-montserrat overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">

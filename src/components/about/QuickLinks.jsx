@@ -135,7 +135,7 @@ export default function QuickLinks() {
   }, [])
 
   return (
-    <section className="bg-[#f6f2ea] py-16 sm:py-24 border-b border-[#eae4d8] font-montserrat">
+    <section className="bg-white py-16 sm:py-24 border-b border-[#eae4d8] font-montserrat">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <div
