@@ -1,59 +1,21 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/page-sections.css'
 import '../styles/services.css'
 import SEO from '../components/common/SEO.jsx'
-import { Users, Target, Rocket, ShieldCheck, ArrowRight, CheckCircle2 } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
-const HERO_IMAGE = "/images/about/team-collaboration.webp"
+import PurposeBanner from '../components/about/PurposeBanner.jsx'
+import StatCounters from '../components/about/StatCounters.jsx'
+import QuickLinks from '../components/about/QuickLinks.jsx'
+import AboutHeroSlider from '../components/about/AboutHeroSlider.jsx'
+import EngineeringFoundation from '../components/about/EngineeringFoundation.jsx'
+import BrandPillarsAccordion from '../components/about/BrandPillarsAccordion.jsx'
+import { useScrollAnimation } from '../hooks/useScrollAnimation.js'
+
+
 const STORY_IMAGE_MAIN = "/images/about/about-main-story.webp"
 const STORY_IMAGE_SMALL = "/images/services/digital-marketing-new.jpg"
-
-const aboutPillars = [
-  {
-    icon: <Users className="h-6 w-6" />,
-    title: 'Senior Engineering Expertise',
-    description: 'Our team consists exclusively of experienced software architects and senior engineers who have built high-scale systems.'
-  },
-  {
-    icon: <Target className="h-6 w-6" />,
-    title: 'Outcome-Driven Engineering',
-    description: 'We measure technology success by real business results—increased throughput, reduced operational costs, and client retention.'
-  },
-  {
-    icon: <ShieldCheck className="h-6 w-6" />,
-    title: 'Zero Technical Debt Mindset',
-    description: 'We write clean, modular, self-documenting code with comprehensive automated tests and zero vendor lock-in.'
-  }
-]
-
-const valuesList = [
-  {
-    tag: 'Core Value 01',
-    title: 'Engineering Rigor & Quality',
-    description: 'We take pride in crafting production-grade software that is performant, secure, and built to stand the test of time.',
-    bullets: ['Peer-reviewed code standards', 'Automated CI/CD testing suites', 'Strict adherence to OWASP security']
-  },
-  {
-    tag: 'Core Value 02',
-    title: 'Transparent Collaboration',
-    description: 'We operate as an extended engineering team for our clients, providing honest feedback, clear milestones, and weekly demos.',
-    bullets: ['Direct communication with lead engineers', 'Transparent sprint reporting', 'No hidden technical surprises']
-  },
-  {
-    tag: 'Core Value 03',
-    title: 'Continuous Technical Innovation',
-    description: 'We actively evaluate emerging technologies—from AI autonomous agents to modern distributed data engines—to keep our clients ahead.',
-    bullets: ['Pragmatic adoption of AI & cloud tooling', 'Focus on open standards', 'Continuous performance optimization']
-  }
-]
-
-const milestones = [
-  { year: '2018', title: 'AD FutureStack Founded', desc: 'Started with a vision to deliver enterprise-grade software architecture.' },
-  { year: '2020', title: 'Cloud & SaaS Expansion', desc: 'Expanded into multi-tenant SaaS platforms and cloud-native microservices.' },
-  { year: '2022', title: 'AI & Workflow Integration', desc: 'Pioneered autonomous AI agent integration and enterprise automation.' },
-  { year: 'Present', title: 'Global Enterprise Partner', desc: 'Over 100+ digital products delivered to high-growth startups and enterprises.' }
-]
 
 const aboutSchema = {
   '@context': 'https://schema.org',
@@ -64,13 +26,43 @@ const aboutSchema = {
     '@type': 'Organization',
     'name': 'AD FutureStack',
     'url': 'https://adfuturestack.com',
-    'logo': 'https://adfuturestack.com/images/AD%20Logo.png'
+    'logo': 'https://adfuturestack.com/images/AD%20Logo.png',
+    'knowsAbout': [
+      'Enterprise Software Architecture',
+      'Cloud Infrastructure & DevOps',
+      'Multi-Tenant SaaS Systems',
+      'AI Agent Orchestration',
+      'Zero-Trust Cybersecurity'
+    ]
   }
 }
 
 export default function About() {
+  const windowRef = useRef(null)
+  const [isAccordionVisible, setIsAccordionVisible] = useState(false)
+  const [storyRef, isStoryVisible] = useScrollAnimation({ threshold: 0.15, once: false })
+  const [ctaRef, isCtaVisible] = useScrollAnimation({ threshold: 0.2, once: false })
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsAccordionVisible(entry.isIntersecting)
+      },
+      {
+        rootMargin: '250px 0px 250px 0px',
+        threshold: 0
+      }
+    )
+
+    if (windowRef.current) {
+      observer.observe(windowRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <div className="bespoke-page">
+    <div className="bespoke-page about-page">
       <SEO
         title="About AD FutureStack — Software Architects & Studio"
         description="Learn about AD FutureStack, our engineering philosophy, core values, and mission to deliver enterprise software architecture and digital solutions."
@@ -78,59 +70,35 @@ export default function About() {
         canonicalUrl="https://adfuturestack.com/about"
         schema={aboutSchema}
       />
-      {/* 1. HERO SECTION WITH BACKGROUND IMAGE */}
+
+      {/* 1. HERO SLIDER SECTION (INFOSYS-INSPIRED AUTO-PROGRESS SLIDER) */}
+      <AboutHeroSlider />
+
+      {/* 2. PURPOSE BANNER (Right after Hero) */}
+      <PurposeBanner />
+
+      {/* 3. ANIMATED STAT COUNTERS ("Overview" Section) */}
+      <StatCounters />
+
+      {/* 4. ABOUT US QUICK-LINK CARD GRID */}
+      <QuickLinks />
+
+      {/* 5. OUR ENGINEERING FOUNDATION (Grant Thornton Inspired Bento Magazine Grid) */}
+      <EngineeringFoundation />
+
+      {/* 6. OUR STORY WITH PHOTOGRAPHY (Slides down over the static accordion when scrolling up) */}
       <section
-        className="page-hero-bespoke"
-        style={{ backgroundImage: `url(${HERO_IMAGE})` }}
+        ref={storyRef}
+        className="showcase-section pb-12 sm:pb-16 relative z-10 bg-white shadow-xl overflow-hidden"
+        id="our-story"
       >
-        <div className="page-hero-overlay" />
-
-        <div className="page-hero-inner">
-          <div className="page-hero-content">
-            <br></br> <br></br><br></br><h1>
-              Engineering the <span>Digital Future</span>
-            </h1>
-
-            <p>
-              We are a team of senior software architects, developers, and system designers dedicated to building high-performance, resilient, and scalable digital products.
-            </p>
-
-            <div className="hero-action-group">
-              <a href="#our-story" className="hero-btn-primary">
-                Read Our Story <ArrowRight className="h-4 w-4" />
-              </a>
-              <Link to="/contact" className="hero-btn-secondary">
-                Get in Touch ↗
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 2. PILLARS SECTION */}
-      <section className="pillars-section">
-        <span className="section-kicker text-xl">OUR ENGINEERING FOUNDATION</span>
-        <h2 className="section-title font-semibold">Built on Discipline & Transparency</h2>
-        <p className="section-description">
-          We bring senior technical craftsmanship to every codebase, prioritizing clean maintainable architecture that enables sustained growth.
-        </p>
-
-        <div className="pillars-grid">
-          {aboutPillars.map((item, idx) => (
-            <div key={idx} className="pillar-card">
-              <div className="pillar-icon-box">{item.icon}</div>
-              <h3 >{item.title}</h3>
-              <p>{item.description}</p>
-            </div>
-          ))}
-        </div>
-      </section >
-
-      {/* 3. OUR STORY WITH PHOTOGRAPHY & MILESTONES */}
-      < section className="showcase-section" id="our-story" >
         <div className="showcase-inner">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div
+              className={`transition-all duration-700 ease-out ${
+                isStoryVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
+              }`}
+            >
               <span className="section-kicker">THE JOURNEY</span>
               <h2 className="section-title font-semibold">Why We Founded AD FutureStack</h2>
               <p className="section-description">
@@ -139,11 +107,14 @@ export default function About() {
               <p className="mt-4 text-slate-600 text-sm leading-relaxed">
                 We combine deep technical expertise across microservices, cloud infrastructure, AI automation, and multi-tenant SaaS to deliver production-ready software systems that are reliable today and ready for tomorrow.
               </p>
-
             </div>
 
             {/* PHOTOGRAPHY COMPOSITION */}
-            <div className="relative min-h-[400px] flex items-center justify-center">
+            <div
+              className={`relative min-h-[400px] flex items-center justify-center transition-all duration-700 ease-out delay-150 ${
+                isStoryVisible ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 translate-x-10 scale-95'
+              }`}
+            >
               <div className="w-4/5 h-[340px] rounded-2xl overflow-hidden shadow-2xl border border-slate-200">
                 <img
                   src={STORY_IMAGE_MAIN}
@@ -165,77 +136,94 @@ export default function About() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* MISSION & VISION DUAL CARDS */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
-            <div data-reveal="left" className="bg-slate-900 text-white p-8 rounded-3xl border border-slate-800 shadow-xl relative overflow-hidden">
-              <div className="h-12 w-12 rounded-xl bg-violet-700/30 border border-violet-500/40 text-violet-400 flex items-center justify-center mb-6">
-                <Target className="h-6 w-6" />
-              </div>
-              <span className="text-xs font-mono font-bold text-violet-400 uppercase tracking-widest block mb-2">OUR MISSION</span>
-              <h3 className="text-2xl font-bold text-white mb-4">Architect Resilient Digital Products</h3>
-              <p className="text-slate-300 text-sm leading-relaxed">
-                To engineer scalable, secure, and maintainable software systems that empower companies to scale seamlessly, reduce operational friction, and lead in their industries.
-              </p>
-            </div>
+      {/* 7. PARALLAX WINDOW SPACER (Transparent gap in document flow) */}
+      <div
+        ref={windowRef}
+        className="relative w-full h-[580px] sm:h-[640px] lg:h-screen pointer-events-none"
+        aria-hidden="true"
+      />
 
-            <div data-reveal="right" className="bg-slate-900 text-white p-8 rounded-3xl border border-slate-800 shadow-xl relative overflow-hidden">
-              <div className="h-12 w-12 rounded-xl bg-violet-700/30 border border-violet-500/40 text-violet-400 flex items-center justify-center mb-6">
-                <Rocket className="h-6 w-6" />
-              </div>
-              <span className="text-xs font-mono font-bold text-violet-400 uppercase tracking-widest block mb-2">OUR VISION</span>
-              <h3 className="text-2xl font-bold text-white mb-4">The Premier Technology Partner</h3>
-              <p className="text-slate-300 text-sm leading-relaxed">
-                To be the global technology partner of choice for ambitious enterprises seeking production-grade engineering, continuous innovation, and zero technical debt.
-              </p>
-            </div>
+      {/* 7b. FIXED STATIC ACCORDION (100% Fixed like a background image; sections scroll OVER it) */}
+      <div
+        className={`fixed inset-0 z-0 transition-opacity duration-300 ${
+          isAccordionVisible
+            ? 'opacity-100 pointer-events-auto'
+            : 'opacity-0 pointer-events-none'
+        }`}
+      >
+        <BrandPillarsAccordion />
+      </div>
+
+      {/* 8. FINAL CTA (With Twilight Engineering Studio Image & Full White Gradient on Words Side) */}
+      <div
+        ref={ctaRef}
+        className="relative z-20 w-full overflow-hidden bg-white border-t border-slate-200/80 shadow-[0_-20px_50px_rgba(0,0,0,0.15)]"
+      >
+        {/* Background Photography with White Gradient Across Words */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/images/about/about-cta-bg.webp"
+            alt="AD FutureStack Modern Software Architecture Studio"
+            loading="lazy"
+            className="w-full h-full object-cover object-center"
+            onError={(e) => {
+              e.target.src = '/images/about/team-collaboration.webp'
+            }}
+          />
+          {/* Full white gradient overlay on the words side, smoothly transitioning to reveal the photo */}
+          <div
+            className="absolute inset-0 pointer-events-none hidden lg:block"
+            style={{
+              background:
+                'linear-gradient(90deg, #ffffff 0%, #ffffff 42%, rgba(255, 255, 255, 0.94) 52%, rgba(255, 255, 255, 0) 76%)'
+            }}
+          />
+          <div
+            className="absolute inset-0 pointer-events-none block lg:hidden"
+            style={{
+              background:
+                'linear-gradient(180deg, #ffffff 0%, #ffffff 62%, rgba(255, 255, 255, 0.88) 75%, rgba(255, 255, 255, 0.15) 100%)'
+            }}
+          />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12">
+          <div
+            className={`max-w-2xl text-center lg:text-left transition-all duration-700 ease-out ${
+              isCtaVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+          >
+            <span className="text-xs font-mono font-bold text-[#0062CD] uppercase tracking-widest block mb-3">
+              START A CONVERSATION
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-tight">
+              Let's Engineer Your Digital Future Together
+            </h2>
+            <p className="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed max-w-xl font-normal">
+              Looking for a dedicated software engineering team that values technical quality, clean architecture, and measurable outcomes?
+            </p>
+          </div>
+
+          <div
+            className={`shrink-0 transition-all duration-700 ease-out delay-150 ${
+              isCtaVisible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 translate-y-6'
+            }`}
+          >
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2.5 bg-[#0062CD] hover:bg-[#004fa8] text-white font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-xl transition-all duration-200 shadow-xl shadow-[#0062CD]/30 active:scale-95 group"
+            >
+              <span>Work With Us</span>
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
-      </section >
-
-      {/* 4. CORE VALUES */}
-      < section className="tech-grid-section" >
-        <div className="showcase-inner">
-          <span className="section-kicker">WHAT DRIVES US</span>
-          <h2 className="section-title font-semibold">Our Guiding Values</h2>
-          <p className="section-description mb-10">
-            These core principles shape how we design architecture, communicate with clients, and deliver production software.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {valuesList.map((item, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-violet-300 transition-colors">
-                <div>
-                  <span className="showcase-tag">{item.tag}</span>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
-                  <p className="text-slate-600 text-sm leading-relaxed mb-6">{item.description}</p>
-                </div>
-                <div className="space-y-2.5 pt-4 border-t border-slate-100">
-                  {item.bullets.map((b, bIdx) => (
-                    <div key={bIdx} className="flex items-center gap-2 text-xs font-semibold text-slate-700">
-                      <CheckCircle2 className="h-4 w-4 text-violet-600 shrink-0" />
-                      <span>{b}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section >
-
-      {/* 5. FINAL CTA */}
-      < section className="bespoke-cta-section" >
-        <div className="bespoke-cta-content">
-          <h2>Let's Engineer Your Digital Future Together</h2>
-          <p>
-            Looking for a dedicated software engineering team that values technical quality, clean architecture, and measurable outcomes?
-          </p>
-        </div>
-        <Link to="/contact" className="bespoke-cta-btn">
-          Work With Us <ArrowRight className="h-4 w-4" />
-        </Link>
-      </section >
-    </div >
+      </div>
+    </div>
   )
 }
+

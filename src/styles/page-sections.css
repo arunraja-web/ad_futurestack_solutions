@@ -22,6 +22,15 @@
   font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
 }
 
+/* About Page Specific Color Overrides (Replaced #A294FA / #a78bfa with #0062CD) */
+.bespoke-page.about-page {
+  --violet-light: #0062CD;
+}
+
+.bespoke-page.about-page .page-hero-bespoke h1 span {
+  color: #0062CD;
+}
+
 .bespoke-page * {
   box-sizing: border-box;
 }
@@ -138,7 +147,7 @@
 }
 
 .page-hero-bespoke h1 span {
-  color: #a78bfa;
+  color: var(--violet-light, #a78bfa);
 }
 
 .page-hero-content > p {
@@ -869,7 +878,7 @@
   display: block;
   font-size: clamp(28px, 3.5vw, 48px);
   font-weight: 800;
-  color: #a78bfa;
+  color: var(--violet-light, #a78bfa);
   margin-bottom: 6px;
   letter-spacing: -0.03em;
 }

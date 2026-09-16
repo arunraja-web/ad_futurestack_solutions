@@ -22,6 +22,7 @@ export default {
         sans: ['Inter', 'Outfit', 'Montserrat', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
+        outfit: ['Outfit', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       backgroundImage: {

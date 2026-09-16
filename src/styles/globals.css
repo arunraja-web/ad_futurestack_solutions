@@ -22,8 +22,8 @@
 
   body {
     @apply bg-white text-slate-900 antialiased selection:bg-violet-700 selection:text-white;
-    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
-    overflow-x: hidden;
+    font-family: 'Outfit', 'Montserrat', system-ui, -apple-system, sans-serif;
+    overflow-x: clip;
     max-width: 100%;
     width: 100%;
     margin: 0;
