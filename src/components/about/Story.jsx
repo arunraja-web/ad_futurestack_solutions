@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function Story() {
   return (
     <section className="py-12 sm:py-16 lg:py-24 font-montserrat">
-      {/* DIRECT CONTENT GRID */}
+
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center font-montserrat">
 
         {/* LEFT: Image Composition & Floating Stat Badge */}
