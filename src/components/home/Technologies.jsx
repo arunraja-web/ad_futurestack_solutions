@@ -61,13 +61,13 @@ export default function Technologies() {
           {/* BOTTOM ASYMMETRIC ROW */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 font-montserrat items-stretch">
 
-            {/* LEFT DEEP NAVY BLUE CARD (Enters from LEFT) */}
+            {/* LEFT BLUE CARD (Enters from LEFT) */}
             <div
               data-reveal="left"
-              className="lg:col-span-5 bg-[#003882] text-white rounded-xl p-7 sm:p-9 shadow-xs hover:shadow-xl flex flex-col justify-between space-y-8 font-montserrat border border-[#004bb0]/30 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1.5"
+              className="lg:col-span-5 bg-[#0062CD] text-white rounded-xl p-7 sm:p-9 shadow-xs hover:shadow-xl flex flex-col justify-between space-y-8 font-montserrat border border-[#0050A8] transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1.5"
             >
               <div className="space-y-4 font-montserrat">
-                <span className="text-xs font-mono font-bold uppercase tracking-wider text-blue-200 block">
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-mono font-bold uppercase tracking-wider bg-white/15 text-white block w-fit">
                   Digital Sovereignty
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-snug font-montserrat">
@@ -77,7 +77,7 @@ export default function Technologies() {
 
               <Link
                 to="/capabilities"
-                className="text-xs font-mono font-bold uppercase tracking-wider text-blue-200 inline-flex items-center gap-1.5"
+                className="text-xs font-mono font-bold uppercase tracking-wider text-white hover:text-blue-100 inline-flex items-center gap-1.5 group"
               >
                 <span>Read Full Whitepaper</span>
                 <ArrowUpRight className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform duration-300" />
@@ -87,10 +87,10 @@ export default function Technologies() {
             {/* RIGHT WHITE REPORT CARD (Enters from RIGHT) */}
             <div
               data-reveal="right"
-              className="lg:col-span-7 bg-white rounded-xl p-7 sm:p-9 shadow-xs hover:shadow-xl border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-8 font-montserrat transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1.5 cursor-pointer group"
+              className="lg:col-span-7 bg-white rounded-xl p-7 sm:p-9 shadow-xs hover:shadow-xl border border-slate-200 hover:border-[#0062CD]/50 flex flex-col sm:flex-row items-center justify-between gap-8 font-montserrat transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1.5 cursor-pointer group"
             >
               <div className="space-y-3 flex-1 font-montserrat">
-                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#0062CD] block">
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-mono font-bold uppercase tracking-wider bg-[#EAF2FC] text-[#0062CD] border border-[#0062CD]/20 block w-fit">
                   Technical Report
                 </span>
                 <h3 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight leading-snug font-montserrat group-hover:text-[#0062CD] transition-colors">
@@ -100,7 +100,7 @@ export default function Technologies() {
                   Analyzing real-time AI telemetry, automated microservices deployment, and enterprise cloud efficiency.
                 </p>
                 <div className="pt-2">
-                  <span className="inline-flex items-center gap-1 text-xs font-bold text-[#0062CD] uppercase tracking-wider font-montserrat">
+                  <span className="inline-flex items-center gap-1 text-xs font-bold text-[#0062CD] group-hover:text-[#0050A8] uppercase tracking-wider font-montserrat">
                     <span>View Innovation Review</span>
                     <ArrowUpRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>

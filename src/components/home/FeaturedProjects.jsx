@@ -17,7 +17,7 @@ const highlights = [
     category: 'AI & Data Systems',
     title: 'Conversations for Tomorrow: AI Systems',
     subtitle: 'Intelligent automated workflows, RAG knowledge bases, and digital sovereignty for high-growth enterprises.',
-    image: '/images/home/ai-augmented-engineering.webp',
+    image: '/images/home/ai-data-systems.webp',
     link: '/solutions',
     reveal: 'up'
   },
@@ -90,7 +90,8 @@ export default function FeaturedProjects() {
             <Link
               key={item.id}
               to={item.link}
-              className="gsap-card-item group relative flex flex-col justify-end aspect-[4/5] sm:aspect-[3/4] bg-slate-950 rounded-2xl p-6 sm:p-7 border border-slate-800/80 hover:border-slate-700 shadow-xl hover:shadow-2xl hover:shadow-slate-950/30 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] font-montserrat overflow-hidden select-none"
+              data-reveal={item.reveal}
+              className="gsap-card-item group relative flex flex-col justify-end aspect-[4/5] sm:aspect-[3/4] bg-slate-950 p-6 sm:p-7 border border-slate-800/80 hover:border-[#0062CD]/50 shadow-xl hover:shadow-2xl hover:shadow-slate-950/30 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] font-montserrat overflow-hidden select-none"
             >
               {/* Full-bleed Background Image */}
               <img

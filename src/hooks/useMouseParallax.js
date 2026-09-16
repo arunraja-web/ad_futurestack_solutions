@@ -1,32 +1,38 @@
 import { useState, useEffect, useRef } from 'react'
 
-export function useMouseParallax(intensity = 15) {
+export function useMouseParallax(intensity = 6) {
   const [position, setPosition] = useState({ x: 0, y: 0 })
-  const tickingRef = useRef(false)
+  const currentPos = useRef({ x: 0, y: 0 })
+  const targetPos = useRef({ x: 0, y: 0 })
+  const rafId = useRef(null)
 
   useEffect(() => {
-    let latestE = null
-
-    const updatePosition = () => {
-      if (latestE) {
-        const { innerWidth, innerHeight } = window
-        const x = ((latestE.clientX / innerWidth) - 0.5) * intensity
-        const y = ((latestE.clientY / innerHeight) - 0.5) * intensity
-        setPosition({ x, y })
-      }
-      tickingRef.current = false
-    }
+    let active = true
 
     const handleMouseMove = (e) => {
-      latestE = e
-      if (!tickingRef.current) {
-        tickingRef.current = true
-        requestAnimationFrame(updatePosition)
+      const { innerWidth, innerHeight } = window
+      targetPos.current = {
+        x: ((e.clientX / innerWidth) - 0.5) * intensity,
+        y: ((e.clientY / innerHeight) - 0.5) * intensity,
       }
+    }
+
+    const loop = () => {
+      if (!active) return
+      currentPos.current.x += (targetPos.current.x - currentPos.current.x) * 0.05
+      currentPos.current.y += (targetPos.current.y - currentPos.current.y) * 0.05
+      setPosition({ x: currentPos.current.x, y: currentPos.current.y })
+      rafId.current = requestAnimationFrame(loop)
     }
 
     window.addEventListener('mousemove', handleMouseMove, { passive: true })
-    return () => window.removeEventListener('mousemove', handleMouseMove)
+    rafId.current = requestAnimationFrame(loop)
+
+    return () => {
+      active = false
+      window.removeEventListener('mousemove', handleMouseMove)
+      if (rafId.current) cancelAnimationFrame(rafId.current)
+    }
   }, [intensity])
 
   return position

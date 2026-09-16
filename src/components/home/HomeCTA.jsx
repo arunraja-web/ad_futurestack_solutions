@@ -20,12 +20,6 @@ export default function HomeCTA() {
       <Container data-reveal="up" className="home-cta-content relative z-10 text-center font-montserrat px-4 sm:px-6">
         <div className="max-w-3xl mx-auto space-y-8 font-montserrat">
           
-          {/* Eyebrow Label with Blue Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-[11px] font-mono font-bold tracking-widest text-[#0062CD] uppercase">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#0062CD] animate-ping" />
-            <span>READY TO SCALE?</span>
-          </div>
-
           {/* Headline */}
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-slate-900 uppercase tracking-tight font-montserrat leading-[1.12]">
             <span className="gsap-mask-wrapper">
