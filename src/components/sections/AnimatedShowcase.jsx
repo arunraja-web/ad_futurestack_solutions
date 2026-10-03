@@ -31,6 +31,39 @@ export default function AnimatedShowcase() {
         overflow: 'hidden'
       }}
     >
+      <style>
+        {`
+          .showcase-block {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+            align-items: center;
+          }
+          .showcase-text-even { grid-column: 1 / 6; grid-row: 1; }
+          .showcase-text-odd { grid-column: 8 / 13; grid-row: 1; }
+          .showcase-img-even { grid-column: 5 / 13; grid-row: 1; }
+          .showcase-img-odd { grid-column: 1 / 9; grid-row: 1; }
+
+          @media (max-width: 900px) {
+            .showcase-block {
+              display: flex;
+              flex-direction: column-reverse;
+              gap: 40px;
+            }
+            .showcase-text-even, .showcase-text-odd,
+            .showcase-img-even, .showcase-img-odd {
+              grid-column: 1 / -1;
+              width: 100%;
+            }
+            .showcase-text-even, .showcase-text-odd {
+              padding: 30px 20px !important;
+            }
+            .showcase-img-even, .showcase-img-odd {
+              height: 250px !important;
+            }
+          }
+        `}
+      </style>
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
         
         {/* Header Block */}
@@ -110,12 +143,7 @@ function ContentBlock({ item, isEven, index }) {
   return (
     <div 
       ref={blockRef}
-      style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(12, 1fr)',
-        gap: '24px',
-        alignItems: 'center'
-      }}
+      className="showcase-block"
     >
       
       {/* Text Section */}
@@ -124,9 +152,8 @@ function ContentBlock({ item, isEven, index }) {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: false, margin: "-50px" }}
         transition={{ type: "spring", stiffness: 70, damping: 20, delay: 0.1 }}
+        className={isEven ? "showcase-text-even" : "showcase-text-odd"}
         style={{
-          gridColumn: isEven ? '1 / 6' : '8 / 13',
-          gridRow: 1,
           zIndex: 2,
           padding: '50px 40px',
           background: 'white',
@@ -169,9 +196,8 @@ function ContentBlock({ item, isEven, index }) {
         whileInView={{ clipPath: 'inset(0% 0% 0% 0%)', opacity: 1, scale: 1, x: 0 }}
         viewport={{ once: false, margin: "-50px" }}
         transition={{ type: "spring", stiffness: 70, damping: 20, duration: 1.2 }}
+        className={isEven ? "showcase-img-even" : "showcase-img-odd"}
         style={{
-          gridColumn: isEven ? '5 / 13' : '1 / 9',
-          gridRow: 1,
           height: '380px',
           position: 'relative',
           overflow: 'hidden',

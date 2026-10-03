@@ -5,6 +5,8 @@ import { Blocks, BrainCircuit, CloudCog, Workflow, Network, Target, Bot, Box, Pi
 import { Link } from "react-router-dom";
 import CountUp from "../components/common/CountUp.jsx";
 import AnimatedShowcase from "../components/sections/AnimatedShowcase.jsx";
+import { useEffect } from "react";
+import { initSmoothScroll, destroySmoothScroll } from "../animations/smoothScroll.js";
 
 
 
@@ -86,6 +88,11 @@ const servicesSchema = {
 }
 
 export default function WhatWeDo() {
+  useEffect(() => {
+    initSmoothScroll();
+    return () => destroySmoothScroll();
+  }, []);
+
   return (
     <main className="services-page what-we-do-page">
       <SEO
@@ -220,17 +227,24 @@ export default function WhatWeDo() {
       {/* =====================================================
           DIGITAL GROWTH CTA
       ===================================================== */}
-      <section className="growth-section" style={{ minHeight: '100vh', height: '100vh' }}>
-        <div className="growth-bg-image">
-          <img 
-            src="https://i.pinimg.com/736x/24/22/be/2422bea743ba1144181892dd6ef13af6.jpg" 
-            alt="Background" 
-            loading="lazy" 
-            style={{ maskImage: 'none', WebkitMaskImage: 'none', opacity: 1 }}
-          />
-        </div>
+      <section 
+        className="growth-section"
+        style={{
+          minHeight: '100vh',
+          height: '100vh',
+          background: "url('https://i.pinimg.com/736x/24/22/be/2422bea743ba1144181892dd6ef13af6.jpg') center center / cover no-repeat",
+          backgroundAttachment: 'fixed',
+          position: 'relative',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '20px'
+        }}
+      >
+        {/* Dark overlay to make text readable */}
+        <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(11, 27, 51, 0.4)', zIndex: 0 }}></div>
 
-        <div className="growth-content-wrapper" style={{ gridTemplateColumns: '1fr', justifyItems: 'center', textAlign: 'center' }}>
+        <div className="growth-content-wrapper" style={{ position: 'relative', zIndex: 1, gridTemplateColumns: '1fr', justifyItems: 'center', textAlign: 'center', margin: 0, width: '100%' }}>
           <div className="growth-content-left" data-reveal="up" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <span className="section-kicker" style={{ color: 'white' }}>DIGITAL GROWTH</span>
             <h2 style={{ textAlign: 'center', color: 'white' }}>

@@ -1513,7 +1513,7 @@
 
 .growth-section {
   position: relative;
-  min-height: 800px;
+  min-height: auto;
   display: flex;
   align-items: center;
   padding: 120px 40px 180px;
