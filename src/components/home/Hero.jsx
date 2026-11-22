@@ -2,11 +2,12 @@ import { useState, useEffect, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
 
-// Unsplash hero slides — dark, software & tech enterprise themed
+// High-resolution local hero slides with distinct fallbacks per slide
 const HERO_SLIDES = [
   {
     // Dark software engineering / code workspace
-    src: 'https://images.unsplash.com/photo-1573164574572-cb89e39749b4?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
+    src: '/images/hero/hero-slide-software.jpg',
+    fallbackSrc: '/images/hero/hero-slide-1.webp',
     alt: 'Software development and engineering',
     label: 'SOFTWARE DEVELOPMENT',
     line1: 'Custom Software',
@@ -18,7 +19,8 @@ const HERO_SLIDES = [
   },
   {
     // Dark digital transformation / global connected network
-    src: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80&auto=format&fit=crop',
+    src: '/images/hero/hero-slide-digital.jpg',
+    fallbackSrc: '/images/hero/hero-slide-2.webp',
     alt: 'Modern digital transformation and global systems',
     label: 'DIGITAL TRANSFORMATION',
     line1: 'Turning Vision',
@@ -30,7 +32,8 @@ const HERO_SLIDES = [
   },
   {
     // Dark cloud server infrastructure
-    src: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=80&auto=format&fit=crop',
+    src: '/images/hero/hero-slide-cloud.jpg',
+    fallbackSrc: '/images/hero/hero-slide-3.webp',
     alt: 'Server infrastructure and enterprise cloud systems',
     label: 'CLOUD INFRASTRUCTURE',
     line1: 'Enterprise Systems',
@@ -42,7 +45,8 @@ const HERO_SLIDES = [
   },
   {
     // Dark AI / data intelligence
-    src: 'https://plus.unsplash.com/premium_photo-1683121718643-fb18d2668d53?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
+    src: '/images/hero/hero-slide-ai.jpg',
+    fallbackSrc: '/images/hero/hero-slide-4.webp',
     alt: 'AI automation and predictive intelligence',
     label: 'AI AUTOMATION',
     line1: 'Intelligent Workflows',
@@ -54,7 +58,8 @@ const HERO_SLIDES = [
   },
   {
     // Dark technology circuit / hardware abstract
-    src: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80&auto=format&fit=crop',
+    src: '/images/hero/hero-slide-product.jpg',
+    fallbackSrc: '/images/hero/hero-slide-5.webp',
     alt: 'Product engineering and circuit innovation',
     label: 'PRODUCT ENGINEERING',
     line1: 'Engineering Products',
@@ -120,7 +125,7 @@ export default function Hero() {
             className="w-full h-full object-cover object-center scale-105"
             onError={(e) => {
               e.currentTarget.onerror = null
-              e.currentTarget.src = '/images/hero/hero-slide-1.webp'
+              e.currentTarget.src = s.fallbackSrc || '/images/hero/hero-slide-1.webp'
             }}
           />
         </div>
