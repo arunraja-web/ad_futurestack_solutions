@@ -4,7 +4,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Hero from '../components/home/Hero.jsx'
 import Story from '../components/about/Story.jsx'
 import FeaturedProjects from '../components/home/FeaturedProjects.jsx'
-import Process from '../components/home/Process.jsx'
 import Technologies from '../components/home/Technologies.jsx'
 import WhatWeDo from '../components/home/WhatWeDo.jsx'
 import HomeCTA from '../components/home/HomeCTA.jsx'
@@ -98,7 +97,6 @@ export default function Home() {
       <Hero />
       <Story />
       <FeaturedProjects />
-      <Process />
       <Technologies />
       <WhatWeDo />
       <HomeCTA />

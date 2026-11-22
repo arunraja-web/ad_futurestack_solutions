@@ -16,6 +16,7 @@ import Contact from './pages/Contact.jsx'
 import NotFound from './pages/NotFound.jsx'
 import OurServices from './pages/OurServices.jsx'
 import WhatWeDo from './pages/WhatWeDo.jsx'
+import Insights from './pages/Insights.jsx'
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -69,6 +70,7 @@ export default function App() {
             <Route path="/projects" element={<Navigate to="/careers" replace />} />
             <Route path="/case-studies" element={<Navigate to="/careers" replace />} />
             <Route path="/about" element={<About />} />
+            <Route path="/insights" element={<Insights />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

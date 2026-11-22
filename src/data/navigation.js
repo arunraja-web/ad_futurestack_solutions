@@ -10,5 +10,6 @@ export const NAV_LINKS = [
     ],
   },
   { label: 'Careers', to: '/careers' },
+  { label: 'Insights', to: '/insights' },
   { label: 'About Us', to: '/about' },
 ]
